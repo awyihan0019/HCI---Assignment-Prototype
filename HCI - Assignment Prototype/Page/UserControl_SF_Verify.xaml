@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.UserControl_SF_Verify"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page"
+             mc:Ignorable="d" >
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="600"
+                Margin="30">
+        <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Profile successfully created.</TextBlock>
+        <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">The verify email already send to xxxxx@xxx.com</TextBlock>
+        <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Please go to your email to verify your profile.</TextBlock>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal"
+                Margin="30">
+            <TextBlock FontSize="16" Margin="5 8 5 10" HorizontalAlignment="Left">Didn't receive your verification email?</TextBlock>
+            <Button x:Name="Resend" Margin="5 2 5 10" Click="Resend_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Width="150"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">RESEND</Button>
+        </StackPanel>
+        <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Enter the verification code in your email :</TextBlock>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal"
+                Margin="30">
+        <TextBox x:Name="VerificationCode" Margin="5 2 5 10" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" materialDesign:HintAssist.Hint="code" Width="250"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <Button x:Name="SUBMIT" Margin="5 2 5 10" Click="Resend_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Width="150"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">SUBMIT</Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

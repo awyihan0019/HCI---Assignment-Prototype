@@ -31,34 +31,38 @@ namespace HCI___Assignment_Prototype.Page
             string email = Textbox_EmailFront.Text + "@" + Textbox_EmailBack.Text;
             string password = Passwordbox_Password.Password;
             string rePassword = Passwordbox_PasswordReenter.Password;
-            if (Textbox_EmailFront.Text == null | Textbox_EmailBack.Text == null)
+            if (Textbox_EmailFront.Text == "" | Textbox_EmailBack.Text == "")
             {
-                DialogBox.Show("Create Error", "you must enter email.", "OK");
+                DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter email.", "OK");
             }
-            else if(Passwordbox_Password.Password == null)
+            else if (Passwordbox_Password.Password == "")
             {
-                DialogBox.Show("Create Error", "you must enter the password.", "OK");
+                DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter the password.", "OK");
             }
-            else if (Passwordbox_PasswordReenter.Password == null)
+            else if (Passwordbox_PasswordReenter.Password == "")
             {
-                DialogBox.Show("Create Error", "you must enter the re-enter password.", "OK");
+                DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter the re-enter password.", "OK");
             }
             else if (password != rePassword)
             {
-                DialogBox.Show("Create Error", "your enter password and re-enter password must be the same.", "OK");
+                DialogBox.Show("Create Error", "Profile Created Failed.\nPassword does not match", "OK");
             }
-            if (email != "kowgau99@gmail.com")
+            else
             {
-
-            }
-            else{
-                DialogBox.Show("Email already used", "Profile Not Created\nEmail already used !!!", "OK");
+                if (email != "kowgau99@gmail.com")
+                {
+                    MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
+                }
+                else
+                {
+                    DialogBox.Show("Email already used", "Profile Not Created.\nEmail already used !!!", "OK");
+                }
             }
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            //
+            
         }
     }
 }
