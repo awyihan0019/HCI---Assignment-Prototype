@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Animation;
 
 namespace HCI___Assignment_Prototype.Class {
@@ -19,27 +15,29 @@ namespace HCI___Assignment_Prototype.Class {
 
         public static readonly TimeSpan LeavingScreenAnimationDuration = TimeSpan.FromSeconds(0.195);
 
-        private static DoubleAnimation GetDoubleAnimation(double from , double to , bool setFillBehaviorStop = true) {
-            var da = new DoubleAnimation { From = from , To = to , DecelerationRatio = DecelerationConstant };
+        private static DoubleAnimation GetDoubleAnimation(double from, double to, bool setFillBehaviorStop = true) {
+            var da = new DoubleAnimation {From = from, To = to, DecelerationRatio = DecelerationConstant};
             if (setFillBehaviorStop)
                 da.FillBehavior = FillBehavior.Stop;
             return da;
         }
 
-        public static DoubleAnimation GetFullScreenAnimation(double from , double to , bool setFillBehaviorStop = true) {
-            var result = GetDoubleAnimation(from , to , setFillBehaviorStop);
+        public static DoubleAnimation GetFullScreenAnimation(double from, double to, bool setFillBehaviorStop = true) {
+            var result = GetDoubleAnimation(from, to, setFillBehaviorStop);
             result.Duration = FullScreenAnimationDuration;
             return result;
         }
 
-        public static DoubleAnimation GetEnteringScreenAnimation(double from , double to , bool setFillBehaviorStop = true) {
-            var result = GetDoubleAnimation(from , to , setFillBehaviorStop);
+        public static DoubleAnimation GetEnteringScreenAnimation(double from, double to,
+                                                                 bool setFillBehaviorStop = true) {
+            var result = GetDoubleAnimation(from, to, setFillBehaviorStop);
             result.Duration = EnteringScreenAnimationDuration;
             return result;
         }
 
-        public static DoubleAnimation GetLeavingScreenAnimation(double from , double to , bool setFillBehaviorStop = true) {
-            var result = GetDoubleAnimation(from , to , setFillBehaviorStop);
+        public static DoubleAnimation
+            GetLeavingScreenAnimation(double from, double to, bool setFillBehaviorStop = true) {
+            var result = GetDoubleAnimation(from, to, setFillBehaviorStop);
             result.Duration = LeavingScreenAnimationDuration;
             return result;
         }

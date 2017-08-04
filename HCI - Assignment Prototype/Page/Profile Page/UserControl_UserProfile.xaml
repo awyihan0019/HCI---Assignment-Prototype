@@ -2,19 +2,21 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Profile_Page"
-             mc:Ignorable="d" >
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
+             mc:Ignorable="d">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
                 Margin="30">
         <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Your Profile</TextBlock>
         <TextBlock FontSize="20" Margin="2 2 2 20" HorizontalAlignment="Left">faster960128@hotmail.com</TextBlock>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-        <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150" Width="150" Margin="15 5 15 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill"/>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
-                Margin="30">
-                <Button HorizontalAlignment="Right" Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Profile" Click="EditProfile_Click"></Button>
+            <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150"
+                   Width="150" Margin="15 5 15 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Margin="30">
+                <Button HorizontalAlignment="Right" Content="{materialDesign:PackIcon Kind=LeadPencil}"
+                        ToolTip="Edit Profile" Click="EditProfile_Click" />
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                     <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Name :</TextBlock>
                     <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Aw Yi Han</TextBlock>
