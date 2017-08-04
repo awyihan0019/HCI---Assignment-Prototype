@@ -204,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
+    <Folder Include="Page\Homepage\MoviePoster\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="dog.jpg" />
