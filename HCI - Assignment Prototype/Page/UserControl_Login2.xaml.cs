@@ -28,7 +28,7 @@ namespace HCI___Assignment_Prototype.Page
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
-            if (PasswordBox.Password == "kow99") {
+            if (PasswordBox.Password == Global.Global.OnlyUser.Password) {
                 DialogBox.Show("Login Successful!", "", "OK");
             }
             else {

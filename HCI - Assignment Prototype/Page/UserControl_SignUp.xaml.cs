@@ -50,7 +50,7 @@ namespace HCI___Assignment_Prototype.Page
                 DialogBox.Show("Create Error" , "Profile Created Failed.\nPassword does not match" , "OK");
             }
             else {
-                if (email != "kowgau99@gmail.com") {
+                if (email != Global.Global.OnlyUser.Email) {
                     Global.Global.Email = email;
                     ProgressDialog.Show("Creating profile . . ." , "" ,  () => {
                         MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
