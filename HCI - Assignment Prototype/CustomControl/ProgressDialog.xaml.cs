@@ -30,6 +30,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             timer.Tick += (sender , args) => {
                 p.Hide();
                 action();
+                timer.Stop();
             };
             timer.Start();
             p.ShowDialog();
