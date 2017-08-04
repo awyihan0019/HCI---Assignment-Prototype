@@ -120,19 +120,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\UserControl_Login.xaml">
+    <Page Include="Page\Login\UserControl_Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\UserControl_Login2.xaml">
+    <Page Include="Page\Login\UserControl_Login2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\UserControl_SF_Verify.xaml">
+    <Page Include="Page\Sign up\UserControl_SF_Verify.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\UserControl_SignUp.xaml">
+    <Page Include="Page\Sign up\UserControl_SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,16 +150,16 @@
     <Compile Include="Page\Profile Page\UserControl_UserProfile.xaml.cs">
       <DependentUpon>UserControl_UserProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\UserControl_Login.xaml.cs">
+    <Compile Include="Page\Login\UserControl_Login.xaml.cs">
       <DependentUpon>UserControl_Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\UserControl_Login2.xaml.cs">
+    <Compile Include="Page\Login\UserControl_Login2.xaml.cs">
       <DependentUpon>UserControl_Login2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\UserControl_SF_Verify.xaml.cs">
+    <Compile Include="Page\Sign up\UserControl_SF_Verify.xaml.cs">
       <DependentUpon>UserControl_SF_Verify.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\UserControl_SignUp.xaml.cs">
+    <Compile Include="Page\Sign up\UserControl_SignUp.xaml.cs">
       <DependentUpon>UserControl_SignUp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -31,7 +31,7 @@ namespace HCI___Assignment_Prototype
             MainFrame = this.Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new UserControl_UserProfile());            
+            Frame.Navigate(new UserControl_Login());            
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
