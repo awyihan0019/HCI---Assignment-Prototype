@@ -29,7 +29,7 @@ namespace HCI___Assignment_Prototype.Page
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e) {
             string email = Textbox_EmailFront.Text + "@" + Textbox_EmailBack.Text;
-            if (email == "kowgau99@gmail.com") {
+            if (email == Global.Global.OnlyUser.Email) {
                 MainWindow.MainFrame.Navigate(new UserControl_Login2());
             }
             else {
