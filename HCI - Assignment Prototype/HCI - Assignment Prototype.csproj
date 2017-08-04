@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\UserControl_SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Page\UserControl_Login.xaml.cs">
@@ -94,6 +98,9 @@
     </Compile>
     <Compile Include="Page\UserControl_Login2.xaml.cs">
       <DependentUpon>UserControl_Login2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\UserControl_SignUp.xaml.cs">
+      <DependentUpon>UserControl_SignUp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
