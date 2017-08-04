@@ -37,7 +37,7 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
             @"MoviePoster\olympusfallen.jpg",
             @"MoviePoster\savingryan.jpg",
             @"MoviePoster\SpidermanHomecoming.jpg",
-            @"MoviePoster\wolfenstein-2-trailer.jpg"
+            @"MoviePoster\wolfenstein2.jpg"
         };
    
         private void Timer_Tick(object sender , EventArgs e) {

@@ -224,19 +224,10 @@
     <Resource Include="dog.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Page\Homepage\wolfenstein-2-trailer.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Page\Homepage\MoviePoster\SpidermanHomecoming.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Page\Homepage\MoviePoster\blackhawkdown.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Page\Homepage\MoviePoster\doom.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Page\Homepage\MoviePoster\bvs.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Page\Homepage\MoviePoster\dunkirk.jpg" />
@@ -248,13 +239,22 @@
     <Resource Include="Page\Homepage\MoviePoster\olympusfallen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Page\Homepage\MoviePoster\jl.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Page\Homepage\MoviePoster\savingryan.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Page\Homepage\MoviePoster\wolfenstein-2-trailer.jpg" />
+    <Resource Include="Page\Homepage\MoviePoster\wolfenstein2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\bvs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\jl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\blackhawkdown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wolfenstein2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
