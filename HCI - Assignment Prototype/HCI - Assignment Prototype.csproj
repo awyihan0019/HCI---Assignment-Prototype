@@ -72,6 +72,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControl\SeatPlace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControl\TextboxWithPencil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,6 +98,9 @@
     </Compile>
     <Compile Include="CustomControl\ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\SeatPlace.xaml.cs">
+      <DependentUpon>SeatPlace.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\TextboxWithPencil.xaml.cs">
       <DependentUpon>TextboxWithPencil.xaml</DependentUpon>
