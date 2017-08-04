@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCI___Assignment_Prototype.CustomControl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +28,16 @@ namespace HCI___Assignment_Prototype.Page.Profile_Page
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            ProgressDialog.Show("Updating profile......", "", () =>
+            {
+                DialogBox.Show("", "Profile successfully updated!", "OK");
+                MainWindow.MainFrame.GoBack();
+            });
         }
 
         private void Cancel_OnClick(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.MainFrame.GoBack();
         }
     }
 }
