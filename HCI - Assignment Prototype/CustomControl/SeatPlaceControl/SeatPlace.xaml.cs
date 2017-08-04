@@ -1,7 +1,8 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using HCI___Assignment_Prototype.CustomControl.SeatPlace;
 
-namespace HCI___Assignment_Prototype.CustomControl {
+namespace HCI___Assignment_Prototype.CustomControl.SeatPlaceControl {
     /// <summary>
     /// Interaction logic for SeatPlace.xaml
     /// </summary>
@@ -23,7 +24,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             int rowNo = g.RowDefinitions.Count;
             for (int i = 0; i < columnNo; i++) {
                 for (int j = 0; j < rowNo; j++) {
-                    var seat = new ToggleButton();
+                    var seat = new SingleSeat();
                     g.Children.Add(seat);
                     Grid.SetColumn(seat,i);
                     Grid.SetRow(seat,j);

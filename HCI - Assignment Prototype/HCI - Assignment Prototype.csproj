@@ -72,7 +72,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomControl\SeatPlace\SeatPlace.xaml">
+    <Page Include="CustomControl\SeatPlaceControl\SeatPlace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControl\SeatPlaceControl\SingleSeat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,8 +103,11 @@
     <Compile Include="CustomControl\ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\SeatPlace\SeatPlace.xaml.cs">
+    <Compile Include="CustomControl\SeatPlaceControl\SeatPlace.xaml.cs">
       <DependentUpon>SeatPlace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\SeatPlaceControl\SingleSeat.xaml.cs">
+      <DependentUpon>SingleSeat.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\TextboxWithPencil.xaml.cs">
       <DependentUpon>TextboxWithPencil.xaml</DependentUpon>
@@ -255,6 +262,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="wolfenstein2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\SeatPlaceControl\Seat_Unoccupied.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\SeatPlaceControl\seat_occupied.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
