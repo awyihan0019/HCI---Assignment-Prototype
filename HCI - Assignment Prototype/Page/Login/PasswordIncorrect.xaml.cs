@@ -32,5 +32,9 @@ namespace HCI___Assignment_Prototype.Page.Login
         private void ForgotYourPassword_OnClick(object sender, RoutedEventArgs e) {
             throw new NotImplementedException();
         }
+
+        private void RetryButton_OnClick(object sender, RoutedEventArgs e) {
+            MainWindow.MainFrame.GoBack();
+        }
     }
 }
