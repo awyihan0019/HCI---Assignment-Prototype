@@ -204,13 +204,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
-    <Folder Include="Page\Homepage\MoviePoster\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="dog.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Page\Homepage\wolfenstein-2-trailer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\815673_Wallpaper2.jpg" />
+    <Resource Include="Page\Homepage\MoviePoster\LawlessUKquadPPP.jpg" />
+    <Resource Include="Page\Homepage\MoviePoster\looper-movie-poster-large.jpg" />
+    <Resource Include="Page\Homepage\MoviePoster\Shelter_Movie_poster.jpg" />
+    <Resource Include="Page\Homepage\MoviePoster\the-chamber-2017-movie-poster.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
