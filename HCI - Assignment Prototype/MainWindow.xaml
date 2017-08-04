@@ -38,7 +38,10 @@
     </Window.Resources>
     <materialDesign:DrawerHost x:Name="DrawerHost">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
             <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}"></Frame>
+            <materialDesign:Snackbar x:Name="snackbar"></materialDesign:Snackbar>
+        </Grid>
     </ScrollViewer>
     </materialDesign:DrawerHost>
 </Window>

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page;
+using MaterialDesignThemes.Wpf;
 
 namespace HCI___Assignment_Prototype
 {
@@ -22,12 +23,14 @@ namespace HCI___Assignment_Prototype
     /// </summary>
     public partial class MainWindow : Window {
         public static Frame MainFrame;
+        public static Snackbar Snackbar;
         public MainWindow()
         {
             InitializeComponent();
             MainFrame = this.Frame;
-            ProgressDialog.Show("Loading . . .","Signing out . . .", (() => { DialogBox.Show("HEY", "yo"); }));
-            Frame.Navigate(new UserControl_Login());
+            Snackbar = this.snackbar;
+            Snackbar.MessageQueue = new SnackbarMessageQueue();
+            Frame.Navigate(new UserControl_Login());            
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
