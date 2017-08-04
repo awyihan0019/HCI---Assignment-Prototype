@@ -24,5 +24,13 @@ namespace HCI___Assignment_Prototype.Page
         {
             InitializeComponent();
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
+
+        private void CreateProfile_Click(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
     }
 }
