@@ -5,17 +5,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page"
-             mc:Ignorable="d" >
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="300"
+             mc:Ignorable="d" Height="500">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="400"
                 Margin="30">
         <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Sign up</TextBlock>
-        <TextBlock FontSize="20" HorizontalAlignment="Left">Enter your email :</TextBlock>
+        <TextBlock FontSize="20" Margin="5 2 5 10" HorizontalAlignment="Left">Email :</TextBlock>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="" Width="180"
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="0 2 0 10" materialDesign:HintAssist.Hint="" Width="180"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBlock FontSize="30">@</TextBlock>
-            <TextBox Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="" Width="100"
+            <TextBlock FontSize="30" Margin="0 2 0 10">@</TextBlock>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="0 2 0 10" materialDesign:HintAssist.Hint="" Width="100"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </StackPanel>
+        <TextBlock FontSize="20" Margin="5 2 5 10" HorizontalAlignment="Left">Password :</TextBlock>
+        <TextBox Grid.Row="4" Margin="5 2 5 10" Grid.Column="1" materialDesign:HintAssist.Hint=""
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <TextBlock FontSize="20" Margin="5 2 5 10" HorizontalAlignment="Left">Reenter password :</TextBlock>
+        <TextBox Grid.Row="4" Margin="5 2 5 10" Grid.Column="1" materialDesign:HintAssist.Hint=""
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="Cancel" Margin="0 15 20 0" Click="CancelButton_Click" Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" HorizontalAlignment="Right">CANCEL</Button>
+            <Button x:Name="Login" Margin="20 15 0 0" Click="CreateProfile_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Width="150"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Center">CRAETE PROFILE</Button>
+
+        </StackPanel>
     </StackPanel>
+    
 </UserControl>
