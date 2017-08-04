@@ -119,5 +119,8 @@
     <Folder Include="Global\" />
     <Folder Include="Interface\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dog.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
