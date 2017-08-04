@@ -4,11 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HCI___Assignment_Prototype"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" WindowState="Maximized">
-    <ScrollViewer>
-        <Frame x:Name="Frame">
+    <Window.Resources>
+        <ControlTemplate TargetType="Frame" x:Key="ControlTemplateForNavigator">
+            <DockPanel Margin="0" LastChildFill="True">
+                <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                          Mode="PrimaryMid" DockPanel.Dock="Top">
+                    <DockPanel>
+                        <Button  x:Name="MenuToggleButton"  Foreground="White" Style="{StaticResource MaterialDesignFlatButton}" DockPanel.Dock="Left"
+                                 Command="{x:Static NavigationCommands.BrowseBack}"
+                                 IsEnabled="{TemplateBinding CanGoBack}"
+                        >
 
-        </Frame>
+                            <materialDesign:PackIcon Kind="ArrowLeftBold"  Height="30" Width="30"/>
+                        </Button>
+                        <Button Foreground="White" Style="{StaticResource MaterialDesignFlatButton}" DockPanel.Dock="Left"
+                                Command="{x:Static NavigationCommands.BrowseForward}"
+                                IsEnabled="{TemplateBinding CanGoForward}"
+                        >
+                            <materialDesign:PackIcon Kind="ArrowRightBold"  Height="30" Width="30"/>
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" DockPanel.Dock="Right" Click="ExtraMenuButton_OnClick">
+                            <materialDesign:PackIcon Height="25" Width="25" Kind="DotsVertical" />
+                        </Button>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Online Movie Ticket Booking System (OMTiBoS)</TextBlock>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+                <ContentPresenter />
+            </DockPanel>
+        </ControlTemplate>
+    </Window.Resources>
+    <materialDesign:DrawerHost x:Name="DrawerHost">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}"></Frame>
     </ScrollViewer>
+    </materialDesign:DrawerHost>
 </Window>

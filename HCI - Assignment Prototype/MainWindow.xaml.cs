@@ -29,5 +29,9 @@ namespace HCI___Assignment_Prototype
             ProgressDialog.Show("Loading . . .","Signing out . . .");
             Frame.Navigate(new UserControl_Login());
         }
+
+        private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
+            DrawerHost.IsRightDrawerOpen = true;
+        }
     }
 }
