@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.Page.Login;
 
 namespace HCI___Assignment_Prototype.Page
 {
@@ -32,7 +33,7 @@ namespace HCI___Assignment_Prototype.Page
                 MainWindow.MainFrame.Navigate(new UserControl_Login2());
             }
             else {
-                DialogBox.Show("Profile create failed", "Profile not created\nEmail already used!!", "OK");
+                MainWindow.MainFrame.Navigate(new EmailDoesNotExist());
             }
         }
 
