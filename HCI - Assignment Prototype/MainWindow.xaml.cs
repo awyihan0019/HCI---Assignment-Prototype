@@ -20,11 +20,12 @@ namespace HCI___Assignment_Prototype
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {
+    public partial class MainWindow : Window {
+        public static Frame MainFrame;
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame = this.Frame;
             Frame.Navigate(new UserControl_Login());
         }
     }

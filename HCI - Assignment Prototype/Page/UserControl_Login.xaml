@@ -13,10 +13,10 @@
             <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Login</TextBlock>
             <TextBlock FontSize="20" HorizontalAlignment="Left">Enter your email :</TextBlock>
             <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBox Margin="5" VerticalAlignment="Center" FontSize="20" materialDesign:HintAssist.Hint="example" Width="180"
+                <TextBox x:Name="Textbox_EmailFront" Margin="5" VerticalAlignment="Center" FontSize="20" materialDesign:HintAssist.Hint="example" Width="180"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <TextBlock VerticalAlignment="Bottom" Margin="0,0,0,10" FontSize="20">@</TextBlock>
-                <TextBox FontSize="20" Margin="5" VerticalAlignment="Center" materialDesign:HintAssist.Hint="mail.com" Width="100"
+                <TextBox x:Name="Textbox_EmailBack" FontSize="20" Margin="5" VerticalAlignment="Center" materialDesign:HintAssist.Hint="mail.com" Width="100"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             </DockPanel>
             <TextBlock FontSize="12" HorizontalAlignment="Left" TextDecorations="Underline">Forgot your password?</TextBlock>
