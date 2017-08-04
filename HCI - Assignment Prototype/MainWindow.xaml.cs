@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.CustomControl;
 
 namespace HCI___Assignment_Prototype
 {
@@ -23,6 +24,7 @@ namespace HCI___Assignment_Prototype
         public MainWindow()
         {
             InitializeComponent();
+            DialogBox.Show("hey", "yo");
         }
     }
 }

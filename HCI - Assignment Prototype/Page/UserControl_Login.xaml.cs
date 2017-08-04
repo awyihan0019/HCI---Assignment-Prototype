@@ -24,5 +24,9 @@ namespace HCI___Assignment_Prototype.Page
         {
             InitializeComponent();
         }
+
+        private void SummitButton_Click(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
     }
 }
