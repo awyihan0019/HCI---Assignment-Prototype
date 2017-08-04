@@ -99,6 +99,7 @@
       <DependentUpon>TextboxWithPencil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Global\Global.cs" />
+    <Compile Include="Global\SampleData.cs" />
     <Compile Include="Global\User.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -219,11 +220,34 @@
     <Resource Include="Page\Homepage\wolfenstein-2-trailer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Page\Homepage\MoviePoster\815673_Wallpaper2.jpg" />
-    <Resource Include="Page\Homepage\MoviePoster\LawlessUKquadPPP.jpg" />
-    <Resource Include="Page\Homepage\MoviePoster\looper-movie-poster-large.jpg" />
-    <Resource Include="Page\Homepage\MoviePoster\Shelter_Movie_poster.jpg" />
-    <Resource Include="Page\Homepage\MoviePoster\the-chamber-2017-movie-poster.jpg" />
+    <Resource Include="Page\Homepage\MoviePoster\SpidermanHomecoming.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\blackhawkdown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\doom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\bvs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\dunkirk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\londonfallen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\olympusfallen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\jl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\savingryan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\Homepage\MoviePoster\wolfenstein-2-trailer.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
