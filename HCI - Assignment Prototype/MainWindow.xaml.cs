@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page;
 using MaterialDesignThemes.Wpf;
+using HCI___Assignment_Prototype.Page.Profile_Page;
 
 namespace HCI___Assignment_Prototype
 {
@@ -30,7 +31,7 @@ namespace HCI___Assignment_Prototype
             MainFrame = this.Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new UserControl_Login());            
+            Frame.Navigate(new UserControl_UserProfile());            
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {

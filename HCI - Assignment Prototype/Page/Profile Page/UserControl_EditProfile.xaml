@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.Profile_Page.UserControl_EditProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Profile_Page"
+             xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             mc:Ignorable="d" Width="500">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+        <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Edit Your Profile</TextBlock>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Orientation="Horizontal" Margin="5">
+            <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150" Width="150" Margin="15 5 5 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill"/>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5" Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture"></Button>
+        </StackPanel>
+        <customcontrol:TextboxWithPencil Label="Password" Text="*****"></customcontrol:TextboxWithPencil>
+        <customcontrol:TextboxWithPencil Label="Name" Text="阿狗"></customcontrol:TextboxWithPencil>
+        <customcontrol:TextboxWithPencil Label="Phone" Text="012-478****"></customcontrol:TextboxWithPencil>
+        <customcontrol:TextboxWithPencil Label="Adress" Text="99, Jalan Dog Taman Dog......"></customcontrol:TextboxWithPencil>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100" Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">CANCEL</Button>
+            <Button x:Name="Login" Click="Save_Click" Width="100" Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">SAVE</Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

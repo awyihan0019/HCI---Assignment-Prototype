@@ -14,7 +14,7 @@
         <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150" Width="150" Margin="15 5 15 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill"/>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
                 Margin="30">
-                <Button HorizontalAlignment="Right" Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Profile"></Button>
+                <Button HorizontalAlignment="Right" Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Profile" Click="EditProfile_Click"></Button>
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                     <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Name :</TextBlock>
                     <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Aw Yi Han</TextBlock>

@@ -104,6 +104,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\Profile Page\UserControl_EditProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\Profile Page\UserControl_UserProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,6 +135,9 @@
     </Compile>
     <Compile Include="Page\Login\PasswordIncorrect.xaml.cs">
       <DependentUpon>PasswordIncorrect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Profile Page\UserControl_EditProfile.xaml.cs">
+      <DependentUpon>UserControl_EditProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Profile Page\UserControl_UserProfile.xaml.cs">
       <DependentUpon>UserControl_UserProfile.xaml</DependentUpon>

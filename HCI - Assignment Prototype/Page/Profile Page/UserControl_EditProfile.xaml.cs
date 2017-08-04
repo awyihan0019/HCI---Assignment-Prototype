@@ -16,18 +16,23 @@ using System.Windows.Shapes;
 namespace HCI___Assignment_Prototype.Page.Profile_Page
 {
     /// <summary>
-    /// Interaction logic for UserControl_UserProfile.xaml
+    /// Interaction logic for UserControl_EditProfile.xaml
     /// </summary>
-    public partial class UserControl_UserProfile : UserControl
+    public partial class UserControl_EditProfile : UserControl
     {
-        public UserControl_UserProfile()
+        public UserControl_EditProfile()
         {
             InitializeComponent();
         }
 
-        private void EditProfile_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.MainFrame.Navigate(new UserControl_EditProfile());
+
+        }
+
+        private void Cancel_OnClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
