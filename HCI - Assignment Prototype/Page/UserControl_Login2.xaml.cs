@@ -24,5 +24,13 @@ namespace HCI___Assignment_Prototype.Page
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
+
+        private void Cancel_OnClick(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HCI___Assignment_Prototype"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" WindowState="Maximized">
+    <ScrollViewer>
+        <Frame x:Name="Frame">
+
+        </Frame>
+    </ScrollViewer>
 </Window>
