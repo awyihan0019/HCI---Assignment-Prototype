@@ -54,8 +54,7 @@ namespace HCI___Assignment_Prototype.Page
                     Global.Global.Email = email;
                     ProgressDialog.Show("Creating profile . . ." , "" ,  () => {
                         MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
-                    });
-                    
+                    });                    
                 }
                 else {
                     DialogBox.Show("Email already used" , "Profile Not Created.\nEmail already used !!!" , "OK");
