@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCI___Assignment_Prototype.CustomControl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,8 +32,13 @@ namespace HCI___Assignment_Prototype.Page
                 MainWindow.MainFrame.Navigate(new UserControl_Login2());
             }
             else {
-                
+                DialogBox.Show("Profile create failed", "Profile not created\nEmail already used!!", "OK");
             }
+        }
+
+        private void Textbox_EmailFront_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

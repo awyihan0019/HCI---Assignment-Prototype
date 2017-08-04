@@ -14,7 +14,7 @@
             <TextBlock FontSize="20" HorizontalAlignment="Left">Enter your email :</TextBlock>
             <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBox x:Name="Textbox_EmailFront" Margin="5" VerticalAlignment="Center" FontSize="20" materialDesign:HintAssist.Hint="example" Width="180"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="Textbox_EmailFront_TextChanged" />
                 <TextBlock VerticalAlignment="Bottom" Margin="0,0,0,10" FontSize="20">@</TextBlock>
                 <TextBox x:Name="Textbox_EmailBack" FontSize="20" Margin="5" VerticalAlignment="Center" materialDesign:HintAssist.Hint="mail.com" Width="100"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />

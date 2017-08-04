@@ -27,7 +27,14 @@ namespace HCI___Assignment_Prototype.Page
 
         private void CreateProfile_Click(object sender, RoutedEventArgs e)
         {
+            String email = Textbox_EmailFront.Text
+            if (email != "kowgau99@gmail.com")
+            {
 
+            }
+            else{
+                
+            }
         }
     }
 }
