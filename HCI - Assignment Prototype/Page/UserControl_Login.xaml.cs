@@ -26,7 +26,13 @@ namespace HCI___Assignment_Prototype.Page
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e) {
-            throw new NotImplementedException();
+            string email = Textbox_EmailFront.Text + "@" + Textbox_EmailBack.Text;
+            if (email == "kowgau99@gmail.com") {
+                MainWindow.MainFrame.Navigate(new UserControl_Login2());
+            }
+            else {
+                
+            }
         }
     }
 }
