@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Login;
+using HCI___Assignment_Prototype.Page.Homepage;
 
 namespace HCI___Assignment_Prototype.Page
 {
@@ -33,6 +34,7 @@ namespace HCI___Assignment_Prototype.Page
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
             if (PasswordBox.Password == Global.Global.OnlyUser.Password) {
                 DialogBox.Show("Login Successful!", "", "OK");
+                MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());
             }
             else {
                 MainWindow.MainFrame.Navigate(new PasswordIncorrect());
