@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace HCI___Assignment_Prototype.Page.Homepage
 {
@@ -20,9 +21,26 @@ namespace HCI___Assignment_Prototype.Page.Homepage
     /// </summary>
     public partial class Homepage_BeforeLogin : UserControl
     {
+        private List<string> posterListSource = new List<string>()
+        {
+            @"MoviePoster\815673_Wallpaper2.jpg",
+            @"MoviePoster\LawlessUKquadPPP.jpg",
+            @"MoviePoster\looper-movie-poster-large.jpg",
+            @"MoviePoster\Shelter_Movie_poster.jpg",
+            @"MoviePoster\the-chamber-2017-movie-poster.jpg",
+        };
         public Homepage_BeforeLogin()
         {
-            InitializeComponent();
+            InitializeComponent();           
+            var timer = new DispatcherTimer(){Interval = TimeSpan.FromSeconds(2)};
+            timer.Start();
+            timer.Tick += Timer_Tick;
+        }
+
+        private void Timer_Tick(object sender , EventArgs e) {
+            var rand = new Random();
+            int nextNumber = rand.Next(posterListSource.Count - 1);
+            Poster.Source = new BitmapImage(new Uri(posterListSource[nextNumber], UriKind.Relative)); 
         }
 
         private void LogInButton_OnClick(object sender, RoutedEventArgs e) {

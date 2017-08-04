@@ -13,7 +13,7 @@
                 <Button Width="100" Style="{StaticResource MaterialDesignRaisedAccentButton}" Click="LogInButton_OnClick">LOG IN</Button>
             </StackPanel>
             <StackPanel>
-                <Image  Margin="20, 20, 20, 20" Width="800"  Source="/Page/Homepage/wolfenstein-2-trailer.jpg" Stretch="Fill"/>
+                <Image x:Name="Poster"  Margin="20, 20, 20, 20" Width="800"  Source="/Page/Homepage/wolfenstein-2-trailer.jpg" Stretch="Fill"/>
                 <StackPanel>
                     <StackPanel.Resources>
                         <Style TargetType="Label">
