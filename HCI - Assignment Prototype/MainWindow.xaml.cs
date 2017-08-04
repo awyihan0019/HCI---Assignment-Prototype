@@ -26,7 +26,7 @@ namespace HCI___Assignment_Prototype
         {
             InitializeComponent();
             MainFrame = this.Frame;
-            ProgressDialog.Show("Loading . . .","Signing out . . .");
+            ProgressDialog.Show("Loading . . .","Signing out . . .", (() => { DialogBox.Show("HEY", "yo"); }));
             Frame.Navigate(new UserControl_Login());
         }
 

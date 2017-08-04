@@ -20,37 +20,26 @@ namespace HCI___Assignment_Prototype.CustomControl {
     public partial class ProgressDialog : Window {
         public ProgressDialog() {
             InitializeComponent();
-        }      
-
-        public static void Show(string title , string message) {
+        }
+        
+        public static void Show(string title , string message, Action action) {
             var p = new ProgressDialog();
             p.SetContent(title , message);
             p.DialogHost.IsOpen = true;
-            var timer = new DispatcherTimer {Interval = TimeSpan.FromSeconds(3)};
-            timer.Tick += (sender, args) => {
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+            timer.Tick += (sender , args) => {
                 p.Hide();
+                action();
             };
             timer.Start();
-            p.ShowDialog();            
+            p.ShowDialog();
         }
+        
 
-        private void SetContent(string title , string message) {            
+        private void SetContent(string title , string message) {
             TextBlock_Title.Text = title;
-            TextBlock_Message.Text = message;                        
-        }
-
-        private void SampleCode() {
-            ProgressDialog.Show("Loading" , "message");
-            switch (DialogBox.Result) {
-                case DialogBox.ResultEnum.LeftButtonClicked:
-                    MessageBox.Show("You clicked left button");
-                    break;
-                case DialogBox.ResultEnum.RightButtonClicked:
-                    MessageBox.Show("you clicked right button");
-                    break;
-
-            }
-        }
+            TextBlock_Message.Text = message;
+        }               
     }
 }
 
