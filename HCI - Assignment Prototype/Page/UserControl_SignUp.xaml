@@ -11,11 +11,9 @@
         <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Sign up</TextBlock>
         <TextBlock FontSize="20" Margin="5 2 5 10" HorizontalAlignment="Left">Email :</TextBlock>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox x:Name="Textbox_EmailFront" Margin="5" VerticalAlignment="Center" FontSize="20" materialDesign:HintAssist.Hint="example" Width="180"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox x:Name="Textbox_EmailFront" Margin="5" VerticalAlignment="Center" FontSize="20" materialDesign:HintAssist.Hint="example" Width="180"/>
             <TextBlock VerticalAlignment="Bottom" Margin="0,0,0,10" FontSize="20">@</TextBlock>
-            <TextBox x:Name="Textbox_EmailBack" FontSize="20" Margin="5" VerticalAlignment="Center" materialDesign:HintAssist.Hint="mail.com" Width="100"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox x:Name="Textbox_EmailBack" FontSize="20" Margin="5" VerticalAlignment="Center" materialDesign:HintAssist.Hint="mail.com" Width="100"/>
         </StackPanel>
         <TextBlock FontSize="20" Margin="5 2 5 10" HorizontalAlignment="Left">Password :</TextBlock>
         <PasswordBox x:Name="Passwordbox_Password" Grid.Row="4" Grid.Column="3" Margin="5 2 5 10" materialDesign:HintAssist.Hint="Password" />

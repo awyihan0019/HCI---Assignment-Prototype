@@ -8,10 +8,10 @@
              mc:Ignorable="d" >
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300"
                 Margin="30">
-        <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Welcome back</TextBlock>
+        <TextBlock x:Name="SentenceOne" FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Welcome back</TextBlock>
         <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" Height="200" Width="200" Margin="2 5 2 15" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill"/>
         <TextBlock FontSize="20" HorizontalAlignment="Left">Enter your password:</TextBlock>
-        <PasswordBox x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password"/>
+        <PasswordBox KeyUp="PasswordBox_OnKeyUp" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="Cancel" Margin="0 15 20 0" Click="Cancel_OnClick" Style="{StaticResource MaterialDesignFlatButton}"  Width="100"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">Cancel</Button>
