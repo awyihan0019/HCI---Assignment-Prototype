@@ -90,6 +90,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\Login\PasswordIncorrect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\UserControl_Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +118,9 @@
   <ItemGroup>
     <Compile Include="Page\Login\EmailDoesNotExist.xaml.cs">
       <DependentUpon>EmailDoesNotExist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Login\PasswordIncorrect.xaml.cs">
+      <DependentUpon>PasswordIncorrect.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\UserControl_Login.xaml.cs">
       <DependentUpon>UserControl_Login.xaml</DependentUpon>

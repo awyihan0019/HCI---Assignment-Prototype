@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Page.Login;
 
 namespace HCI___Assignment_Prototype.Page
 {
@@ -31,7 +32,7 @@ namespace HCI___Assignment_Prototype.Page
                 DialogBox.Show("Login Successful!", "", "OK");
             }
             else {
-                
+                MainWindow.MainFrame.Navigate(new PasswordIncorrect());
             }
         }
 
