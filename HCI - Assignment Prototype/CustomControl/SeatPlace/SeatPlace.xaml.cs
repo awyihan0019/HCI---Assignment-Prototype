@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace HCI___Assignment_Prototype.CustomControl {
     /// <summary>
@@ -25,7 +13,22 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         private void BuildSeats() {
-            throw new NotImplementedException();
+            BuildSeat(LeftArea);
+            BuildSeat(MiddleArea);
+            BuildSeat(RightArea);
+        }
+
+        private void BuildSeat(Grid g) {
+            int columnNo = g.ColumnDefinitions.Count;
+            int rowNo = g.RowDefinitions.Count;
+            for (int i = 0; i < columnNo; i++) {
+                for (int j = 0; j < rowNo; j++) {
+                    var seat = new ToggleButton();
+                    g.Children.Add(seat);
+                    Grid.SetColumn(seat,i);
+                    Grid.SetRow(seat,j);
+                }
+            }
         }
 
         private void InitializeAreaGrid() {

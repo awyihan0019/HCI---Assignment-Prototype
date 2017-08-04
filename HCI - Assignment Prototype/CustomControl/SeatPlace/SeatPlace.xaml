@@ -6,9 +6,16 @@
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid>
+        <Rectangle Height="20" Fill="OrangeRed" />
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">S C R E E N</TextBlock>
+        </Grid>
+        <StackPanel Orientation="Horizontal"  >
         <Grid x:Name="LeftArea" Margin="10"></Grid>
         <Grid x:Name="MiddleArea" Margin="10"></Grid>
         <Grid x:Name="RightArea" Margin="10"></Grid>
     </StackPanel>
+    </StackPanel>
 </UserControl>
+

@@ -72,7 +72,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomControl\SeatPlace.xaml">
+    <Page Include="CustomControl\SeatPlace\SeatPlace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,7 +99,7 @@
     <Compile Include="CustomControl\ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\SeatPlace.xaml.cs">
+    <Compile Include="CustomControl\SeatPlace\SeatPlace.xaml.cs">
       <DependentUpon>SeatPlace.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\TextboxWithPencil.xaml.cs">
