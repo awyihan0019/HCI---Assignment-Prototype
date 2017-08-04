@@ -28,11 +28,16 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
 
         private readonly List<string> posterListSource = new List<string>
         {
-            @"MoviePoster\815673_Wallpaper2.jpg",
-            @"MoviePoster\LawlessUKquadPPP.jpg",
-            @"MoviePoster\looper-movie-poster-large.jpg",
-            @"MoviePoster\Shelter_Movie_poster.jpg",
-            @"MoviePoster\the-chamber-2017-movie-poster.jpg"
+            @"MoviePoster\blackhawkdown.jpg",
+            @"MoviePoster\bvs.jpg",
+            @"MoviePoster\doom.jpg",
+            @"MoviePoster\dunkirk.jpg",
+            @"MoviePoster\jl.jpg",
+            @"MoviePoster\londonfallen.jpg",
+            @"MoviePoster\olympusfallen.jpg",
+            @"MoviePoster\savingryan.jpg",
+            @"MoviePoster\SpidermanHomecoming.jpg",
+            @"MoviePoster\wolfenstein-2-trailer.jpg"
         };
    
         private void Timer_Tick(object sender , EventArgs e) {
