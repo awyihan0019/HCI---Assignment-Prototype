@@ -13,24 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HCI___Assignment_Prototype.Page
+namespace HCI___Assignment_Prototype.Page.Login
 {
     /// <summary>
-    /// Interaction logic for UserControl_SignUp.xaml
+    /// Interaction logic for EmailDoesNotExist.xaml
     /// </summary>
-    public partial class UserControl_SignUp : UserControl
+    public partial class EmailDoesNotExist : UserControl
     {
-        public UserControl_SignUp()
+        public EmailDoesNotExist()
         {
             InitializeComponent();
         }
 
-        private void CreateProfile_Click(object sender, RoutedEventArgs e) {            
-         
+        private void CreateNewAccount_OnClick(object sender, RoutedEventArgs e) {
+            MainWindow.MainFrame.Navigate(new UserControl_SignUp());
         }
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e) {
-            throw new NotImplementedException();
+        private void RetryButton_OnClick(object sender, RoutedEventArgs e) {
+            MainWindow.MainFrame.GoBack();
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.CustomControl;
 
 namespace HCI___Assignment_Prototype.Page
 {
@@ -26,11 +27,16 @@ namespace HCI___Assignment_Prototype.Page
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
-            throw new NotImplementedException();
+            if (PasswordBox.Password == "kow99") {
+                DialogBox.Show("Login Successful!", "", "OK");
+            }
+            else {
+                
+            }
         }
 
         private void Cancel_OnClick(object sender, RoutedEventArgs e) {
-            throw new NotImplementedException();
+            MainWindow.MainFrame.GoBack();
         }
     }
 }

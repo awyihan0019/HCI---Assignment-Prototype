@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.Login.EmailDoesNotExist"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Login"
+             mc:Ignorable="d">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}">Email does not exist!</TextBlock>
+        <TextBlock Margin="0 0 12 0" HorizontalAlignment="Left">
+            <Hyperlink Click="CreateNewAccount_OnClick">Create new account</Hyperlink>
+        </TextBlock>
+        <Button Click="RetryButton_OnClick" Width="100" Margin="10">RETRY</Button>
+    </StackPanel>
+</UserControl>
