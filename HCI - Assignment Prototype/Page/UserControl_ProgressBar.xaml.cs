@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace HCI___Assignment_Prototype.Page
 {
     /// <summary>
-    /// Interaction logic for UserControl_SignUp.xaml
+    /// Interaction logic for UserControl_ProgressBar.xaml
     /// </summary>
-    public partial class UserControl_SignUp : UserControl
+    public partial class UserControl_ProgressBar : UserControl
     {
-        public UserControl_SignUp()
+        public UserControl_ProgressBar()
         {
             InitializeComponent();
-        }
-
-        private void CreateProfile_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
