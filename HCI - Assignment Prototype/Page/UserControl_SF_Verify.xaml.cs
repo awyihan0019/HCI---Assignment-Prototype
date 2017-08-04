@@ -24,16 +24,21 @@ namespace HCI___Assignment_Prototype.Page
         public UserControl_SF_Verify()
         {
             InitializeComponent();
+            SecondSentence.Text += " " + Global.Global.Email;
         }
 
         private void Resend_Click(object sender, RoutedEventArgs e)
         {
-            DialogBox.Show("Resend verify email", "The verify email already resend.", "OK");
+            MainWindow.Snackbar.MessageQueue.Enqueue("Verification mail resent.");
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-
+            if (VerificationCode.Text != "1234") {
+                DialogBox.Show("Error!", "Verification code is incorrect.", "RETRY");
+            }
+            else
+            ProgressDialog.Show("Loading . . .", "Going to homepage . . .", () => {});
         }
     }
 }

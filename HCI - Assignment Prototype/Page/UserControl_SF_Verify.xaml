@@ -9,7 +9,7 @@
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
                 Margin="30">
         <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Profile successfully created.</TextBlock>
-        <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">The verify email already send to xxxxx@xxx.com</TextBlock>
+        <TextBlock x:Name="SecondSentence" FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">The verify email already send to</TextBlock>
         <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Please go to your email to verify your profile.</TextBlock>
         <DockPanel VerticalAlignment="Center" Width="600" HorizontalAlignment="Center"
                 Margin="30">
@@ -20,8 +20,7 @@
         <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Enter the verification code in your email :</TextBlock>
         <DockPanel VerticalAlignment="Center" Width="600" HorizontalAlignment="Center"
                 Margin="30">
-        <TextBox x:Name="VerificationCode" Margin="5 2 5 10" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" materialDesign:HintAssist.Hint="code" Width="250"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <TextBox x:Name="VerificationCode" Margin="5 2 5 10" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" materialDesign:HintAssist.Hint="XXXXX" Width="250"/>
             <Button x:Name="SUBMIT" Margin="5 2 5 10" Click="Submit_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Width="150"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">SUBMIT</Button>
         </DockPanel>
