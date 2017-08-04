@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Login;
+using HCI___Assignment_Prototype.Page.Homepage;
 
 namespace HCI___Assignment_Prototype.Page {
     /// <summary>
@@ -17,8 +18,13 @@ namespace HCI___Assignment_Prototype.Page {
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
-            if (PasswordBox.Password == Global.Global.OnlyUser.Password) DialogBox.Show("Login Successful!", "", "OK");
-            else MainWindow.MainFrame.Navigate(new PasswordIncorrect());
+            if (PasswordBox.Password == Global.Global.OnlyUser.Password) {
+                DialogBox.Show("Login Successful!", "", "OK");
+                MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());
+            }
+            else {
+                MainWindow.MainFrame.Navigate(new PasswordIncorrect());
+            }
         }
 
         private void Cancel_OnClick(object sender, RoutedEventArgs e) {

@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Profile_Page"
              mc:Ignorable="d">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
                 Margin="30">
         <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Your Profile</TextBlock>
         <TextBlock FontSize="20" Margin="2 2 2 20" HorizontalAlignment="Left">faster960128@hotmail.com</TextBlock>
