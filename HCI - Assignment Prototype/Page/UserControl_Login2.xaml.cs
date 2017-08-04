@@ -25,6 +25,9 @@ namespace HCI___Assignment_Prototype.Page
         public UserControl_Login2()
         {
             InitializeComponent();
+            SentenceOne.Text += " " + Global.Global.OnlyUser.Username + "!";
+            PasswordBox.Focus();
+            Keyboard.Focus(PasswordBox);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
@@ -38,6 +41,12 @@ namespace HCI___Assignment_Prototype.Page
 
         private void Cancel_OnClick(object sender, RoutedEventArgs e) {
             MainWindow.MainFrame.GoBack();
+        }
+
+        private void PasswordBox_OnKeyUp(object sender, KeyEventArgs e) {
+            if (e.Key == Key.Enter) {
+                LoginButton_Click(null,null);
+            }
         }
     }
 }

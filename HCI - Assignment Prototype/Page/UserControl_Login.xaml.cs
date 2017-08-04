@@ -41,5 +41,11 @@ namespace HCI___Assignment_Prototype.Page
         {
 
         }
+
+        private void Textbox_EmailBack_OnKeyUp(object sender, KeyEventArgs e) {
+            if (e.Key == Key.Enter) {
+                SubmitButton_Click(null,null);
+            }
+        }
     }
 }

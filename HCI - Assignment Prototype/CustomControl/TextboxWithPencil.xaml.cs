@@ -92,7 +92,6 @@ namespace HCI___Assignment_Prototype.CustomControl {
             d.TextBox.Text = newValue;
             d.TextBlock.Text = newValue;
         }
-
         #endregion
     }
 }
