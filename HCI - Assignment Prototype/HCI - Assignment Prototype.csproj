@@ -82,6 +82,7 @@
     <Compile Include="CustomControl\ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Global\Global.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -99,10 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page\UserControl_Login2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Page\UserControl_ProgressBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,9 +124,6 @@
     </Compile>
     <Compile Include="Page\UserControl_Login2.xaml.cs">
       <DependentUpon>UserControl_Login2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Page\UserControl_ProgressBar.xaml.cs">
-      <DependentUpon>UserControl_ProgressBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\UserControl_SF_Verify.xaml.cs">
       <DependentUpon>UserControl_SF_Verify.xaml</DependentUpon>
@@ -164,7 +158,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Global\" />
     <Folder Include="Interface\" />
   </ItemGroup>
   <ItemGroup>
