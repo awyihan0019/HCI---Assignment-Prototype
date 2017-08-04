@@ -30,5 +30,10 @@ namespace HCI___Assignment_Prototype.Page
         {
             DialogBox.Show("Resend verify email", "The verify email already resend.", "OK");
         }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
