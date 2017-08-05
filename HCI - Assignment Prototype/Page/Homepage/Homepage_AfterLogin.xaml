@@ -25,48 +25,43 @@
                         <materialDesign:PackIcon Kind="Microphone" Opacity=".56" Margin="8 0 0 0" />
                     </Button>
                 </Grid>
-
-                <materialDesign:PopupBox Margin="16,0,16,0" StaysOpen="True" HorizontalAlignment="Right" >
-                    <Grid Width="300" Margin="8,8,8,8">
-                        <Grid.Resources>                            
-                            <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
-                                <Setter Property="materialDesign:HintAssist.IsFloating" Value="True"/>
-                                <Setter Property="Margin" Value="8,8,8,8"/>
-                            </Style>
-                        </Grid.Resources>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="8,8,8,16">OPTIONS</TextBlock>
-                        <TextBox Grid.Column="0" Grid.Row="1" materialDesign:HintAssist.Hint="Setting 1" Text="200"/>
-                        <TextBox Grid.Column="0" Grid.Row="2" materialDesign:HintAssist.Hint="Setting 2" Text="400"/>
-                        <TextBox Grid.Column="0" Grid.Row="3" materialDesign:HintAssist.Hint="Setting 3" Text="600"/>
-                        <CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" />
-                        <CheckBox Grid.Column="1" Grid.Row="2" IsChecked="True" VerticalAlignment="Bottom" />
-                        <CheckBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" />
-                        <ComboBox Grid.Column="0" Grid.Row="4" materialDesign:HintAssist.Hint="Setting 4" materialDesign:HintAssist.IsFloating="True"
-                                  MaxDropDownHeight="200"
-                                  Margin="8 8 8 8">
-                            <ComboBoxItem>25%</ComboBoxItem>
-                            <ComboBoxItem>50%</ComboBoxItem>
-                            <ComboBoxItem>75%</ComboBoxItem>
-                            <ComboBoxItem>100%</ComboBoxItem>
-                            <ComboBoxItem>150%</ComboBoxItem>
-                            <ComboBoxItem>200%</ComboBoxItem>
-                            <ComboBoxItem>250%</ComboBoxItem>
-                            <ComboBoxItem>501%</ComboBoxItem>
-                        </ComboBox>
-                    </Grid>
-
-                </materialDesign:PopupBox>
+                <StackPanel HorizontalAlignment="Right">
+                    <ToggleButton x:Name="button">
+                        <ToggleButton.Template>
+                            <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                <StackPanel Orientation="Horizontal">
+                                     <Button x:Name="Cancel"
+                    Style="{StaticResource MaterialDesignFlatButton}" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                                        阿狗
+                                    </Button>
+                                    <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="30"
+                   Width="30" Margin="0 5 5 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
+                                </StackPanel>
+                            </ControlTemplate>
+                        </ToggleButton.Template>
+                    </ToggleButton>
+                    <Popup IsOpen="{Binding IsChecked, ElementName=button}" StaysOpen="False">
+                        <StackPanel  HorizontalAlignment="Center" Width="134" Background="White">
+                            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Margin="0 12 8 0" Width="125" HorizontalAlignment="Center" Click="ViewProfile"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton">
+                                Your Profile
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Margin="0 12 8 0" Width="125" HorizontalAlignment="Center"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton">
+                                Check Booking
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Margin="0 12 8 0" Width="125" HorizontalAlignment="Center"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton">
+                                Top-Up
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Margin="0 12 8 0" Width="125" HorizontalAlignment="Center" Click="LogOut"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton">
+                                Logout
+                            </Button>
+                        </StackPanel>
+                    </Popup>
+                </StackPanel>
             </DockPanel>
             <local:Homepage_BottomPart></local:Homepage_BottomPart>
         </StackPanel>
