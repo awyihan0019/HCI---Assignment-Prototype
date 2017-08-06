@@ -8,25 +8,27 @@
     <Grid>
         <StackPanel>
             <DockPanel HorizontalAlignment="Stretch" Margin="0,10">
-                <Grid HorizontalAlignment="Left" Margin="20 0 20 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Button Style="{DynamicResource MaterialDesignToolButton}">
-                        <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
-                    </Button>
-                    <TextBox Grid.Column="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Build a search bar" 
+                <materialDesign:Card Margin="10 10 20 0">
+                    <Grid HorizontalAlignment="Left" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button Style="{DynamicResource MaterialDesignToolButton}">
+                            <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                        </Button>
+                        <TextBox Grid.Column="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Search movie . . ." 
                                      materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
                                      MinWidth="200" VerticalAlignment="Center" />
-                    <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
-                        <materialDesign:PackIcon Kind="Microphone" Opacity=".56" Margin="8 0 0 0" />
-                    </Button>
-                </Grid>
-                <Button Style="{StaticResource MaterialDesignFlatButton}" DockPanel.Dock="Right" Click="LogInButton_OnClick" ToolTip="MaterialDesignFlatButton" HorizontalAlignment="Right">Sign In</Button>
+                        <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
+                            <materialDesign:PackIcon Kind="Microphone" Opacity=".56" Margin="8 0 0 0" />
+                        </Button>
+                    </Grid>
+                </materialDesign:Card>
+                <Button Style="{StaticResource MaterialDesignFlatButton}" DockPanel.Dock="Right" Click="LogInButton_OnClick"  HorizontalAlignment="Right">Sign In</Button>
                 <TextBlock DockPanel.Dock="Right" VerticalAlignment="Center">or</TextBlock>
-                <Button Style="{StaticResource MaterialDesignFlatButton}" Click="SignUpButto_OnClick" ToolTip="MaterialDesignFlatButton" HorizontalAlignment="Right">Sign Up</Button>
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Click="SignUpButto_OnClick"  HorizontalAlignment="Right">Sign Up</Button>
             </DockPanel>
             <local:Homepage_BottomPart></local:Homepage_BottomPart>
         </StackPanel>
