@@ -8,14 +8,16 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid>
-        <Rectangle Height="20" Fill="OrangeRed" />
+            <Rectangle Height="20" Fill="OrangeRed" />
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">S C R E E N</TextBlock>
         </Grid>
-        <StackPanel Orientation="Horizontal"  >
-        <Grid x:Name="LeftArea" Margin="15"></Grid>
-        <Grid x:Name="MiddleArea" Margin="15"></Grid>
-        <Grid x:Name="RightArea" Margin="15"></Grid>
-    </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Grid x:Name="LeftArea" Margin="15" Visibility="Collapsed"></Grid>
+            <Grid x:Name="LabelArea" Margin="15"></Grid>
+            <Grid x:Name="MiddleArea" Margin="15"></Grid>
+            <Grid x:Name="RightArea" Margin="15" Visibility="Collapsed"></Grid>
+        </StackPanel>
+        <Label x:Name="HighlightedSeatsLabel">Selected seats</Label>
     </StackPanel>
 </UserControl>
 

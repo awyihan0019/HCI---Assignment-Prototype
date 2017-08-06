@@ -20,6 +20,7 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlace {
     /// </summary>
     public partial class SingleSeat : UserControl {
         private static Random random = new Random();
+        public event EventHandler Clicked;
         public SingleSeat() {
             InitializeComponent();
 
@@ -98,6 +99,7 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlace {
                     SeatState = SeatStateEnum.Unoccupied;
                     break;
             }
+            Clicked?.Invoke(this,null);
         }
 
     }
