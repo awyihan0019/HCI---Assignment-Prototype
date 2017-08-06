@@ -23,11 +23,11 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlace {
         public SingleSeat() {
             InitializeComponent();
 
-            SeatState = 
+            SeatState =
                 random.Next() % 2 == 0 ?
                 SeatStateEnum.Occupied :
                 SeatStateEnum.Unoccupied;
-            OnSeatStatePropertyChanged(this, new DependencyPropertyChangedEventArgs(SeatStateProperty, null, SeatState));
+            OnSeatStatePropertyChanged(this , new DependencyPropertyChangedEventArgs(SeatStateProperty , null , SeatState));
         }
 
         #region SeatStateProperty
@@ -50,14 +50,40 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlace {
             switch (newValue) {
                 case SeatStateEnum.Highlighted:
                     seat.Image.Source = new BitmapImage(new Uri(@"seat_black.png" , UriKind.Relative));
+                    seat.Label.Foreground = Brushes.White;
                     break;
                 case SeatStateEnum.Occupied:
                     seat.Image.Source = new BitmapImage(new Uri(@"seat_red.png" , UriKind.Relative));
+                    seat.Label.Visibility = Visibility.Hidden;
                     break;
                 case SeatStateEnum.Unoccupied:
                     seat.Image.Source = new BitmapImage(new Uri(@"seat_blue.png" , UriKind.Relative));
+                    seat.Label .Visibility = Visibility.Visible;
+                    seat.Label.Foreground = Brushes.Black;
                     break;
             }
+        }
+
+        #endregion
+
+        #region SeatNumberProperty
+
+
+
+        public int SeatNumber {
+            get { return (int)GetValue(SeatNumberProperty); }
+            set { SetValue(SeatNumberProperty , value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SeatNumber.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SeatNumberProperty =
+            DependencyProperty.Register("SeatNumber" , typeof(int) , typeof(SingleSeat) , new PropertyMetadata(0 , OnSeatNumberPropertyChanged));
+
+        private static void OnSeatNumberPropertyChanged(DependencyObject d , DependencyPropertyChangedEventArgs e) {
+            var seat = d as SingleSeat;
+            if (seat == null) return;
+            var newValue = (int)e.NewValue;
+            seat.Label.Content = newValue;
         }
 
         #endregion

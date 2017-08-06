@@ -5,6 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
              mc:Ignorable="d">
     <ToggleButton Background="{x:Null}" BorderThickness="0" BorderBrush="Aquamarine"  Style="{x:Null}" Click="Button_OnClick">
-        <Image x:Name="Image"></Image>
+        <Grid>
+            <Image x:Name="Image"></Image>
+            <Label x:Name="Label" Margin="0,0,0,10" VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Center" FontWeight="Bold">5</Label>
+        </Grid>
     </ToggleButton>
 </UserControl>
