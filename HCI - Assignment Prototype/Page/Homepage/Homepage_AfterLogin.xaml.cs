@@ -20,6 +20,12 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         private void LogOut(object sender, System.Windows.RoutedEventArgs e)
         {
             DialogBox.Show("Logout the account", "Do you really want to logout your account?", "Cancel", "Logout");
+            switch (DialogBox.Result) {
+                    case DialogBox.ResultEnum.LeftButtonClicked: return;
+                    case DialogBox.ResultEnum.RightButtonClicked:
+                        MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
+                        return;
+            }
         }
 
         private void UserButton_OnClick(object sender, RoutedEventArgs e) {
