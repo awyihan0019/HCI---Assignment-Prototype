@@ -1,4 +1,5 @@
-﻿using HCI___Assignment_Prototype.CustomControl;
+﻿using System.Windows;
+using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Profile_Page;
 using System.Windows.Controls;
 
@@ -19,6 +20,10 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         private void LogOut(object sender, System.Windows.RoutedEventArgs e)
         {
             DialogBox.Show("Logout the account", "Do you really want to logout your account?", "Cancel", "Logout");
+        }
+
+        private void UserButton_OnClick(object sender, RoutedEventArgs e) {
+            UserPopup.IsOpen = !UserPopup.IsOpen;
         }
     }
 }
