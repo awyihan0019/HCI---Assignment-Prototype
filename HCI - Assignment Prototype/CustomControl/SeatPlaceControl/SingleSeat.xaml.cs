@@ -14,27 +14,66 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HCI___Assignment_Prototype.CustomControl.SeatPlace
-{
+namespace HCI___Assignment_Prototype.CustomControl.SeatPlace {
     /// <summary>
     /// Interaction logic for SingleSeat.xaml
     /// </summary>
-    public partial class SingleSeat : UserControl
-    {
-        public SingleSeat()
-        {
+    public partial class SingleSeat : UserControl {
+        private static Random random = new Random();
+        public SingleSeat() {
             InitializeComponent();
-            Image.Source = new BitmapImage(new Uri(@"Seat_Unoccupied.png" , UriKind.Relative));
+
+            SeatState = 
+                random.Next() % 2 == 0 ?
+                SeatStateEnum.Occupied :
+                SeatStateEnum.Unoccupied;
+            OnSeatStatePropertyChanged(this, new DependencyPropertyChangedEventArgs(SeatStateProperty, null, SeatState));
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
-            var t = sender as ToggleButton;
-            if (t.IsChecked.Value) {
-                Image.Source = new BitmapImage(new Uri(@"seat_occupied.png", UriKind.Relative));
-            }
-            else {
-                Image.Source = new BitmapImage(new Uri(@"Seat_Unoccupied.png" , UriKind.Relative));
+        #region SeatStateProperty
+        public enum SeatStateEnum {
+            Occupied, Unoccupied, Highlighted
+        }
+
+        public SeatStateEnum SeatState {
+            get { return (SeatStateEnum)GetValue(SeatStateProperty); }
+            set { SetValue(SeatStateProperty , value); }
+        }
+
+        public static readonly DependencyProperty SeatStateProperty =
+            DependencyProperty.Register("SeatState" , typeof(SeatStateEnum) , typeof(SingleSeat) , new PropertyMetadata(SeatStateEnum.Unoccupied , OnSeatStatePropertyChanged));
+
+        private static void OnSeatStatePropertyChanged(DependencyObject d , DependencyPropertyChangedEventArgs e) {
+            var newValue = (SeatStateEnum)e.NewValue;
+            var seat = d as SingleSeat;
+            if (seat == null) return;
+            switch (newValue) {
+                case SeatStateEnum.Highlighted:
+                    seat.Image.Source = new BitmapImage(new Uri(@"seat_black.png" , UriKind.Relative));
+                    break;
+                case SeatStateEnum.Occupied:
+                    seat.Image.Source = new BitmapImage(new Uri(@"seat_red.png" , UriKind.Relative));
+                    break;
+                case SeatStateEnum.Unoccupied:
+                    seat.Image.Source = new BitmapImage(new Uri(@"seat_blue.png" , UriKind.Relative));
+                    break;
             }
         }
+
+        #endregion
+        private void Button_OnClick(object sender , RoutedEventArgs e) {
+            switch (SeatState) {
+                case SeatStateEnum.Occupied:
+                    return;
+                case SeatStateEnum.Unoccupied:
+                    SeatState = SeatStateEnum.Highlighted;
+                    break;
+                case SeatStateEnum.Highlighted:
+                    SeatState = SeatStateEnum.Unoccupied;
+                    break;
+            }
+        }
+
     }
 }
+

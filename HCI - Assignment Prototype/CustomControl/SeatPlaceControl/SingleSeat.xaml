@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
              mc:Ignorable="d">
-    <ToggleButton Background="{x:Null}" BorderThickness="0" Style="{x:Null}" Click="ButtonBase_OnClick">
+    <ToggleButton Background="{x:Null}" BorderThickness="0" BorderBrush="Aquamarine"  Style="{x:Null}" Click="Button_OnClick">
         <Image x:Name="Image"></Image>
     </ToggleButton>
 </UserControl>

@@ -264,10 +264,16 @@
     <Resource Include="wolfenstein2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="CustomControl\SeatPlaceControl\Seat_Unoccupied.png" />
+    <Resource Include="CustomControl\SeatPlaceControl\seat_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="CustomControl\SeatPlaceControl\seat_occupied.png" />
+    <Resource Include="CustomControl\SeatPlaceControl\seat_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\SeatPlaceControl\seat_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\SeatPlaceControl\seat_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
