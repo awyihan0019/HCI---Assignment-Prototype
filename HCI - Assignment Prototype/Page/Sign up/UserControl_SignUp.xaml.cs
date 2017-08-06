@@ -45,6 +45,8 @@ namespace HCI___Assignment_Prototype.Page {
             }
         }
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e) { }
+        private void CancelButton_Click(object sender, RoutedEventArgs e) {
+            MainWindow.MainFrame.GoBack();
+        }
     }
 }
