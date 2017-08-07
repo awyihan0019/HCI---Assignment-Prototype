@@ -5,21 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.View_Booking"
              xmlns:class="clr-namespace:HCI___Assignment_Prototype.Class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d">
-    <Grid>
-        <ListView Margin="10" x:Name="ListView">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center" FontWeight="Bold" Style="{StaticResource MaterialDesignDisplay1TextBlock}">Select Movies</TextBlock>
+        <ListView Margin="10" x:Name="ListView" >
             <ListView.DataContext>
                 <class:Movie></class:Movie>
             </ListView.DataContext>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel HorizontalAlignment="Stretch"></StackPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}" />
-                        <TextBlock Text="{Binding Description}" />
-                        <TextBlock Text="{Binding Category}" />
-                    </StackPanel>
+                    <Grid Width="800" HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel DockPanel.Dock="Left">
+                                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding Name}" />
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" MaxWidth="500"  Text="{Binding Description}" />
+                                <TextBlock Text="{Binding Category}" />
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
+                            <Button>View availability</Button>
+                            <Button Style="{StaticResource MaterialDesignRaisedAccentButton}">Book ticket</Button>
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </Grid>
+    </StackPanel>
 </UserControl>
+
