@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <Grid HorizontalAlignment="Stretch" Margin="0 10 0 0">
-                <customControl:SearchBar HorizontalAlignment="Center" Margin="10 0 0 0"></customControl:SearchBar>
+                <customControl:SearchBar HorizontalAlignment="Left" Margin="10 0 0 0"></customControl:SearchBar>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource MaterialDesignFlatButton}" DockPanel.Dock="Right" Click="LogInButton_OnClick"  HorizontalAlignment="Right">Sign In</Button>
                     <TextBlock DockPanel.Dock="Right" VerticalAlignment="Center">or</TextBlock>

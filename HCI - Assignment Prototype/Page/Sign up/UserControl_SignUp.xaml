@@ -24,18 +24,8 @@
         <PasswordBox x:Name="Passwordbox_PasswordReenter" Grid.Row="4" Grid.Column="3" Margin="5 2 5 10"
                      materialDesign:HintAssist.Hint="Re-enter Password" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="Cancel" Margin="0 15 20 0" Click="CancelButton_Click"
-                    Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton"
-                    HorizontalAlignment="Right">
-                CANCEL
-            </Button>
-            <Button x:Name="Login" Margin="20 15 0 0" Click="CreateProfile_Click"
-                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="150"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Center">
-                CRAETE PROFILE
-            </Button>
-
+            <Button x:Name="Cancel" Margin="0 15 20 0" Click="CancelButton_Click" Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" HorizontalAlignment="Right"> CANCEL </Button>
+            <Button x:Name="Login" Margin="20 15 0 0" Click="CreateProfile_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Center"> CRAETE PROFILE </Button>
         </StackPanel>
     </StackPanel>
-
 </UserControl>
