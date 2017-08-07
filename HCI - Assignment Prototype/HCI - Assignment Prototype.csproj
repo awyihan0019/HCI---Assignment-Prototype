@@ -178,6 +178,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\View Booking\UserControl_DisplayBookDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\View Booking\UserControl_selectDate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page\View Booking\UserControl_SelectTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\View Booking\UserControl_SelectSeats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -229,6 +237,9 @@
     <Compile Include="Page\Sign up\UserControl_SignUp.xaml.cs">
       <DependentUpon>UserControl_SignUp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\View Booking\UserControl_DisplayBookDetail.xaml.cs">
+      <DependentUpon>UserControl_DisplayBookDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\View Booking\UserControl_selectDate.xaml.cs">
       <DependentUpon>UserControl_selectDate.xaml</DependentUpon>
     </Compile>
@@ -237,6 +248,9 @@
     </Compile>
     <Compile Include="Page\View Booking\UserControl_SelectMovie.xaml.cs">
       <DependentUpon>UserControl_SelectMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\View Booking\UserControl_SelectSeats.xaml.cs">
+      <DependentUpon>UserControl_SelectSeats.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\View Booking\UserControl_SelectTime.xaml.cs">
       <DependentUpon>UserControl_SelectTime.xaml</DependentUpon>
@@ -317,6 +331,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CustomControl\SeatPlaceControl\seat_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\doom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\dunkirk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\wolfenstein2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\beauty&amp;beast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\deruntergang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

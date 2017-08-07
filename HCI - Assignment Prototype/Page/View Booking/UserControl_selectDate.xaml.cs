@@ -41,12 +41,13 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
         private void Click_dateNext(object sender, RoutedEventArgs e)
         {
-            if (ListView.SelectedItem == null)
-            {
+            if (ListView.SelectedItem == null) {
                 DialogBox.Show("You must select a location!", "", "OK");
             }
-            else
+            else {
                 UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectTime());
+                Global.Global.MovieReservation.Time = ListView.SelectedItem.ToString();
+            }
         }
     }
 }
