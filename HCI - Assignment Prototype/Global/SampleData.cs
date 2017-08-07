@@ -65,7 +65,7 @@ namespace HCI___Assignment_Prototype.Global
                     "NuSentral",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "PG 13"),
+                }, "PG 13", new Uri(@"MovieIcon/dunkirk.png", UriKind.Relative).ToString()),
 
             new Movie("Doom",
                 new List<DateTime>(){
@@ -88,7 +88,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                },"PG 18+"),
+                },"PG 18+", new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative).ToString()),
 
             new Movie("Wolfenstein 2",
                 new List<DateTime>(){
@@ -111,8 +111,8 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                 
-                }, "PG 18+"),
+
+                }, "PG 18+", new Uri(@"MovieIcon/wolfenstein2.png", UriKind.Relative).ToString()),
 
             new Movie("Der Untergang",
                 new List<DateTime>(){
@@ -135,7 +135,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "PG 13+"),
+                }, "PG 13+", new Uri(@"MovieIcon/deruntergang.png", UriKind.Relative).ToString()),
 
             new Movie("Beauty and The Beast",
                 new List<DateTime>(){
@@ -158,7 +158,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "U"),
+                }, "U", new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative).ToString())
         };
     }
 }

@@ -183,6 +183,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\View Booking\UserControl_SelectSeats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Page\Homepage\Homepage_AfterLogin.xaml.cs">
@@ -226,6 +230,9 @@
     </Compile>
     <Compile Include="Page\View Booking\UserControl_SelectMovie.xaml.cs">
       <DependentUpon>UserControl_SelectMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\View Booking\UserControl_SelectSeats.xaml.cs">
+      <DependentUpon>UserControl_SelectSeats.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -303,6 +310,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CustomControl\SeatPlaceControl\seat_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\doom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\dunkirk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\wolfenstein2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\beauty&amp;beast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\deruntergang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
