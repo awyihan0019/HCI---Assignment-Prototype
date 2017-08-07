@@ -14,7 +14,7 @@ namespace HCI___Assignment_Prototype.Class {
         public List<string> AvailableLocation { get; set; }
         public string Category { get; set; }
 
-        public Movie(string name, List<DateTime> date, List<DateTime> time, string description, List<string> availableLocation, string category, string imageUri) {
+        public Movie(string name, List<DateTime> date, List<DateTime> time, string description, List<string> availableLocation, string category, string imageUri="") {
             Name = name;
             Date = date;
             Time = time;
@@ -24,8 +24,7 @@ namespace HCI___Assignment_Prototype.Class {
             ImageUri = imageUri;
         }
 
-        public Movie(string imageUri) {
-            ImageUri = imageUri;
+        public Movie() {
         }
     }
 }
