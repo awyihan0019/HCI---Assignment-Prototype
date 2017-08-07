@@ -53,11 +53,11 @@ namespace HCI___Assignment_Prototype.Global
                     new DateTime(2017, 07, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
-                    new DateTime(0, 0, 0, 2, 30, 0),
-                    new DateTime(0, 0, 0, 4, 30, 0),
-                    new DateTime(0, 0, 0, 8, 30, 0),
-                    new DateTime(0, 0, 0, 10, 30, 0),
-                    new DateTime(0, 0, 0, 1, 30, 0)
+                    new DateTime(1, 1, 1, 2, 30, 0),
+                    new DateTime(1, 1, 1, 4, 30, 0),
+                    new DateTime(1, 1, 1, 8, 30, 0),
+                    new DateTime(1, 1, 1, 10, 30, 0),
+                    new DateTime(1, 1, 1, 1, 30, 0)
                 }, "The story about the retreat of the British 4th Army from the Wehrmacht in Dunkirk.",
                 new List<string>(){
                     "Mid Valley",
@@ -76,11 +76,11 @@ namespace HCI___Assignment_Prototype.Global
                     new DateTime(2017, 09, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
-                    new DateTime(0, 0, 0, 2, 30, 0),
-                    new DateTime(0, 0, 0, 4, 30, 0),
-                    new DateTime(0, 0, 0, 8, 30, 0),
-                    new DateTime(0, 0, 0, 10, 30, 0),
-                    new DateTime(0, 0, 0, 1, 30, 0)
+                    new DateTime(1, 1, 1, 2, 30, 0),
+                    new DateTime(1, 1, 1, 4, 30, 0),
+                    new DateTime(1, 1, 1, 8, 30, 0),
+                    new DateTime(1, 1, 1, 10, 30, 0),
+                    new DateTime(1, 1, 1, 1, 30, 0)
                 }, "An action packed story about the being who sought to eliminate hell itself.",
                 new List<string>(){
                     "Mid Valley",
@@ -99,11 +99,11 @@ namespace HCI___Assignment_Prototype.Global
                     new DateTime(2017, 06, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
-                    new DateTime(0, 0, 0, 2, 30, 0),
-                    new DateTime(0, 0, 0, 4, 30, 0),
-                    new DateTime(0, 0, 0, 8, 30, 0),
-                    new DateTime(0, 0, 0, 10, 30, 0),
-                    new DateTime(0, 0, 0, 1, 30, 0)
+                    new DateTime(1, 1, 1, 2, 30, 0),
+                    new DateTime(1, 1, 1, 4, 30, 0),
+                    new DateTime(1, 1, 1, 8, 30, 0),
+                    new DateTime(1, 1, 1, 10, 30, 0),
+                    new DateTime(1, 1, 1, 1, 30, 0)
                 }, "America has fallen into the hands of Nazi Germany, it is up to Captain B. J. Blazkowicz to wake America for the second revolution.",
                 new List<string>(){
                     "Mid Valley",
@@ -123,11 +123,11 @@ namespace HCI___Assignment_Prototype.Global
                     new DateTime(2017, 08, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
-                    new DateTime(0, 0, 0, 2, 30, 0),
-                    new DateTime(0, 0, 0, 4, 30, 0),
-                    new DateTime(0, 0, 0, 8, 30, 0),
-                    new DateTime(0, 0, 0, 10, 30, 0),
-                    new DateTime(0, 0, 0, 1, 30, 0)
+                    new DateTime(1, 1, 1, 2, 30, 0),
+                    new DateTime(1, 1, 1, 4, 30, 0),
+                    new DateTime(1, 1, 1, 8, 30, 0),
+                    new DateTime(1, 1, 1, 10, 30, 0),
+                    new DateTime(1, 1, 1, 1, 30, 0)
                 }, "A story about the ending days of the Third Reich and the days leading to Hitler's suicide.",
                 new List<string>(){
                     "Mid Valley",
@@ -146,11 +146,11 @@ namespace HCI___Assignment_Prototype.Global
                     new DateTime(2017, 08, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
-                    new DateTime(0, 0, 0, 2, 30, 0),
-                    new DateTime(0, 0, 0, 4, 30, 0),
-                    new DateTime(0, 0, 0, 8, 30, 0),
-                    new DateTime(0, 0, 0, 10, 30, 0),
-                    new DateTime(0, 0, 0, 1, 30, 0)
+                    new DateTime(1, 1, 1, 2, 30, 0),
+                    new DateTime(1, 1, 1, 4, 30, 0),
+                    new DateTime(1, 1, 1, 8, 30, 0),
+                    new DateTime(1, 1, 1, 10, 30, 0),
+                    new DateTime(1, 1, 1, 1, 30, 0)
                 }, "A live movie adaptation of the Disney classic animation, Beauty and The Beast.",
                 new List<string>(){
                     "Mid Valley",
