@@ -22,6 +22,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
         public UserControl_SelectMovie() {
             InitializeComponent();
             ListView.ItemsSource = SampleData.SampleMovies;
+
         }
     }
 }
