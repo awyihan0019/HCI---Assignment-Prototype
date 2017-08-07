@@ -41,5 +41,10 @@ namespace HCI___Assignment_Prototype.Global
             new MovieReservation("Der Untergang", "12:00p.m. - 2:00p.m.",
                 "31 August 2017", "GSC-IpohParade", "A40", "CC4", "Comba A(3)")
             };            
+
+        public static List<Movie> SampleMovies = new List<Movie>()
+        {
+            
+        };
     }
 }
