@@ -40,11 +40,125 @@ namespace HCI___Assignment_Prototype.Global
 
             new MovieReservation("Der Untergang", "12:00p.m. - 2:00p.m.",
                 "31 August 2017", "GSC-IpohParade", "A40", "CC4", "Comba A(3)")
-            };            
+            };
 
         public static List<Movie> SampleMovies = new List<Movie>()
         {
-            
+            new Movie("Dunkirk",
+                new List<DateTime>(){
+                    new DateTime(2017, 07, 19, 0, 0, 0),
+                    new DateTime(2017, 07, 20, 0, 0, 0),
+                    new DateTime(2017, 07, 21, 0, 0, 0),
+                    new DateTime(2017, 07, 22, 0, 0, 0),
+                    new DateTime(2017, 07, 23, 0, 0, 0)
+                },
+                new List<DateTime>(){
+                    new DateTime(0, 0, 0, 2, 30, 0),
+                    new DateTime(0, 0, 0, 4, 30, 0),
+                    new DateTime(0, 0, 0, 8, 30, 0),
+                    new DateTime(0, 0, 0, 10, 30, 0),
+                    new DateTime(0, 0, 0, 1, 30, 0)
+                }, "The story about the retreat of the British 4th Army from the Wehrmacht in Dunkirk.",
+                new List<string>(){
+                    "Mid Valley",
+                    "OneU",
+                    "NuSentral",
+                    "Sunway Pyramid",
+                    "Ipoh Parade"
+                }, "PG 13"),
+
+            new Movie("Doom",
+                new List<DateTime>(){
+                    new DateTime(2017, 09, 19, 0, 0, 0),
+                    new DateTime(2017, 09, 20, 0, 0, 0),
+                    new DateTime(2017, 09, 21, 0, 0, 0),
+                    new DateTime(2017, 09, 22, 0, 0, 0),
+                    new DateTime(2017, 09, 23, 0, 0, 0)
+                },
+                new List<DateTime>(){
+                    new DateTime(0, 0, 0, 2, 30, 0),
+                    new DateTime(0, 0, 0, 4, 30, 0),
+                    new DateTime(0, 0, 0, 8, 30, 0),
+                    new DateTime(0, 0, 0, 10, 30, 0),
+                    new DateTime(0, 0, 0, 1, 30, 0)
+                }, "An action packed story about the being who sought to eliminate hell itself.",
+                new List<string>(){
+                    "Mid Valley",
+                    "OneU",
+                    "Gardens",
+                    "Sunway Pyramid",
+                    "Ipoh Parade"
+                },"PG 18+"),
+
+            new Movie("Wolfenstein 2",
+                new List<DateTime>(){
+                    new DateTime(2017, 06, 19, 0, 0, 0),
+                    new DateTime(2017, 06, 20, 0, 0, 0),
+                    new DateTime(2017, 06, 21, 0, 0, 0),
+                    new DateTime(2017, 06, 22, 0, 0, 0),
+                    new DateTime(2017, 06, 23, 0, 0, 0)
+                },
+                new List<DateTime>(){
+                    new DateTime(0, 0, 0, 2, 30, 0),
+                    new DateTime(0, 0, 0, 4, 30, 0),
+                    new DateTime(0, 0, 0, 8, 30, 0),
+                    new DateTime(0, 0, 0, 10, 30, 0),
+                    new DateTime(0, 0, 0, 1, 30, 0)
+                }, "America has fallen into the hands of Nazi Germany, it is up to Captain B. J. Blazkowicz to wake America for the second revolution.",
+                new List<string>(){
+                    "Mid Valley",
+                    "OneU",
+                    "Gardens",
+                    "Sunway Pyramid",
+                    "Ipoh Parade"
+                 
+                }, "PG 18+"),
+
+            new Movie("Der Untergang",
+                new List<DateTime>(){
+                    new DateTime(2017, 08, 19, 0, 0, 0),
+                    new DateTime(2017, 08, 20, 0, 0, 0),
+                    new DateTime(2017, 08, 21, 0, 0, 0),
+                    new DateTime(2017, 08, 22, 0, 0, 0),
+                    new DateTime(2017, 08, 23, 0, 0, 0)
+                },
+                new List<DateTime>(){
+                    new DateTime(0, 0, 0, 2, 30, 0),
+                    new DateTime(0, 0, 0, 4, 30, 0),
+                    new DateTime(0, 0, 0, 8, 30, 0),
+                    new DateTime(0, 0, 0, 10, 30, 0),
+                    new DateTime(0, 0, 0, 1, 30, 0)
+                }, "A story about the ending days of the Third Reich and the days leading to Hitler's suicide.",
+                new List<string>(){
+                    "Mid Valley",
+                    "OneU",
+                    "Gardens",
+                    "Sunway Pyramid",
+                    "Ipoh Parade"
+                }, "PG 13+"),
+
+            new Movie("Beauty and The Beast",
+                new List<DateTime>(){
+                    new DateTime(2017, 08, 19, 0, 0, 0),
+                    new DateTime(2017, 08, 20, 0, 0, 0),
+                    new DateTime(2017, 08, 21, 0, 0, 0),
+                    new DateTime(2017, 08, 22, 0, 0, 0),
+                    new DateTime(2017, 08, 23, 0, 0, 0)
+                },
+                new List<DateTime>(){
+                    new DateTime(0, 0, 0, 2, 30, 0),
+                    new DateTime(0, 0, 0, 4, 30, 0),
+                    new DateTime(0, 0, 0, 8, 30, 0),
+                    new DateTime(0, 0, 0, 10, 30, 0),
+                    new DateTime(0, 0, 0, 1, 30, 0)
+                }, "A live movie adaptation of the Disney classic animation, Beauty and The Beast.",
+                new List<string>(){
+                    "Mid Valley",
+                    "OneU",
+                    "Gardens",
+                    "Sunway Pyramid",
+                    "Ipoh Parade"
+                }, "U"),
         };
     }
 }
