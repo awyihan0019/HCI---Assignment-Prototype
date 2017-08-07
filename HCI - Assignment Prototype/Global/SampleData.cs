@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace HCI___Assignment_Prototype.Global
 {
@@ -65,7 +66,7 @@ namespace HCI___Assignment_Prototype.Global
                     "NuSentral",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "PG 13", new Uri(@"MovieIcon/dunkirk.png", UriKind.Relative).ToString()),
+                }, "PG 13", new BitmapImage(new Uri(@"MovieIcon/dunkirk.png", UriKind.Relative))),
 
             new Movie("Doom",
                 new List<DateTime>(){
@@ -88,7 +89,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                },"PG 18+", new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative).ToString()),
+                },"PG 18+", new BitmapImage(new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative))),
 
             new Movie("Wolfenstein 2",
                 new List<DateTime>(){
@@ -112,7 +113,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Sunway Pyramid",
                     "Ipoh Parade"
 
-                }, "PG 18+", new Uri(@"MovieIcon/wolfenstein2.png", UriKind.Relative).ToString()),
+                }, "PG 18+", new BitmapImage(new Uri(@"MovieIcon/wolfenstein2.png", UriKind.Relative))),
 
             new Movie("Der Untergang",
                 new List<DateTime>(){
@@ -135,7 +136,9 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "PG 13+", new Uri(@"MovieIcon/deruntergang.png", UriKind.Relative).ToString()),
+                }, 
+                "PG 13+", 
+                new BitmapImage(new Uri(@"MovieIcon/deruntergang.png", UriKind.Relative))),
 
             new Movie("Beauty and The Beast",
                 new List<DateTime>(){
@@ -158,7 +161,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "U", new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative).ToString())
+                }, "U", new BitmapImage( new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative)))
         };
     }
 }
