@@ -7,6 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock
+            Margin="0,4,0,6"
+            Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+            Step 3 : Select seats
+        </TextBlock>
         <Grid>
             <Rectangle Height="20" Fill="OrangeRed" />
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">S C R E E N</TextBlock>
