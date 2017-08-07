@@ -22,8 +22,7 @@ namespace HCI___Assignment_Prototype.Class {
             Category = category;
         }
 
-        public Movie(string category) {
-            Category = category;
+        public Movie() {
         }
     }
 }
