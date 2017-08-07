@@ -171,7 +171,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_selectDate.xaml">
+    <Page Include="Page\View Booking\UserControl_SelectMovie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,8 +210,8 @@
     <Compile Include="Page\Sign up\UserControl_SignUp.xaml.cs">
       <DependentUpon>UserControl_SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_selectDate.xaml.cs">
-      <DependentUpon>UserControl_selectDate.xaml</DependentUpon>
+    <Compile Include="Page\View Booking\UserControl_SelectMovie.xaml.cs">
+      <DependentUpon>UserControl_SelectMovie.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
