@@ -89,7 +89,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                },"PG 18+", new BitmapImage(new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative))),
+                },"PG 18+", new BitmapImage(new Uri(@"MovieIcon/doom.png", UriKind.Relative))),
 
             new Movie("Wolfenstein 2",
                 new List<DateTime>(){
