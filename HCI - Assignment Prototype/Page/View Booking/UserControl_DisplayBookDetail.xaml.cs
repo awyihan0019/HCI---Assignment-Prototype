@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCI___Assignment_Prototype.CustomControl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,21 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         private void Click_cancelDetail(object sender, RoutedEventArgs e)
         {
             MainWindow.MainFrame.GoBack();
+        }
+
+        private void Click_ConfirmBooking(object sender, RoutedEventArgs e)
+        {
+            DialogBox.Show("Comfirm Payment", "Do you really want to make the payment?", "CANCEL", "CONFIRM");
+            switch (DialogBox.Result)
+            {
+                case DialogBox.ResultEnum.LeftButtonClicked: return;
+                case DialogBox.ResultEnum.RightButtonClicked:
+                    ProgressDialog.Show("Progress Payment", "", () =>
+                    {
+
+                    });
+                    return;
+            }
         }
     }
 }

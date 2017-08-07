@@ -23,7 +23,7 @@
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
                 CANCEL
             </Button>
-            <Button x:Name="Login" Margin="20 15 0 0" Click="Click_dateNext"
+            <Button x:Name="Login" Margin="20 15 0 0" Click="Click_ConfirmBooking"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
                 COMFIRM
