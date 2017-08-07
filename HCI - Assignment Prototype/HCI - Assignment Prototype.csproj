@@ -88,6 +88,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControl\UserControl_BookingDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -119,6 +123,9 @@
     </Compile>
     <Compile Include="CustomControl\TextboxWithPencil.xaml.cs">
       <DependentUpon>TextboxWithPencil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\UserControl_BookingDetail.xaml.cs">
+      <DependentUpon>UserControl_BookingDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Global\Global.cs" />
     <Compile Include="Global\SampleData.cs" />
@@ -183,6 +190,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\View Booking\UserControl_SelectTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\View Booking\UserControl_SelectSeats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -233,6 +244,9 @@
     </Compile>
     <Compile Include="Page\View Booking\UserControl_SelectSeats.xaml.cs">
       <DependentUpon>UserControl_SelectSeats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\View Booking\UserControl_SelectTime.xaml.cs">
+      <DependentUpon>UserControl_SelectTime.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
