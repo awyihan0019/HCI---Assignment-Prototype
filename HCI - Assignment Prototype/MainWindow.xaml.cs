@@ -18,7 +18,7 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new UserControl_SelectMovie());
+            Frame.Navigate(new Homepage_BeforeLogin());
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
