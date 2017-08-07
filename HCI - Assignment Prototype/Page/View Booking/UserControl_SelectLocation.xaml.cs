@@ -31,12 +31,13 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
         private void Click_locationNext(object sender, RoutedEventArgs e)
         {
-            if (ListView.SelectedItem == null)
-            {
+            if (ListView.SelectedItem == null) {
                 DialogBox.Show("You must select a location!", "", "OK");
             }
-            else
+            else {
                 MainWindow.MainFrame.Navigate(new UserControl_SelectDate());
+                Global.Global.MovieReservation.Location = ListView.SelectedItem.ToString();
+            }
         }
 
         private void Click_Cancel(object sender, RoutedEventArgs e)
