@@ -27,7 +27,7 @@
         <DockPanel VerticalAlignment="Center" Width="600" HorizontalAlignment="Center"
                    Margin="30">
             <TextBox x:Name="VerificationCode" Margin="5 2 5 10" VerticalAlignment="Center" HorizontalAlignment="Left"
-                     FontSize="20" materialDesign:HintAssist.Hint="XXXXX" Width="250" />
+                     FontSize="20" materialDesign:HintAssist.Hint="Verification Code" Width="250" />
             <Button x:Name="SUBMIT" Margin="5 2 5 10" Click="Submit_Click"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="150"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
