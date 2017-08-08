@@ -14,8 +14,13 @@ namespace HCI___Assignment_Prototype.Class {
         public string Description { get; set; }
         public List<string> AvailableLocation { get; set; }
         public string Category { get; set; }
+        public string ReleaseDate { get; set; }
+        public string RunningTime { get; set; }
+        public string Director { get; set; }
+        public string Cast { get; set; }
+       
 
-        public Movie(string name, List<DateTime> date, List<DateTime> time, string description, List<string> availableLocation, string category, BitmapImage imageUri) {
+        public Movie(string name, List<DateTime> date, List<DateTime> time, string description, List<string> availableLocation, string category, BitmapImage imageUri, string releaseDate="", string runningTime="", string director="", string cast="") {
             Name = name;
             Date = date;
             Time = time;
@@ -23,9 +28,13 @@ namespace HCI___Assignment_Prototype.Class {
             AvailableLocation = availableLocation;
             Category = category;
             ImageUri = imageUri;
+            ReleaseDate = releaseDate;
+            RunningTime = runningTime;
+            Director = director;
+            Cast = cast;
         }
 
-        public Movie() {
+        public Movie(string releaseDate, string runningTime, string director, string cast) {
         }
     }
 }
