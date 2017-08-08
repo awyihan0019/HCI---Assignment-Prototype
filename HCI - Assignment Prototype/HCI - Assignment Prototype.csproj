@@ -398,5 +398,20 @@
   <ItemGroup>
     <Resource Include="Page\Homepage\MoviePoster\lastofus.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\fallout4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\emoji.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\guardians2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\wonderwoman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\dm3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

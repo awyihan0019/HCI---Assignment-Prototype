@@ -197,8 +197,68 @@ namespace HCI___Assignment_Prototype.Global
 
         public static List<MovieReservation_Admin> SampleReservationDetails_Admin = new List<MovieReservation_Admin>()
         {
+            new MovieReservation_Admin("Fallout 4",
+                "PG 18",
+                "www.youtube.com/fallout4",
+                "30 July 2017",
+                "Mid Valley, " + "OneU, " + "Gardens," + "Sunway Pyramid," + "Ipoh Parade",
+                "A story about a lone survivor in a post apocalytic world.",
+                "2 Hours 30 Minutes",
+                "Todd Howard",
+                "Nate Dunkirque, Roger Maxson, Nick Valentine",
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/fallout4.jpg"))
+                ),
             
-        };
+            new MovieReservation_Admin("Emoji Movie",
+                "U",
+                "www.youtube.com/emojimovie",
+                "01 August 2017",
+                "Mid Valley, " + "OneU, " + "Gardens," + "Sunway Pyramid," + "NuSentral",
+                "Meh story that should never be made. Damn you Sony Pictures.",
+                "2 Hours",
+                "Tony Leondis",
+                "T.J. Miller, James Corden, Anna Faris",
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/emoji.jpg"))
+                ),
 
+            new MovieReservation_Admin("Guardians of The Galaxy Vol 2",
+                "PG 13",
+                "www.youtube.com/guardians2",
+                "02 August 2017",
+                "Mid Valley, " + "OneU, " + "NuSentral," + "Sunway Pyramid," + "Ipoh Parade",
+                "The long awaited sequel to the hit superhero action movie.",
+                "3 Hours",
+                "James Gunn (II)",
+                "Chris Pratt, Zoe Saldana, Dave Bautista",
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/guardians2.jpg"))
+                ),
+
+            new MovieReservation_Admin("Wonder Woman",
+                "PG 13",
+                "www.youtube.com/wonderwoman",
+                "03 August 2017",
+                "Mid Valley, " + "OneU, " + "NuSentral," + "Gardens," + "Ipoh Parade",
+                "A movie about an Amazonian Princess that soon learns about the war that engulfs the planet.",
+                "3 Hours",
+                "Patty Jenkins",
+                "Gal Gadot, Chris Pine, Connie Nielsen",
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wonderwoman.jpg"))
+                ),
+
+            new MovieReservation_Admin("Despicable Me 3",
+                "PG 13",
+                "www.youtube.com/despicableme3",
+                "04 August 2017",
+                "Mid Valley, " + "Sunway Pyramid, " + "NuSentral," + "Gardens," + "Ipoh Parade",
+                "The 3rd Movie where little yellow banana looking things get all the attention.",
+                "2 Hours 30 Minutes",
+                "Kyle Balda",
+                "Steve Carell, Kristen Wiig, Trey Parker",
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dm3.jpg"))
+                )
+
+
+        };
+    
     }
 }
