@@ -8,6 +8,7 @@
              xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
              mc:Ignorable="d">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+        <TextBlock FontSize="30" Margin="2 2 2 2" HorizontalAlignment="Center" FontWeight="Bold">Update Reservation</TextBlock>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Orientation="Horizontal"
                     Margin="5">
             <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150"
@@ -15,14 +16,12 @@
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" />
         </StackPanel>
-        <TextBlock >Movie Name</TextBlock>
-        <!--
-        <customcontrol:TextboxWithPencil Label="Location" Text="LLLLLL" />
-        <customcontrol:TextboxWithPencil Label="Time" Text="08:00" />
-        <customcontrol:TextboxWithPencil Label="Date" Text="2017/2/01" />
-        <customcontrol:TextboxWithPencil Label="Ticket" Text="4" />
-        <customcontrol:TextboxWithPencil Label="Seat" Text="A3, A4" />
-        -->
+        <TextBlock FontSize="25" FontWeight="Bold" Margin="5">Movie Name</TextBlock>
+        <customcontrol:DropDownWithPencil Label="Location" Text="Location" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Time" Text="Time" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Date" Text="Date" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Ticket" Text="Ticket" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Seat" Text="Seat" Margin="0 5"></customcontrol:DropDownWithPencil>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
