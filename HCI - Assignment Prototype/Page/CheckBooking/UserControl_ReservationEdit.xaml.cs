@@ -39,9 +39,13 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
                 case DialogBox.ResultEnum.LeftButtonClicked: return;
                 case DialogBox.ResultEnum.RightButtonClicked:
                     {
-                        DialogBox.Show("", "Profile successfully updated!", "OK");
+                        ProgressDialog.Show("Updating profile......", "", () => {
+                            DialogBox.Show("", "Profile successfully updated!", "OK");
+                            MainWindow.MainFrame.GoBack();
+                        });
                         return;
                     }
+            }
         }
     }
 }
