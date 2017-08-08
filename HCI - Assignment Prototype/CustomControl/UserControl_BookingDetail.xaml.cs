@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCI___Assignment_Prototype.Page.View_Booking;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace HCI___Assignment_Prototype.CustomControl
     /// </summary>
     public partial class UserControl_BookingDetail : UserControl
     {
+        public static Frame DetailFrame;
         public UserControl_BookingDetail()
         {
             InitializeComponent();
+            frame.Navigate(new UserControl_SelectLocation());
+            DetailFrame = frame;
         }
     }
 }

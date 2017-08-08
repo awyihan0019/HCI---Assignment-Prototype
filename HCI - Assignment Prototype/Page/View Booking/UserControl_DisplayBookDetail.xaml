@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.View_Booking.UserControl_DisplayBookDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.View_Booking"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock x:Name="SentenceOne" FontSize="34" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">⑥ Booking Detail</TextBlock>
+        <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding}" FontSize="20" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="Cancel" Margin="0 15 20 0" Click="Click_cancelDetail"
+                    Style="{StaticResource MaterialDesignFlatButton}" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                CANCEL
+            </Button>
+            <Button x:Name="Login" Margin="20 15 0 0" Click="Click_ConfirmBooking"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                COMFIRM
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

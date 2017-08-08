@@ -45,7 +45,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
                 DialogBox.Show("You must select a location!", "", "OK");
             }
             else {
-                MainWindow.MainFrame.Navigate(new UserControl_SelectTime());
+                UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectTime());
                 Global.Global.MovieReservation.Time = ListView.SelectedItem.ToString();
             }
         }
