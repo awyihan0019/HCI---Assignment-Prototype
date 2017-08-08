@@ -10,30 +10,35 @@
     <Grid>
         <materialDesign:DialogHost x:Name="DialogHost" IsOpen="False">
             <materialDesign:DialogHost.DialogContent>
-                <Border Padding="20">
-                    <StackPanel>
-                        <TextBlock x:Name="TextBlock_Title" Margin="10,10,10,0" MinWidth="300" MaxWidth="300"
+                <Grid>
+                    <Border x:Name="Custom" Visibility="Hidden" Padding="20">
+                        <ContentPresenter x:Name="ContentPresenter"></ContentPresenter>
+                    </Border>
+                    <Border x:Name="Default" Visibility="Hidden" Padding="20">
+                        <StackPanel>
+                            <TextBlock x:Name="TextBlock_Title" Margin="10,10,10,0" MinWidth="300" MaxWidth="300"
                                    FontSize="30" TextWrapping="Wrap" FontWeight="Bold">
                             Why no possible timetable?
-                        </TextBlock>
-                        <TextBlock x:Name="TextBlock_Message" Margin="10" FontSize="20" MinWidth="300" MaxWidth="300"
+                            </TextBlock>
+                            <TextBlock x:Name="TextBlock_Message" Margin="10" FontSize="20" MinWidth="300" MaxWidth="300"
                                    TextWrapping="Wrap">
                             Please make sure you copied the correct content and is using Google Chrome
-                        </TextBlock>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Button x:Name="Button_Left" materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                            </TextBlock>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button x:Name="Button_Left" materialDesign:ShadowAssist.ShadowDepth="Depth0"
                                     Margin="10,10,0,0" HorizontalAlignment="Center" FontSize="20" Height="40"
                                     Click="Button_Left_OnClick">
-                                Left
-                            </Button>
-                            <Button x:Name="Button_Right" materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                                    Left
+                                </Button>
+                                <Button x:Name="Button_Right" materialDesign:ShadowAssist.ShadowDepth="Depth0"
                                     Margin="10,10,0,0" HorizontalAlignment="Center" FontSize="20" Height="40"
                                     Click="Button_Right_OnClick">
-                                Right
-                            </Button>
+                                    Right
+                                </Button>
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
-                </Border>
+                    </Border>
+                </Grid>
             </materialDesign:DialogHost.DialogContent>
         </materialDesign:DialogHost>
 
