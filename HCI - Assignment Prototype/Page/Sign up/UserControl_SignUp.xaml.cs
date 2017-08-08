@@ -22,18 +22,27 @@ namespace HCI___Assignment_Prototype.Page {
             var rePassword = Passwordbox_PasswordReenter.Password;
 
             if ((Textbox_EmailFront.Text == "")) {
-                DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter email.", "OK");
+                DialogBox.Show("Error . . .", "You must enter email.", "OK");
+               
+
             }
             else if (PasswordBox.Password == "") {
-                DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter the password.", "OK");
+                DialogBox.Show("Error . . .", "You must enter the password.", "OK");
             }
             else if (Passwordbox_PasswordReenter.Password == "") {
-                DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter the re-enter password.", "OK");
+                DialogBox.Show("Error . . .", "You must enter the re-enter password.", "OK");
             }
             else if (password != rePassword) {
-                DialogBox.Show("Create Error", "Profile Created Failed.\nPassword does not match", "OK");
+                DialogBox.Show("Error . . .", "Password does not match", "OK");
             }
             else {
+                try {
+                    var addr = new System.Net.Mail.MailAddress(email);
+                }
+                catch {
+                    DialogBox.Show("Error . . ." , "Email is not in correct format." , "OK");
+                    return;
+                }
                 if (email != Global.Global.OnlyUser.Email) {
                     Global.Global.Email = email;
                     ProgressDialog.Show("Creating profile . . .", "",
