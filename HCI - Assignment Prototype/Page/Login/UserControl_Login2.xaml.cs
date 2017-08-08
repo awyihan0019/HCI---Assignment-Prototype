@@ -4,6 +4,7 @@ using System.Windows.Input;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Login;
 using HCI___Assignment_Prototype.Page.Homepage;
+using HCI___Assignment_Prototype.Global;
 
 namespace HCI___Assignment_Prototype.Page {
     /// <summary>

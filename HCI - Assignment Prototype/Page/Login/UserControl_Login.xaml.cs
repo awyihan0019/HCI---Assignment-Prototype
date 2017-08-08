@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 using HCI___Assignment_Prototype.Page.Login;
+using HCI___Assignment_Prototype.CustomControl;
 
 namespace HCI___Assignment_Prototype.Page {
     /// <summary>
