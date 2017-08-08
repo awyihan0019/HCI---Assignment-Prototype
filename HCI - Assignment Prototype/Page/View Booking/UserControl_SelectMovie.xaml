@@ -40,18 +40,20 @@
                                         </Grid.RowDefinitions>
                                         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
                                             <TextBlock VerticalAlignment="Center" Margin="0, 10, 10, 10" FontWeight="DemiBold" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Text="{Binding Name}" />
+                                            <TextBlock VerticalAlignment="Center" TextAlignment="Right" Margin="0, 10 10 5" Style="{StaticResource MaterialDesignHeadlineTextBlock}"  Text="("></TextBlock>
                                             <TextBlock VerticalAlignment="Center" Margin="0, 10 10 5" Style="{StaticResource MaterialDesignHeadlineTextBlock}"  Text="{Binding Category}"></TextBlock>
+                                            <TextBlock VerticalAlignment="Center" TextAlignment="Left" Margin="0, 10 10 5" Style="{StaticResource MaterialDesignHeadlineTextBlock}"  Text=")"></TextBlock>
                                         </StackPanel>
                                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ReleaseDate}" />
                                         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding RunningTime}" />
                                         <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Director}" />
                                         <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Cast}" />
                                         <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding Description}" TextWrapping="Wrap" MaxWidth="300" />
-                                        <TextBlock Grid.Row="1" Grid.Column="0" FontWeight="DemiBold">Release date</TextBlock>
-                                        <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="DemiBold">Running time</TextBlock>
-                                        <TextBlock Grid.Row="3" Grid.Column="0" FontWeight="DemiBold">Director</TextBlock>
-                                        <TextBlock Grid.Row="4" Grid.Column="0" FontWeight="DemiBold">Cast</TextBlock>
-                                        <TextBlock Grid.Row="5" Grid.Column="0" FontWeight="DemiBold" >Description</TextBlock>
+                                        <TextBlock Margin="0 0 5 0" Grid.Row="1" Grid.Column="0" FontWeight="DemiBold">Release date</TextBlock>
+                                        <TextBlock Margin="0 0 5 0" Grid.Row="2" Grid.Column="0" FontWeight="DemiBold">Running time</TextBlock>
+                                        <TextBlock Margin="0 0 5 0" Grid.Row="3" Grid.Column="0" FontWeight="DemiBold">Director</TextBlock>
+                                        <TextBlock Margin="0 0 5 0" Grid.Row="4" Grid.Column="0" FontWeight="DemiBold">Cast</TextBlock>
+                                        <TextBlock Margin="0 0 5 0" Grid.Row="5" Grid.Column="0" FontWeight="DemiBold" >Description</TextBlock>
                                     </Grid>
                                 </StackPanel>
                             </StackPanel>
