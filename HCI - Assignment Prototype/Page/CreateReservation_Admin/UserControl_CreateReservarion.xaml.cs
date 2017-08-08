@@ -47,5 +47,10 @@ namespace HCI___Assignment_Prototype.Page.CreateReservation_Admin
                         }
                 }
         }
+
+        private void Click_UploadPoster(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
