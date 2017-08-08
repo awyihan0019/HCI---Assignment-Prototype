@@ -59,14 +59,21 @@ namespace HCI___Assignment_Prototype.Global
                     new DateTime(1, 1, 1, 8, 30, 0),
                     new DateTime(1, 1, 1, 10, 30, 0),
                     new DateTime(1, 1, 1, 1, 30, 0)
-                }, "The story about the retreat of the British 4th Army from the Wehrmacht in Dunkirk.",
+                }, 
+                "The story about the retreat of the British 4th Army from the Wehrmacht in Dunkirk.",
                 new List<string>(){
                     "Mid Valley",
                     "OneU",
                     "NuSentral",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "PG 13", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.png"))),
+                }, 
+                "PG 13", 
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.png")),
+                "13 July 2017", 
+                "2 Hours", 
+                "Christopher Nolan",
+                "Fionn Whitehead, Tom Glynn-Carrey, Jack Lowden"),
 
             new Movie("Doom",
                 new List<DateTime>(){
@@ -89,7 +96,14 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                },"PG 18+", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
+                },
+                "PG 18+", 
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png")),
+                "06 September 2017",
+                "2 Hours 30 Minutes",
+                "Marty Stratton",
+                "Samuel Hayden, Doom Slayer, Olivia Pierce"
+                ),
 
             new Movie("Wolfenstein 2",
                 new List<DateTime>(){
@@ -113,7 +127,13 @@ namespace HCI___Assignment_Prototype.Global
                     "Sunway Pyramid",
                     "Ipoh Parade"
 
-                }, "PG 18+", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
+                }, "PG 18+",
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg")),
+                "10 June 2017",
+                "2 Hours",
+                "Jens Matthies",
+                "B.J. Blazkowicz, Wilhelm Strasse, Fergus Reid"
+                ),
 
             new Movie("Der Untergang",
                 new List<DateTime>(){
@@ -138,7 +158,12 @@ namespace HCI___Assignment_Prototype.Global
                     "Ipoh Parade"
                 }, 
                 "PG 13+", 
-                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.png"))),
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.png")),
+                "01 August 2017",
+                "3 Hours",
+                "Oliver Hirschbiegel",
+                "Bruno Ganz, Alexandra Maria Lara, Ulrich Matthes"
+                ),
 
             new Movie("Beauty and The Beast",
                 new List<DateTime>(){
@@ -161,7 +186,13 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "U", new BitmapImage( new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png")))
+                }, "U",
+                new BitmapImage( new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png")),
+                "07 August 2017",
+                "2 Hours 30 Minutes",
+                "Bill Condon",
+                "Emma Watson, Dan Stevens, Luke Evans"
+                )
         };
 
         public static Uri SampleUri = new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png" , UriKind.RelativeOrAbsolute);
