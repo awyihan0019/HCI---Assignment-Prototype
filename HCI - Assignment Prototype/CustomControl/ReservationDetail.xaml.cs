@@ -11,7 +11,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             InitializeComponent();
         }
 
-        private void DeleteButton_OnClick(object sender, System.Windows.RoutedEventArgs e) {
+        private void DeleteButton_OnClick(object sender, RoutedEventArgs e) {
             this.DrawerHost.IsRightDrawerOpen = true;
         }
 
