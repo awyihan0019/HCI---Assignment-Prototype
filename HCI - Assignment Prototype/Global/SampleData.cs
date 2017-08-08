@@ -206,7 +206,7 @@ namespace HCI___Assignment_Prototype.Global
                 "2 Hours 30 Minutes",
                 "Todd Howard",
                 "Nate Dunkirque, Roger Maxson, Nick Valentine",
-                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/fallout4.jpg"))
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/fallout4.png"))
                 ),
             
             new MovieReservation_Admin("Emoji Movie",
