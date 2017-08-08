@@ -66,7 +66,7 @@ namespace HCI___Assignment_Prototype.Global
                     "NuSentral",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "PG 13", new BitmapImage(new Uri(@"MovieIcon/dunkirk.png", UriKind.Relative))),
+                }, "PG 13", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.png"))),
 
             new Movie("Doom",
                 new List<DateTime>(){
@@ -89,7 +89,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                },"PG 18+", new BitmapImage(new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative))),
+                },"PG 18+", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
 
             new Movie("Wolfenstein 2",
                 new List<DateTime>(){
@@ -113,7 +113,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Sunway Pyramid",
                     "Ipoh Parade"
 
-                }, "PG 18+", new BitmapImage(new Uri(@"MovieIcon/wolfenstein2.png", UriKind.Relative))),
+                }, "PG 18+", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
 
             new Movie("Der Untergang",
                 new List<DateTime>(){
@@ -138,7 +138,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Ipoh Parade"
                 }, 
                 "PG 13+", 
-                new BitmapImage(new Uri(@"MovieIcon/deruntergang.png", UriKind.Relative))),
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.png"))),
 
             new Movie("Beauty and The Beast",
                 new List<DateTime>(){
@@ -161,7 +161,9 @@ namespace HCI___Assignment_Prototype.Global
                     "Gardens",
                     "Sunway Pyramid",
                     "Ipoh Parade"
-                }, "U", new BitmapImage( new Uri(@"MovieIcon/beauty&beast.png", UriKind.Relative)))
+                }, "U", new BitmapImage( new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png")))
         };
+
+        public static Uri SampleUri = new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png" , UriKind.RelativeOrAbsolute);
     }
 }

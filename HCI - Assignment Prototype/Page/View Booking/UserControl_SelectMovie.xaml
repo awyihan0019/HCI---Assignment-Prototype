@@ -20,19 +20,24 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="800" HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel DockPanel.Dock="Left">
-                                <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding Name}" />
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" MaxWidth="500"  Text="{Binding Description}" />
-                                <TextBlock Text="{Binding Category}" />
+                    <materialDesign:Card Padding="10">
+                        <Grid Width="800" HorizontalAlignment="Stretch">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="200" Height="200" Margin="10" Source="{Binding ImageUri}"></Image>
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel DockPanel.Dock="Left">
+                                        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding Name}" />
+                                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" MaxWidth="500"  Text="{Binding Description}" />
+                                        <TextBlock Text="{Binding Category}" />
+                                    </StackPanel>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
-                            <Button>View availability</Button>
-                            <Button Style="{StaticResource MaterialDesignRaisedAccentButton}">Book ticket</Button>
-                        </StackPanel>
-                    </Grid>
+                            <StackPanel DockPanel.Dock="Right" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                <Button>View availability</Button>
+                                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}">Book ticket</Button>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
