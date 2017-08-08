@@ -24,5 +24,13 @@ namespace HCI___Assignment_Prototype.CustomControl
         {
             InitializeComponent();
         }
+
+        private void YesButton_OnClick(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
+
+        private void DeleteButton_OnClick(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
     }
 }
