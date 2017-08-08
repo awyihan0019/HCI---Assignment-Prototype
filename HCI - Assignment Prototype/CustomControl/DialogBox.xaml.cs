@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace HCI___Assignment_Prototype.CustomControl {
     /// <summary>
@@ -35,6 +36,22 @@ namespace HCI___Assignment_Prototype.CustomControl {
             TextBlock_Message.Text = message;
             Button_Left.Content = leftButtonText;
             Button_Right.Content = rightButtonText;
+            Custom.Visibility = Visibility.Collapsed;
+            Default.Visibility = Visibility.Visible;
+        }
+
+        public static void Show(UserControl content) {
+            var p = new DialogBox();
+            p.SetContent(content);
+            p.DialogHost.IsOpen = true;
+            p.AllowsTransparency = true;
+            p.ShowDialog();
+        }
+
+        private void SetContent(UserControl content) {
+            Custom.Visibility = Visibility.Visible;
+            Default.Visibility = Visibility.Collapsed;
+            ContentPresenter.Content = content;
         }
 
         private void Button_Left_OnClick(object sender, RoutedEventArgs e) {

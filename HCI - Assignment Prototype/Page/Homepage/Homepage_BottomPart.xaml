@@ -4,10 +4,44 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Homepage"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              >
-    <StackPanel>
-        <Image x:Name="Poster" Source="/HCI - Assignment Prototype;component/wolfenstein2.jpg" Stretch="Fill" Margin="10" Width="960" Height="540"/>
+    <StackPanel HorizontalAlignment="Stretch" Margin="0 10 0 0">
+        <materialDesign:Card Background="Black" HorizontalAlignment="Stretch">
+            <materialDesign:Transitioner SelectedIndex="0" HorizontalAlignment="Center" x:Name="Transitioner">
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/SpidermanHomecoming.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/blackhawkdown.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/bvs.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/doom.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/dunkirk.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/jl.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/londonfallen.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/olympusfallen.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/savingryan.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+                <materialDesign:TransitionerSlide>
+                    <Image Source="MoviePoster/wolfenstein2.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                </materialDesign:TransitionerSlide>
+            </materialDesign:Transitioner>
+        </materialDesign:Card>
         <GroupBox HorizontalAlignment="Center"
 	        Margin="16"
 	        Header="Top 10 Movies">
