@@ -13,10 +13,15 @@
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         <!-- Add Dropdown list (Rating) here -->
         <TextBox
-	materialDesign:HintAssist.Hint="Movie Summary" FontSize="20" x:Name="Textbox_SummaryOfMovie" Margin="5" VerticalAlignment="Center" Width="380"
+	materialDesign:HintAssist.Hint="Movie Summary" FontSize="20" x:Name="Textbox_SummaryOfMovie" Margin="5" VerticalAlignment="Center" Width="380" MinLines="5"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         <StackPanel Orientation="Horizontal">
-            
+            <Image Width="200" Height="200" Margin="10" Source="{Binding ImageUri}"></Image>
+            <Button x:Name="UPLOAD" Click="Click_UploadPoster"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" VerticalAlignment="Bottom" Margin="10"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                UPLOAD POSTER
+            </Button>
         </StackPanel>
         <TextBox
 	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380"
