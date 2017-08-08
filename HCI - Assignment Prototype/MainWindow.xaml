@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HCI___Assignment_Prototype"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:customControl="clr-namespace:HCI___Assignment_Prototype.CustomControl"
         mc:Ignorable="d"
         Title="MainWindow" WindowState="Maximized">
     <Window.Resources>

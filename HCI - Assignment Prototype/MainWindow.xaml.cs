@@ -23,7 +23,8 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new Homepage_BeforeLogin());
+            DialogBox.Show("", "");
+            Frame.Navigate(new DropDownWithPencil());
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {

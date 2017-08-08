@@ -4,9 +4,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+    <materialDesign:Card>
+        <Border Background="White" BorderThickness="0,0,0,1" BorderBrush="DarkGray">
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock x:Name="TextBlock_Label" VerticalAlignment="Center" FontWeight="Bold" Margin="10">Label</TextBlock>
+                    <Grid Margin="5">
+                        <ComboBox x:Name="ComboBox" Visibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5"></ComboBox>
+                        <TextBlock x:Name="TextBlock" VerticalAlignment="Center" Margin="5">hello</TextBlock>
+                    </Grid>
+                    <Button x:Name="Button_Pencil" Click="Button_Pencil_OnClick" Width="50" DockPanel.Dock="Right"
+                        Margin="10,10,0,10" HorizontalAlignment="Right"
+                        Style="{StaticResource MaterialDesignFlatButton}">
+                        <materialDesign:PackIcon Kind="Pencil" />
+                    </Button>
+
+                </DockPanel>
+                <StackPanel x:Name="StackPanel_Bottom" Visibility="Visible" Height="0" Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="5" Click="Button_Cancel_OnClick">Cancel</Button>
+                    <Button Margin="0,5,5,5" Click="Button_Save_OnClick">Save</Button>
+
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </materialDesign:Card>
 </UserControl>
