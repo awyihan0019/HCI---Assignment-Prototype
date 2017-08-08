@@ -146,6 +146,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\CheckBooking\UserControl_ReservationEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\Homepage\Homepage_AfterLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -218,6 +222,9 @@
   <ItemGroup>
     <Compile Include="Page\CheckBooking\UserControl_CheckBooking.xaml.cs">
       <DependentUpon>UserControl_CheckBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\CheckBooking\UserControl_ReservationEdit.xaml.cs">
+      <DependentUpon>UserControl_ReservationEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Homepage\Homepage_AfterLogin.xaml.cs">
       <DependentUpon>Homepage_AfterLogin.xaml</DependentUpon>
