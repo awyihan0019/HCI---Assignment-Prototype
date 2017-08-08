@@ -69,7 +69,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Ipoh Parade"
                 }, 
                 "PG 13", 
-                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.png")),
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg")),
                 "13 July 2017", 
                 "2 Hours", 
                 "Christopher Nolan",
@@ -158,7 +158,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Ipoh Parade"
                 }, 
                 "PG 13+", 
-                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.png")),
+                new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg")),
                 "01 August 2017",
                 "3 Hours",
                 "Oliver Hirschbiegel",
@@ -187,7 +187,7 @@ namespace HCI___Assignment_Prototype.Global
                     "Sunway Pyramid",
                     "Ipoh Parade"
                 }, "U",
-                new BitmapImage( new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png")),
+                new BitmapImage( new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.jpg")),
                 "07 August 2017",
                 "2 Hours 30 Minutes",
                 "Bill Condon",

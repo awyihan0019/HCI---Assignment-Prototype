@@ -336,16 +336,16 @@
     <Resource Include="Global\MovieIcon\doom.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Global\MovieIcon\dunkirk.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Global\MovieIcon\wolfenstein2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Global\MovieIcon\beauty&amp;beast.png" />
+    <Resource Include="Global\MovieIcon\beauty&amp;beast.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Global\MovieIcon\deruntergang.png" />
+    <Resource Include="Global\MovieIcon\deruntergang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Global\MovieIcon\dunkirk.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
