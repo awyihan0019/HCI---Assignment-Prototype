@@ -14,28 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HCI___Assignment_Prototype.Page.CheckBooking
-{
+namespace HCI___Assignment_Prototype.Page.CheckBooking {
     /// <summary>
     /// Interaction logic for UserControl_ReservationEdit.xaml
     /// </summary>
-    public partial class UserControl_ReservationEdit : UserControl
-    {
-        public UserControl_ReservationEdit()
-        {
+    public partial class UserControl_ReservationEdit : UserControl {
+        public UserControl_ReservationEdit() {
             InitializeComponent();
         }
 
-        private void Cancel_OnClick(object sender, RoutedEventArgs e)
-        {
+        private void Cancel_OnClick(object sender , RoutedEventArgs e) {
             MainWindow.MainFrame.GoBack();
         }
 
-        private void SaveReservationEdit_Click(object sender, RoutedEventArgs e)
-        {
-            DialogBox.Show("Do you really want to update this reservation", "", "CANCEL", "SAVE");
-            switch (DialogBox.Result)
-            {
+        private void SaveReservationEdit_Click(object sender , RoutedEventArgs e) {
+            DialogBox.Show("Do you really want to update this reservation" , "" , "CANCEL" , "SAVE");
+            switch (DialogBox.Result) {
                 case DialogBox.ResultEnum.LeftButtonClicked: return;
                 case DialogBox.ResultEnum.RightButtonClicked:
                     {
@@ -43,6 +37,7 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
                             DialogBox.Show("", "Profile successfully updated!", "OK");
                             MainWindow.MainFrame.GoBack();
                         });
+
                         return;
                     }
             }

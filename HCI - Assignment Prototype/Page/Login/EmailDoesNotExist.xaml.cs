@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using HCI___Assignment_Prototype.CustomControl;
 
 namespace HCI___Assignment_Prototype.Page.Login {
     /// <summary>
@@ -15,7 +16,7 @@ namespace HCI___Assignment_Prototype.Page.Login {
         }
 
         private void RetryButton_OnClick(object sender, RoutedEventArgs e) {
-            MainWindow.MainFrame.GoBack();
+            DialogBox.GoBack();
         }
     }
 }

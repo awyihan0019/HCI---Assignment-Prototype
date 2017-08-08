@@ -29,7 +29,7 @@ namespace HCI___Assignment_Prototype.Page {
         }
 
         private void Cancel_OnClick(object sender, RoutedEventArgs e) {
-            MainWindow.MainFrame.GoBack();
+            DialogBox.GoBack();
         }
 
         private void PasswordBox_OnKeyUp(object sender, KeyEventArgs e) {

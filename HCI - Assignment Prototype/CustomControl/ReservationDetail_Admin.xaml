@@ -43,7 +43,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <TextBlock FontWeight="Bold">Movie name</TextBlock>
-                    <TextBlock FontWeight="Bold" Grid.Row="1">Rating</TextBlock>
+                    <TextBlock FontWeight="Bold" Grid.Row="1">Category</TextBlock>
                     <TextBlock FontWeight="Bold" Grid.Row="2">Trailer Link</TextBlock>
                     <TextBlock FontWeight="Bold" Grid.Row="3">Release Date</TextBlock>
                     <TextBlock FontWeight="Bold" Grid.Row="4">Cinemas</TextBlock>

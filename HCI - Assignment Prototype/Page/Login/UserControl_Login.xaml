@@ -6,22 +6,28 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page"
              mc:Ignorable="d">
-    <materialDesign:Card VerticalAlignment="Center" HorizontalAlignment="Center">
-        <StackPanel VerticalAlignment="Center"
+    <StackPanel VerticalAlignment="Center"
                     Margin="30">
-            <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Login</TextBlock>
-            <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBox
-	materialDesign:HintAssist.Hint="Email" FontSize="20" x:Name="Textbox_EmailFront" Margin="5" VerticalAlignment="Center" Width="380" KeyUp="Textbox_EmailFront_KeyUp"
+        <TextBlock FontSize="30" Margin="2 2 2 2" HorizontalAlignment="Center" FontWeight="Bold">Login</TextBlock>
+        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox
+	materialDesign:HintAssist.Hint="Enter your email" FontSize="20" x:Name="Textbox_EmailFront" Margin="5" Width="200" VerticalAlignment="Center" KeyUp="Textbox_EmailFront_KeyUp"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                
-            </DockPanel>
-            <TextBlock FontSize="12" HorizontalAlignment="Left" TextDecorations="Underline">Forgot your password?</TextBlock>
-            <Button x:Name="SubmitButton" Click="SubmitButton_Click"
-                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="0 12 8 0" Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Center">
-                SUBMIT
+
+        </DockPanel>
+        <TextBlock FontSize="12" Margin="5,0,0,0" HorizontalAlignment="Left" TextDecorations="Underline">Forgot your password?</TextBlock>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="Cancel" Margin="0 15 20 0" Click="Cancel_OnClick"
+                    Style="{StaticResource MaterialDesignFlatButton}" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                CANCEL
+            </Button>
+            <Button x:Name="Login" Margin="20 15 0 0" Click="NextButton_OnClick"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                NEXT
             </Button>
         </StackPanel>
-    </materialDesign:Card>
+
+    </StackPanel>
 </UserControl>

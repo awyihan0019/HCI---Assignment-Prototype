@@ -13,17 +13,22 @@ namespace HCI___Assignment_Prototype.Page {
             InitializeComponent();
         }
 
-        private void SubmitButton_Click(object sender, RoutedEventArgs e) {
-            var email = Textbox_EmailFront.Text;
-            if (email == Global.Global.OnlyUser.Email) MainWindow.MainFrame.Navigate(new UserControl_Login2());
-            else MainWindow.MainFrame.Navigate(new EmailDoesNotExist());
-        }
 
-        private void Textbox_EmailFront_TextChanged(object sender, TextChangedEventArgs e) { }
 
         private void Textbox_EmailFront_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter) SubmitButton_Click(null, null);
+            if (e.Key == Key.Enter) NextButton_OnClick(null, null);
+        }
+
+        private void Cancel_OnClick(object sender, RoutedEventArgs e) {
+            DialogBox.CloseDialog();
+        }
+
+        private void NextButton_OnClick(object sender, RoutedEventArgs e) {
+            var email = Textbox_EmailFront.Text;
+            if (email == Global.Global.OnlyUser.Email)
+                DialogBox.Show(new UserControl_Login2());
+            else DialogBox .Show(new EmailDoesNotExist());
         }
     }
 }

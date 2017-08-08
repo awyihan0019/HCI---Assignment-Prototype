@@ -1,6 +1,11 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.CustomControl.SeatPlaceControl;
+using HCI___Assignment_Prototype.Global;
+using HCI___Assignment_Prototype.Page.CheckBooking;
 using HCI___Assignment_Prototype.Page.Homepage;
 using HCI___Assignment_Prototype.Page.View_Booking;
 using MaterialDesignThemes.Wpf;
@@ -16,7 +21,7 @@ namespace HCI___Assignment_Prototype {
         public MainWindow() {
             InitializeComponent();
             MainFrame = Frame;
-            Snackbar = snackbar;
+            Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
             Frame.Navigate(new Homepage_BeforeLogin());
         }
