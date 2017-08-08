@@ -17,7 +17,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             p.DialogHost.IsOpen = true;
             var timer = new DispatcherTimer {Interval = TimeSpan.FromSeconds(3)};
             timer.Tick += (sender, args) => {
-                p.Hide();
+                p.Close();
                 action();
                 timer.Stop();
             };
