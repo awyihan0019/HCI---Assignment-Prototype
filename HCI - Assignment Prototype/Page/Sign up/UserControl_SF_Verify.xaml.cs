@@ -20,12 +20,12 @@ namespace HCI___Assignment_Prototype.Page {
         private void Submit_Click(object sender, RoutedEventArgs e) {
             ProgressDialog.Show("Loading . . .", "Verifiying Code . . .", () => {
                 if (VerificationCode.Text != "1234") DialogBox.Show("Error!", "Verification code is incorrect.", "RETRY");
-
                 else
                 {
                     DialogBox.Show("", "Profile successfully created!", "OK");
-                    MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
-                    DialogBox.Show(new UserControl_Login());
+                    if (DialogBox.Result == DialogBox.ResultEnum.LeftButtonClicked) {
+                        MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
+                    }
                 }
             });
             
