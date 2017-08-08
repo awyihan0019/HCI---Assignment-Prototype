@@ -2,6 +2,7 @@
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Profile_Page;
 using System.Windows.Controls;
+using HCI___Assignment_Prototype.Page.CheckBooking;
 
 namespace HCI___Assignment_Prototype.Page.Homepage {
     /// <summary>
@@ -30,6 +31,10 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
 
         private void UserButton_OnClick(object sender, RoutedEventArgs e) {
             UserPopup.IsOpen = !UserPopup.IsOpen;
+        }
+        private void CheckBooking(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainFrame.Navigate(new UserControl_CheckBooking());
         }
     }
 }

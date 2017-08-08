@@ -33,7 +33,7 @@
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="ViewProfile">
                                     Your Profile
                                 </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center">
+                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="CheckBooking">
                                     Check Booking
                                 </Button>
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center">
