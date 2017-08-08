@@ -26,24 +26,10 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
             timer.Tick += Timer_Tick;
         }
 
-        private readonly List<string> posterListSource = new List<string>
-        {
-            @"MoviePoster\blackhawkdown.jpg",
-            @"MoviePoster\bvs.jpg",
-            @"MoviePoster\doom.jpg",
-            @"MoviePoster\dunkirk.jpg",
-            @"MoviePoster\jl.jpg",
-            @"MoviePoster\londonfallen.jpg",
-            @"MoviePoster\olympusfallen.jpg",
-            @"MoviePoster\savingryan.jpg",
-            @"MoviePoster\SpidermanHomecoming.jpg",
-            @"MoviePoster\wolfenstein2.jpg"
-        };
-   
+
+        private static Random random= new Random();
         private void Timer_Tick(object sender , EventArgs e) {
-            var rand = new Random();
-            var nextNumber = rand.Next(posterListSource.Count - 1);
-            Poster.Source = new BitmapImage(new Uri(posterListSource[nextNumber] , UriKind.Relative));
+            Transitioner.SelectedIndex = random.Next() % 10;
         }
     }
 }
