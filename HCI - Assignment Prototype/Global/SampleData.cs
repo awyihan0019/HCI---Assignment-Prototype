@@ -195,6 +195,10 @@ namespace HCI___Assignment_Prototype.Global
                 )
         };
 
-        public static Uri SampleUri = new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.png" , UriKind.RelativeOrAbsolute);
+        public static List<MovieReservation_Admin> SampleReservationDetails_Admin = new List<MovieReservation_Admin>()
+        {
+            
+        };
+
     }
 }
