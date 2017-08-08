@@ -413,5 +413,8 @@
   <ItemGroup>
     <Resource Include="Global\MovieIcon\dm3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Page\CreateReservation_Admin\insertimage.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
