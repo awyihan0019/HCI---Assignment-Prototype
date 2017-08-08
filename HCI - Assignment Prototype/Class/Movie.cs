@@ -34,7 +34,7 @@ namespace HCI___Assignment_Prototype.Class {
             Cast = cast;
         }
 
-        public Movie(string releaseDate, string runningTime, string director, string cast) {
+        public Movie() {
         }
     }
 }
