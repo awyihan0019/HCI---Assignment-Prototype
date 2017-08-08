@@ -107,6 +107,7 @@
     <Compile Include="Class\CustomAnimation.cs" />
     <Compile Include="Class\Movie.cs" />
     <Compile Include="Class\MovieReservation.cs" />
+    <Compile Include="Class\MovieReservation_Admin.cs" />
     <Compile Include="CustomControl\ReservationDetail.xaml.cs">
       <DependentUpon>ReservationDetail.xaml</DependentUpon>
     </Compile>
@@ -360,6 +361,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Global\MovieIcon\dunkirk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wallpaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wallpaper2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wallpaper3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

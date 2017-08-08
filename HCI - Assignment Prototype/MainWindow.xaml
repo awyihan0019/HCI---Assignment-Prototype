@@ -38,11 +38,14 @@
         </ControlTemplate>
     </Window.Resources>
     <materialDesign:DrawerHost x:Name="DrawerHost">
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <Grid>
-                <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" />
-                <materialDesign:Snackbar x:Name="snackbar" />
-            </Grid>
-        </ScrollViewer>
+        <Grid>
+            <Image x:Name="Image" Source="Wallpaper3.png" Stretch="Fill"></Image>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" />
+                    <materialDesign:Snackbar x:Name="snackbar" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
     </materialDesign:DrawerHost>
 </Window>
