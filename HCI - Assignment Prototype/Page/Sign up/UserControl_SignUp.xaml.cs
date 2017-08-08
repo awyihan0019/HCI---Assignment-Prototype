@@ -17,14 +17,14 @@ namespace HCI___Assignment_Prototype.Page {
 
 
         private void Verify() {
-            var email = Textbox_EmailFront.Text + "@" + Textbox_EmailBack.Text;
-            var password = Passwordbox_Password.Password;
+            var email = Textbox_EmailFront.Text;
+            var password = PasswordBox.Password;
             var rePassword = Passwordbox_PasswordReenter.Password;
 
-            if ((Textbox_EmailFront.Text == "") | (Textbox_EmailBack.Text == "")) {
+            if ((Textbox_EmailFront.Text == "")) {
                 DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter email.", "OK");
             }
-            else if (Passwordbox_Password.Password == "") {
+            else if (PasswordBox.Password == "") {
                 DialogBox.Show("Create Error", "Profile Created Failed.\nYou must enter the password.", "OK");
             }
             else if (Passwordbox_PasswordReenter.Password == "") {
@@ -49,6 +49,12 @@ namespace HCI___Assignment_Prototype.Page {
             MainWindow.MainFrame.GoBack();
         }
 
-
+        private void PasswordBox_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Enter)
+            {
+                CreateProfile_Click(null, null);
+            }
+        }
     }
 }
