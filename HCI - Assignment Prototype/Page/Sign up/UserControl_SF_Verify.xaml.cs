@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Page.Homepage;
 
 namespace HCI___Assignment_Prototype.Page {
     /// <summary>
@@ -17,9 +18,18 @@ namespace HCI___Assignment_Prototype.Page {
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e) {
-            if (VerificationCode.Text != "1234") DialogBox.Show("Error!", "Verification code is incorrect.", "RETRY");
-            else
-                ProgressDialog.Show("Loading . . .", "Going to homepage . . .", () => { });
+            ProgressDialog.Show("Loading . . .", "Verifiying Code . . .", () => {
+                if (VerificationCode.Text != "1234") DialogBox.Show("Error!", "Verification code is incorrect.", "RETRY");
+
+                else
+                {
+                    DialogBox.Show("", "Profile successfully created!", "OK");
+                    MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
+                    DialogBox.Show(new UserControl_Login());
+                }
+            });
+            
+                
         }
     }
 }
