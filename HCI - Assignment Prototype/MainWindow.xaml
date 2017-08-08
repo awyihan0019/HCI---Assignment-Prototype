@@ -45,7 +45,6 @@
                 <Grid>
                     <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" />
                     <materialDesign:Snackbar x:Name="snackbar" />
-                    <customControl:DropDownWithPencil Label="Table" Text="One" Items="Hello,Hey,Yo" HorizontalAlignment="Center"></customControl:DropDownWithPencil>
                 </Grid>
             </ScrollViewer>
         </Grid>

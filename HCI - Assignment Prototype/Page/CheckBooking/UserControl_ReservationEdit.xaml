@@ -15,13 +15,15 @@
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" />
         </StackPanel>
-        <customcontrol:TextboxWithPencil Label="Movie Name" Text="xxxxx" />
+        <TextBlock >Movie Name</TextBlock>
+        <!--
         <customcontrol:TextboxWithPencil Label="Location" Text="LLLLLL" />
         <customcontrol:TextboxWithPencil Label="Time" Text="08:00" />
         <customcontrol:TextboxWithPencil Label="Date" Text="2017/2/01" />
         <customcontrol:TextboxWithPencil Label="Ticket" Text="4" />
         <customcontrol:TextboxWithPencil Label="Seat" Text="A3, A4" />
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
