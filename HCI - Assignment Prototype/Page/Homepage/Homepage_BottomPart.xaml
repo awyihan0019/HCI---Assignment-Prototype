@@ -14,7 +14,7 @@
                     <Image Source="MoviePoster/SpidermanHomecoming.jpg" Stretch="Fill" Width="960" Height="540"></Image>
                 </materialDesign:TransitionerSlide>
                 <materialDesign:TransitionerSlide>
-                    <Image Source="MoviePoster/blackhawkdown.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                    <Image Source="MoviePoster/warcraft.jpg" Stretch="Fill" Width="960" Height="540"></Image>
                 </materialDesign:TransitionerSlide>
                 <materialDesign:TransitionerSlide>
                     <Image Source="MoviePoster/bvs.jpg" Stretch="Fill" Width="960" Height="540"></Image>
@@ -35,7 +35,7 @@
                     <Image Source="MoviePoster/olympusfallen.jpg" Stretch="Fill" Width="960" Height="540"></Image>
                 </materialDesign:TransitionerSlide>
                 <materialDesign:TransitionerSlide>
-                    <Image Source="MoviePoster/savingryan.jpg" Stretch="Fill" Width="960" Height="540"></Image>
+                    <Image Source="MoviePoster/lastofus.jpg" Stretch="Fill" Width="960" Height="540"></Image>
                 </materialDesign:TransitionerSlide>
                 <materialDesign:TransitionerSlide>
                     <Image Source="MoviePoster/wolfenstein2.jpg" Stretch="Fill" Width="960" Height="540"></Image>
@@ -54,7 +54,7 @@
                 </StackPanel.Resources>
                 <StackPanel Width="400">
                     <Label>1. Wolfstein 2: The New Colossus</Label>
-                    <Label>2. Black Hawk Down</Label>
+                    <Label>2. Warcraft</Label>
                     <Label>3. Doom</Label>
                     <Label>4. Batman vs Superman</Label>
                     <Label>5. Spiderman: Homecoming</Label>
@@ -64,7 +64,7 @@
                     <Label>7. Olympus Has Fallen</Label>
                     <Label>8. London Has Fallen</Label>
                     <Label>9. Justice League</Label>
-                    <Label>10. Saving Private Ryan</Label>
+                    <Label>10. The Last of Us</Label>
                 </StackPanel>
             </StackPanel>
         </GroupBox>
