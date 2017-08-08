@@ -5,6 +5,7 @@ using System.Windows.Media.Imaging;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.CustomControl.SeatPlaceControl;
 using HCI___Assignment_Prototype.Global;
+using HCI___Assignment_Prototype.Page;
 using HCI___Assignment_Prototype.Page.CheckBooking;
 using HCI___Assignment_Prototype.Page.Homepage;
 using HCI___Assignment_Prototype.Page.View_Booking;
@@ -23,8 +24,7 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            DialogBox.Show("", "");
-            Frame.Navigate(new DropDownWithPencil());
+            Frame.Navigate(new UserControl_SignUp());
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
