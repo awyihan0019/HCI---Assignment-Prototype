@@ -13,10 +13,10 @@ namespace HCI___Assignment_Prototype.Global
     {
         public static List<MovieReservation> SampleReservationDetails = new List<MovieReservation>(){
             new MovieReservation("The Red Menace", "8:00p.m. - 10:00p.m.",
-                "8 August 2017", "GSC-MidValley", "A1, A2, A3", "-", "Comba A(3)"),
+                "30 June 2017", "GSC-MidValley", "A1, A2, A3", "-", "Comba A(3)"),
 
             new MovieReservation("Wolfenstein 2: The New Colossus", "1:00p.m. - 3:00p.m.",
-                "10 August 2017", "GSC-NuSentral", "A6, A7", "-", "Comba B(2)"),
+                "10 July 2017", "GSC-NuSentral", "A6, A7", "-", "Comba B(2)"),
 
             new MovieReservation("Metro 2033", "10:00p.m. - 12:00p.m.",
                 "13 August 2017", "GSC-SunwayPyramid", "A10, A11, A12", "-", "Comba A(1), Combo B(2)"),

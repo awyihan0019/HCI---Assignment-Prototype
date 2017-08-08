@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+using HCI___Assignment_Prototype.Class;
 
 namespace HCI___Assignment_Prototype.CustomControl {
     /// <summary>
@@ -9,13 +11,20 @@ namespace HCI___Assignment_Prototype.CustomControl {
             InitializeComponent();
         }
 
-        private void DeleteButton_OnClick(object sender, System.Windows.RoutedEventArgs e)
-        {
-            DialogBox.Show("Do you really want cancel the following reservation?", "", "CANCEL", "CONFIRM");
-            switch (DialogBox.Result)
-            {
-                case 
-            }
+        private void DeleteButton_OnClick(object sender, System.Windows.RoutedEventArgs e) {
+            this.DrawerHost.IsRightDrawerOpen = true;
+        }
+
+        private void YesButton_OnClick(object sender, RoutedEventArgs e) {
+            var da = CustomAnimation.GetLeavingScreenAnimation(this.ActualHeight, 0, false);
+            this.BeginAnimation(HeightProperty, da);
+
+        }
+
+        public void MarkAsExpired() {
+            ToolBox.Visibility = Visibility.Hidden;
+            ExpiredLabel.Visibility = Visibility.Visible;
+            Card.Opacity = 0.5;
         }
     }
 }
