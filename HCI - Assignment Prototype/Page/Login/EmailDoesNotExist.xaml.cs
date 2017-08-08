@@ -16,7 +16,7 @@ namespace HCI___Assignment_Prototype.Page.Login {
         }
 
         private void RetryButton_OnClick(object sender, RoutedEventArgs e) {
-            DialogBox.GoBack();
+            DialogBox.Show(new UserControl_Login2());
         }
     }
 }
