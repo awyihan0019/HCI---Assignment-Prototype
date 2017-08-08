@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.Class;
 
 namespace HCI___Assignment_Prototype.Page.CheckBooking
 {
@@ -25,10 +26,19 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
         public UserControl_CheckBooking()
         {
             InitializeComponent();
-
-            foreach (var item in SampleData.SampleReservationDetails)
+            var incoming = SampleData.SampleReservationDetails.
+                Where(m => DateTime.Parse(m.Date) >= DateTime.Today).ToList();
+            var expired = SampleData.SampleReservationDetails.
+                Where(m => DateTime.Parse(m.Date) < DateTime.Today).ToList();
+            foreach (var item in incoming)
             {
                 BookingList.Children.Add(new ReservationDetail() { DataContext = item });
+            }
+            foreach (var item in expired) {
+               var r = new ReservationDetail(){DataContext = item};
+                r.MarkAsObsoleted("[EXPIRED]");
+                BookingList.Children.Add(r);
+
             }
         }
     }
