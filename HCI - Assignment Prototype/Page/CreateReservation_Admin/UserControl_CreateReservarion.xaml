@@ -15,7 +15,7 @@
         <TextBox
 	materialDesign:HintAssist.Hint="Movie Summary" FontSize="20" x:Name="Textbox_SummaryOfMovie" Margin="5" VerticalAlignment="Center" Width="380" MinLines="5"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Width="200" Height="200" Margin="10" Source = "insertimage.jpg" >
             </Image>
             <Button x:Name="UPLOAD" Click="Click_UploadPoster"
@@ -25,10 +25,10 @@
             </Button>
         </StackPanel>
         <TextBox
-	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380"
+	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" x:Name="DatePicker_ReleaseDate" Margin="5" VerticalAlignment="Center"></DatePicker>
-        <TextBlock FontSize="21" Margin="5" HorizontalAlignment="Left">Release Cinemas</TextBlock>
+        <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" x:Name="DatePicker_ReleaseDate" Margin="5" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
+        <TextBlock FontSize="21" Margin="5" HorizontalAlignment="Center">Release Cinemas</TextBlock>
         <!-- Add scroll down list (cinemas) here) -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
