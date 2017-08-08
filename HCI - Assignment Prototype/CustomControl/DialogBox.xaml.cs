@@ -26,8 +26,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         public static ResultEnum Show(string title , string message , string leftButtonText = "Got it!" ,
                                       string rightButtonText = null) {
-            if (_singleton == null) _singleton = new DialogBox();
-            var p = _singleton;
+            var p = new DialogBox();
             p.SetContent(title , message , leftButtonText , rightButtonText);
             p.DialogHost.IsOpen = true;
             p.ShowDialog();
@@ -45,10 +44,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
             Default.Visibility = Visibility.Visible;
         }
 
-        private static DialogBox _singleton;
+        private static DialogBox _singleton_Custom;
         public static void Show(UserControl content) {
-            if (_singleton == null) _singleton = new DialogBox();
-            var p = _singleton;
+            _singleton_Custom.Hide();
+            var p = new DialogBox();
+            _singleton_Custom = p;
             p.SetContent(content);
             p.DialogHost.IsOpen = true;
             if (p.Visibility == Visibility.Visible) return;
@@ -56,29 +56,23 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         public static void CloseDialog() {
-            _singleton.Hide();
-        }
-
-        public static void GoBack() {
-            if (_singleton == null) return;
-            if (_singleton.Frame.CanGoBack == false) return;
-            _singleton.Frame.GoBack();
+            _singleton_Custom.Hide();
         }
 
         private void SetContent(UserControl content) {
-            Custom.Visibility = Visibility.Visible;
             Default.Visibility = Visibility.Collapsed;
+            Custom.Visibility = Visibility.Visible;
             Frame.Navigate(content);
         }
 
         private void Button_Left_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.LeftButtonClicked;
-            Hide();
+            Close();
         }
 
         private void Button_Right_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.RightButtonClicked;
-            Hide();
+            Close();
         }
 
         private void SampleCode() {
