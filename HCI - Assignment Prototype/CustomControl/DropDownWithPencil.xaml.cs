@@ -23,24 +23,28 @@ namespace HCI___Assignment_Prototype.CustomControl {
     public partial class DropDownWithPencil : UserControl {
         public DropDownWithPencil() {
             InitializeComponent();
-            ComboBox.ItemsSource = new List<string>(){"qwe","wer","asd"};
+            ComboBox.ItemsSource = new List<string>() { "qwe" , "wer" , "asd" };
+            OnItemsPropertyChanged(this, new DependencyPropertyChangedEventArgs(ItemsProperty, "","apple, banana, orange"));
+            LabelPropertyChangedCallback(this, new DependencyPropertyChangedEventArgs(LabelProperty, "","Test label"));
+            TextPropertyChangedCallback(this, new DependencyPropertyChangedEventArgs(TextProperty, "", "test text"));
+
         }
 
         public void SetItems(string items) {
             ComboBox.ItemsSource = items.Split(',');
         }
 
-        private void Button_Pencil_OnClick(object sender, RoutedEventArgs e) {
+        private void Button_Pencil_OnClick(object sender , RoutedEventArgs e) {
             GoToEditableMode();
             ComboBox.IsDropDownOpen = true;
         }
 
-        private void Button_Cancel_OnClick(object sender, RoutedEventArgs e) {
+        private void Button_Cancel_OnClick(object sender , RoutedEventArgs e) {
             ComboBox.Text = TextBlock.Text;
             GoToUneditableMode();
         }
 
-        private void Button_Save_OnClick(object sender, RoutedEventArgs e) {
+        private void Button_Save_OnClick(object sender , RoutedEventArgs e) {
             TextBlock.Text = ComboBox.Text;
             GoToUneditableMode();
         }
@@ -52,7 +56,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             ComboBox.Visibility = Visible;
             TextBlock.Visibility = Hidden;
             Button_Pencil.Visibility = Hidden;
-            
+
         }
 
         private void GoToUneditableMode() {
@@ -63,5 +67,67 @@ namespace HCI___Assignment_Prototype.CustomControl {
             Button_Pencil.Visibility = Visible;
         }
 
+
+        #region ItemsProperty
+        public string Items {
+            get { return (string)GetValue(ItemsProperty); }
+            set { SetValue(ItemsProperty , value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Items.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ItemsProperty =
+            DependencyProperty.Register("Items" , typeof(string) , typeof(DropDownWithPencil) , new PropertyMetadata("" , OnItemsPropertyChanged));
+
+        private static void OnItemsPropertyChanged
+            (DependencyObject d , DependencyPropertyChangedEventArgs e) {
+            var dropDownWithPencil = d as DropDownWithPencil;
+            if (dropDownWithPencil == null) return;
+            var newValue = (string)e.NewValue;
+            dropDownWithPencil.SetItems(newValue);
+        }
+        #endregion
+
+        #region LabelProperty
+
+        public string Label {
+            get => (string)GetValue(LabelProperty);
+            set => SetValue(LabelProperty , value);
+        }
+
+        // Using a DependencyProperty as the backing store for LabelProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty LabelProperty =
+            DependencyProperty.Register("Label" , typeof(string) , typeof(TextboxWithPencil) ,
+                new PropertyMetadata("Label" , LabelPropertyChangedCallback));
+
+        private static void LabelPropertyChangedCallback(DependencyObject dependencyObject ,
+                                                         DependencyPropertyChangedEventArgs e) {
+            var d = dependencyObject as DropDownWithPencil;
+            d.TextBlock_Label.Text = (string)e.NewValue;
+        }
+
+        #endregion
+
+        #region TextProperty
+
+        public string Text {
+            get => (string)GetValue(TextProperty);
+            set => SetValue(TextProperty , value);
+        }
+
+        // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TextProperty =
+            DependencyProperty.Register("Text" , typeof(string) , typeof(TextboxWithPencil) ,
+                new PropertyMetadata("sample text . . . " , TextPropertyChangedCallback));
+
+        private static void TextPropertyChangedCallback(DependencyObject dependencyObject ,
+                                                        DependencyPropertyChangedEventArgs
+                                                            dependencyPropertyChangedEventArgs) {
+            var d = dependencyObject as DropDownWithPencil;
+            var newValue = (string)dependencyPropertyChangedEventArgs.NewValue;
+            d.ComboBox.Text = newValue;
+            d.TextBlock.Text = newValue;
+        }
+
+        #endregion
     }
 }
