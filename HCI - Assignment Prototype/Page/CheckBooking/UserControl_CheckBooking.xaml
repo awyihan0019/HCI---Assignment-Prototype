@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.CheckBooking"
              mc:Ignorable="d" >
     <StackPanel Orientation="Vertical" Width="1000">
-        <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Check Booking</TextBlock>
+        <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Check Reservation History</TextBlock>
         <StackPanel x:Name="BookingList"></StackPanel>
     </StackPanel>
 </UserControl>

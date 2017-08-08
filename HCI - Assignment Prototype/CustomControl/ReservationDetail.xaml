@@ -60,8 +60,16 @@
                     <Setter Property="Height" Value="100" />
                 </Style>
             </StackPanel.Resources>
-            <Button Style="{StaticResource MaterialDesignToolButton}" Content="{materialDesign:PackIcon Kind=Heart}" />
-            <Button Style="{StaticResource MaterialDesignToolButton}" Content="{materialDesign:PackIcon Kind=Delete}" />
+                <ToggleButton
+	IsChecked="False"
+	Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+	ToolTip="MaterialDesignFlatPrimaryToggleButton">
+                    <materialDesign:PackIcon
+		Width="30"
+		Height="30"
+		Kind="Heart" />
+                </ToggleButton>
+                <Button Style="{StaticResource MaterialDesignToolButton}" Content="{materialDesign:PackIcon Kind=Delete}" Click="DeleteButton_OnClick" />
             <Button Style="{StaticResource MaterialDesignToolButton}"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" />
         </StackPanel>
