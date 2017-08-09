@@ -2,6 +2,9 @@
 
 namespace HCI___Assignment_Prototype.Class {
     public class MovieReservation {
+        public MovieReservation(string movieName) : this(movieName, "", "","","","","") {
+            
+        }
         public MovieReservation() : this("Spiderman: Homecoming", "8.00pm - 10.00pm", "8 June 2017", "GSC - Mid Valley",
             "A3, A4, A5", "-", "Combo-A (2), Combo-B (1)", null) { }
 
