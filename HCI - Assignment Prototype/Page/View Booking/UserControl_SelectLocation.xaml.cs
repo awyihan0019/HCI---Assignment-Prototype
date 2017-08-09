@@ -25,8 +25,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         public UserControl_SelectLocation()
         {
             InitializeComponent();
-            String[] location = SampleData.SampleMovies[0].AvailableLocation.ToArray();
-            ListView.ItemsSource = location;
+            ListView.ItemsSource = Global.Global.SelectedMovie.AvailableLocation;
         }
 
         private void Click_locationNext(object sender, RoutedEventArgs e)

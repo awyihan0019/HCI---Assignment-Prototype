@@ -15,34 +15,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HCI___Assignment_Prototype.Page.View_Booking
-{
+namespace HCI___Assignment_Prototype.Page.View_Booking {
     /// <summary>
     /// Interaction logic for UserControl_SelectDate.xaml
     /// </summary>
-    public partial class UserControl_SelectDate : UserControl
-    {
-        public UserControl_SelectDate()
-        {
+    public partial class UserControl_SelectDate : UserControl {
+        public UserControl_SelectDate() {
             InitializeComponent();
-            DateTime[] date = SampleData.SampleMovies[0].AvailableDate.ToArray();
+            DateTime[] date = Global.Global.SelectedMovie.AvailableDate.ToArray();
             String[] fixedDate = new String[date.Length];
-            for (int i = 0; i < fixedDate.Length; i++)
-            {
+            for (int i = 0 ; i < fixedDate.Length ; i++) {
                 fixedDate[i] = date[i].ToLongDateString();
             }
             ListView.ItemsSource = fixedDate;
         }
 
-        private void Click_cancel(object sender, RoutedEventArgs e)
-        {
+        private void Click_cancel(object sender , RoutedEventArgs e) {
             MainWindow.MainFrame.GoBack();
         }
 
-        private void Click_dateNext(object sender, RoutedEventArgs e)
-        {
+        private void Click_dateNext(object sender , RoutedEventArgs e) {
             if (ListView.SelectedItem == null) {
-                DialogBox.Show("You must select a location!", "", "OK");
+                DialogBox.Show("You must select a location!" , "" , "OK");
             }
             else {
                 UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectTime());
