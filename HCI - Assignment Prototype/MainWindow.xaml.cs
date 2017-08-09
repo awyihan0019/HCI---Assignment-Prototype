@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Mail;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using HCI___Assignment_Prototype.Class;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.CustomControl.SeatPlaceControl;
 using HCI___Assignment_Prototype.Global;
@@ -29,7 +31,15 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new Homepage_BeforeLogin());
+            Frame.Navigate(new DropDownSelectionList()
+            {
+                DataContext = new List<Item>()
+                {
+                    new Item("GSC"),
+                    new Item("The mines"),
+                    new Item("Garden")
+                }
+            });
         }
 
         private void ExtraMenuButton_OnClick(object sender , RoutedEventArgs e) {
