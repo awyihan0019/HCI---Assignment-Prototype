@@ -24,9 +24,6 @@ namespace HCI___Assignment_Prototype.CustomControl {
         public DropDownWithPencil() {
             InitializeComponent();
             ComboBox.ItemsSource = new List<string>() { "qwe" , "wer" , "asd" };
-            OnItemsPropertyChanged(this, new DependencyPropertyChangedEventArgs(ItemsProperty, "","apple, banana, orange"));
-            LabelPropertyChangedCallback(this, new DependencyPropertyChangedEventArgs(LabelProperty, "","Test label"));
-            TextPropertyChangedCallback(this, new DependencyPropertyChangedEventArgs(TextProperty, "", "test text"));
 
         }
 
@@ -129,5 +126,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         #endregion
+
+        private void DropDownWithPencil_OnLoaded(object sender, RoutedEventArgs e) {
+            OnItemsPropertyChanged(this , new DependencyPropertyChangedEventArgs(ItemsProperty , "" , Items));
+            LabelPropertyChangedCallback(this , new DependencyPropertyChangedEventArgs(LabelProperty , "" , Label));
+            TextPropertyChangedCallback(this , new DependencyPropertyChangedEventArgs(TextProperty , "" , Text));
+        }
     }
 }
