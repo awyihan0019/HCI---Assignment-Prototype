@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Mail;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -29,6 +31,13 @@ namespace HCI___Assignment_Prototype {
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
             DrawerHost.IsRightDrawerOpen = true;
+        }
+
+        private void HomeButton_OnClick(object sender, RoutedEventArgs e) {
+            if(Global.Global.CurrentUser == null)
+            MainFrame.Navigate(new Homepage_BeforeLogin());
+            else
+            MainFrame.Navigate(new Homepage_AfterLogin());
         }
     }
 }

@@ -3,11 +3,12 @@
         public string Email;
         public string Password;
         public string Username;
-
-        public User(string email, string password, string username) {
+        public bool IsVerified;
+        public User(string email, string password, string username, bool isVerified = false) {
             Email = email;
             Password = password;
             Username = username;
+            IsVerified = isVerified;
         }
     }
 }

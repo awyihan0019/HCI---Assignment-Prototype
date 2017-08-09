@@ -21,6 +21,7 @@ namespace HCI___Assignment_Prototype.Page {
             ProgressDialog.Show("Loading . . ." , "Verifiying Code . . ." , () => {
                 if (VerificationCode.Text != "1234") DialogBox.Show("Error!" , "Verification code is incorrect." , "RETRY");
                 else {
+                    Global.Global.CurrentUser.IsVerified = true;
                     DialogBox.Show("Profile successfully created!" , "" , "OK");
                     if (DialogBox.Result == DialogBox.ResultEnum.LeftButtonClicked) {
                         MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());

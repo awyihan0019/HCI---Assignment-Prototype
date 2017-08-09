@@ -8,11 +8,11 @@ namespace HCI___Assignment_Prototype.Global {
         public static List<User> Users = new List<User>(
             )
         {
-            new User("clement@gmail.com", "clement99", "阿狗"),
+            new User("clement@gmail.com", "clement99", "阿狗", true),
 
         };
 
-        public static User CurrentUser = Users[0];
+        public static User CurrentUser = null;
         public static MovieReservation MovieReservation = new MovieReservation();
     }
 }

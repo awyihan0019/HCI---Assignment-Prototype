@@ -31,7 +31,7 @@
                                 DockPanel.Dock="Right" Click="ExtraMenuButton_OnClick">
                             <materialDesign:PackIcon Height="25" Width="25" Kind="DotsVertical" />
                         </Button>
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Online Movie Ticket Booking System (OMTiBoS)</TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="Black" Click="HomeButton_OnClick" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Online Movie Ticket Booking System (OMTiBoS)</Button>
                     </DockPanel>
                 </materialDesign:ColorZone>
                 <ContentPresenter />

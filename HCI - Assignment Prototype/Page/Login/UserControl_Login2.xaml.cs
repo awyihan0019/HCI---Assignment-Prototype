@@ -20,6 +20,11 @@ namespace HCI___Assignment_Prototype.Page {
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
             if (PasswordBox.Password == Global.Global.CurrentUser.Password) {
+                if (Global.Global.CurrentUser.IsVerified == false) {
+                DialogBox.CloseDialog();
+                    MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
+                    return;
+                }
                 DialogBox.CloseDialog();
                 DialogBox.Show("Login Successful!", "", "OK");
                 MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());

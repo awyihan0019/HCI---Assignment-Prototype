@@ -8,7 +8,7 @@
              mc:Ignorable="d">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
                 Margin="30">
-        <TextBlock FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10" HorizontalAlignment="Left">Profile successfully created.</TextBlock>
+        <TextBlock FontSize="25" FontWeight="Bold" Margin="5 2 5 10" HorizontalAlignment="Left">Please verify your account.</TextBlock>
         <TextBlock x:Name="SecondSentence" FontSize="20" FontWeight="DemiBold" Margin="5 2 5 10"
                    HorizontalAlignment="Left">
             The verify email already send to

@@ -26,6 +26,7 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
                     case DialogBox.ResultEnum.LeftButtonClicked: return;
                     case DialogBox.ResultEnum.RightButtonClicked:
                         MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
+                        Global.Global.CurrentUser = null;
                         return;
             }
         }
