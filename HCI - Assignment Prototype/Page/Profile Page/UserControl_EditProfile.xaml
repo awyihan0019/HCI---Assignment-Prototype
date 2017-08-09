@@ -16,10 +16,10 @@
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" />
         </StackPanel>
-        <customcontrol:TextboxWithPencil Label="Password" Text="*****" />
-        <customcontrol:TextboxWithPencil Label="Name" Text="阿狗" />
-        <customcontrol:TextboxWithPencil Label="Phone" Text="012-478****" />
-        <customcontrol:TextboxWithPencil Label="Adress" Text="99, Jalan Dog Taman Dog......" />
+        <customcontrol:TextboxWithPencil x:Name="PasswordField" Label="Password"/>
+        <customcontrol:TextboxWithPencil x:Name="NameField" Label="Name"/>
+        <customcontrol:TextboxWithPencil x:Name="PhoneField" Label="Phone"/>
+        <customcontrol:TextboxWithPencil x:Name="AddressField" Label="Adress"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"

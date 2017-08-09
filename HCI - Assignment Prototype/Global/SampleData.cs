@@ -292,7 +292,9 @@ namespace HCI___Assignment_Prototype.Global
                     SampleReservationDetails[1],
                     SampleReservationDetails[2],
                     SampleReservationDetails[5]
-                }
+                },
+                PhoneNumber = "012-9172898",
+                Address = "The White House"
             }
         };
     }
