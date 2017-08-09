@@ -9,17 +9,21 @@ namespace HCI___Assignment_Prototype.Page.Profile_Page {
     public partial class UserControl_EditProfile : UserControl {
         public UserControl_EditProfile() {
             InitializeComponent();
-            PasswordField.Text = Global.Global.CurrentUser.Password;
-            NameField.Text = Global.Global.CurrentUser.Username;
-            PhoneField.Text = Global.Global.CurrentUser.PhoneNumber;
-            AddressField.Text = Global.Global.CurrentUser.Address;
+            var u = Global.Global.CurrentUser;
+            PasswordField.Text = u.Password;
+            NameField.Text = u.Username;
+            PhoneField.Text = u.PhoneNumber;
+            AddressField.Text = u.Address;
+            ProfilePicture.Source = u.ProfilePicture;
+            
         }
 
         private void Save_Click(object sender, RoutedEventArgs e) {
-            Global.Global.CurrentUser.Password = PasswordField.Text;
-            Global.Global.CurrentUser.Username = NameField.Text;
-            Global.Global.CurrentUser.PhoneNumber = PhoneField.Text;
-            Global.Global.CurrentUser.Address = AddressField.Text;
+            var u = Global.Global.CurrentUser;
+            u.Password = PasswordField.Text;
+            u.Username = NameField.Text;
+            u.PhoneNumber = PhoneField.Text;
+            u.Address = AddressField.Text;
             ProgressDialog.Show("Updating profile......", "", () => {
                 DialogBox.Show("", "Profile successfully updated!", "OK");
                 MainWindow.MainFrame.GoBack();

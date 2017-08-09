@@ -11,7 +11,8 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
     public partial class Homepage_AfterLogin : UserControl {
         public Homepage_AfterLogin() {
             InitializeComponent();
-            UsernameButton.Tag = Global.Global.CurrentUser.Username;
+            UsernameButton.Content = Global.Global.CurrentUser.Username;
+            ProfilePicture.Source = Global.Global.CurrentUser.ProfilePicture;
         }
 
         private void ViewProfile(object sender, System.Windows.RoutedEventArgs e)
@@ -37,6 +38,11 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         private void CheckBooking(object sender, RoutedEventArgs e)
         {
             MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
+        }
+
+        private void ProfilePicture_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            UserPopup.IsOpen = !UserPopup.IsOpen;
         }
     }
 }

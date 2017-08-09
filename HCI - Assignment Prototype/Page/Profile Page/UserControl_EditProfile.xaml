@@ -11,7 +11,7 @@
         <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Edit Your Profile</TextBlock>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Orientation="Horizontal"
                     Margin="5">
-            <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150"
+            <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="150"
                    Width="150" Margin="15 5 5 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" />
