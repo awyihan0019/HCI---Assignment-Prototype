@@ -45,15 +45,14 @@ namespace HCI___Assignment_Prototype.Page {
                     DialogBox.Show("Error . . ." , "Email is not in correct format." , "OK");
                     return;
                 }
-                if (Global.Global.Users.Any(x => x.Email == email))
+                if (Global.SampleData.Users.Any(x => x.Email == email))
                     DialogBox.Show("Error . . ." , $"The email of '{email}' has already been used." , "OK");
                 else {
-                    Global.Global.Email = email;
                     ProgressDialog.Show("Creating profile . . ." , "" ,
                         () => {
                             MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
                             var newUser = new User(email , password , email);
-                            Global.Global.Users.Add(newUser);
+                            Global.SampleData.Users.Add(newUser);
                             Global.Global.CurrentUser = newUser;
 
                         });

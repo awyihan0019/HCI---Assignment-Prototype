@@ -10,7 +10,7 @@ namespace HCI___Assignment_Prototype.Page {
     public partial class UserControl_SF_Verify : UserControl {
         public UserControl_SF_Verify() {
             InitializeComponent();
-            SecondSentence.Text += " " + Global.Global.Email;
+            SecondSentence.Text += " " + Global.Global.CurrentUser.Email;
         }
 
         private void Resend_Click(object sender , RoutedEventArgs e) {

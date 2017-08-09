@@ -27,8 +27,8 @@ namespace HCI___Assignment_Prototype.Page {
 
         private void NextButton_OnClick(object sender, RoutedEventArgs e) {
             var email = Textbox_EmailFront.Text;
-            if (Global.Global.Users.Any(x => x.Email == email)) {
-                Global.Global.CurrentUser = Global.Global.Users.Find(x => x.Email == email);
+            if (Global.SampleData.Users.Any(x => x.Email == email)) {
+                Global.Global.CurrentUser = Global.SampleData.Users.Find(x => x.Email == email);
                 DialogBox.Show(new UserControl_Login2());
             }
             else DialogBox .Show(new EmailDoesNotExist());
