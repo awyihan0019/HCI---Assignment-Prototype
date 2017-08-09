@@ -36,7 +36,7 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         }
         private void CheckBooking(object sender, RoutedEventArgs e)
         {
-            MainWindow.MainFrame.Navigate(new UserControl_CheckBooking());
+            MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
         }
     }
 }

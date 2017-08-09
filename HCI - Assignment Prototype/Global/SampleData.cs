@@ -31,13 +31,13 @@ namespace HCI___Assignment_Prototype.Global
                 "25 August 2017", "GSC-MidValley", "A33, A34, A35", "-", "Comba B(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
 
             new MovieReservation("Doom", "10:00a.m. - 12:00p.m.",
-                "26 August 2017", "GSC-NuSentral", "A1, A2, A3", "-", "-", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.jpg"))),
+                "26 August 2017", "GSC-NuSentral", "A1, A2, A3", "-", "-", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
 
             new MovieReservation("Dunkirk", "12:00a.m. - 2:00a.m.",
                 "29 August 2017", "GSC-OneU", "-", "CC2", "Comba A(2)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
 
             new MovieReservation("Doom", "8:00p.m. - 10:00p.m.",
-                "30 August 2017", "GSC-Gardens", "A54, A55", "-", "Comba A(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.jpg"))),
+                "30 August 2017", "GSC-Gardens", "A54, A55", "-", "Comba A(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
 
             new MovieReservation("Der Untergang", "12:00p.m. - 2:00p.m.",
                 "31 August 2017", "GSC-IpohParade", "A40", "CC4", "Comba A(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg")))
