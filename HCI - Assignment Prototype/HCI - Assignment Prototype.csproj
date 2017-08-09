@@ -110,6 +110,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControl\UserControl_NumberCounter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -155,6 +159,9 @@
     </Compile>
     <Compile Include="CustomControl\UserControl_BookingDetail.xaml.cs">
       <DependentUpon>UserControl_BookingDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\UserControl_NumberCounter.xaml.cs">
+      <DependentUpon>UserControl_NumberCounter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Global\Global.cs" />
     <Compile Include="Global\SampleData.cs" />
