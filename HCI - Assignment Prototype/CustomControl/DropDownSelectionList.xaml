@@ -9,14 +9,23 @@
     <UserControl.DataContext>
         <class:Item></class:Item>
     </UserControl.DataContext>
-    <ComboBox ItemsSource="{Binding}">
-       <ComboBox.ItemTemplate>
-           <DataTemplate>
-               <StackPanel Orientation="Horizontal">
-                   <CheckBox IsChecked="{Binding IsSelected}"></CheckBox>
-                   <TextBlock Text="{Binding Content}"></TextBlock>
-               </StackPanel>
-           </DataTemplate>
-       </ComboBox.ItemTemplate>     
-    </ComboBox>
+    <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+        <Grid>
+            <TextBlock x:Name="TextBlock" VerticalAlignment="Center" MinWidth="200"></TextBlock>
+            <ComboBox x:Name="ComboBox" VerticalAlignment="Center" DropDownOpened="ComboBox_OnDropDownOpened" DropDownClosed="ComboBox_OnDropDownClosed"
+            ItemsSource="{Binding}"
+                  Width="{Binding Path=ActualWidth, ElementName=TextBlock}"
+                  >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Click="Checkbox_OnClicked" IsChecked="{Binding IsSelected}"></CheckBox>
+                            <TextBlock Text="{Binding Content}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+        <Button Margin="10 0 0 0"  Click="ButtonBase_OnClick">OK</Button>
+    </StackPanel>
 </UserControl>
