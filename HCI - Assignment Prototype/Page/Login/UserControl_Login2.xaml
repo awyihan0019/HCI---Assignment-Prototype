@@ -9,7 +9,7 @@
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300"
                 Margin="30">
         <TextBlock x:Name="SentenceOne" FontSize="30" TextWrapping="Wrap" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Welcome back</TextBlock>
-        <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" Height="200" Width="200" Margin="2 5 2 15"
+        <Image x:Name="Image" Height="200" Width="200" Margin="2 5 2 15"
                Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
         <PasswordBox
 	x:Name="PasswordBox" KeyUp="PasswordBox_OnKeyUp"
