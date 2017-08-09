@@ -6,7 +6,7 @@ namespace HCI___Assignment_Prototype.Class {
             "A3, A4, A5", "-", "Combo-A (2), Combo-B (1)", null) { }
 
         public MovieReservation(string movieName, string time, string date, string location, string normalSeat,
-                                string coupleSeat, string foodAndDrinks, BitmapImage image) {
+                                string coupleSeat, string foodAndDrinks, BitmapImage image = null) {
             MovieName = movieName;
             Time = time;
             Date = date;
