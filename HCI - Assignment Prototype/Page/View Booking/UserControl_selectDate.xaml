@@ -13,7 +13,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding}" FontSize="20" />
+                        <materialDesign:Card>
+                            <TextBlock Text="{Binding}" FontSize="20" />
+                        </materialDesign:Card>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

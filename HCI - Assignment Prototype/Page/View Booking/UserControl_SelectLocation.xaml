@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.View_Booking"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" >
     <StackPanel VerticalAlignment="Center">
         <TextBlock x:Name="SentenceOne" FontSize="34" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">① Select Location</TextBlock>
@@ -12,7 +13,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding}" FontSize="20" />
+                        <materialDesign:Card>
+                            <TextBlock Text="{Binding}" FontSize="20" />
+                        </materialDesign:Card>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -5,14 +5,15 @@
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			 xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.CreateReservation_Admin"
-			 mc:Ignorable="d" >
+             xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             mc:Ignorable="d" >
 	<StackPanel>
 		<TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Create New Reservation</TextBlock>
 		<TextBox
 	materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-		<!-- Add Dropdown list (Rating) here -->
-		<TextBox
+        <customcontrol:DropDownWithPencil Label="Rating" Text="{Binding Time}" Items="PG 18,U,PG 13" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <TextBox
 	materialDesign:HintAssist.Hint="Movie Summary" FontSize="20" x:Name="Textbox_SummaryOfMovie" Margin="5" VerticalAlignment="Center" Width="380" MinLines="5"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
