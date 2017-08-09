@@ -39,5 +39,10 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         {
             MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
         }
+
+        private void ProfilePicture_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            UserPopup.IsOpen = !UserPopup.IsOpen;
+        }
     }
 }
