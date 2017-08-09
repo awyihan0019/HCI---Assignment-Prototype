@@ -264,9 +264,36 @@ namespace HCI___Assignment_Prototype.Global
         )
         {
             new User("clement@gmail.com", "clement99", "阿狗", true){
-                ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png"))
+                ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png")),
+                Reservations = new List<MovieReservation>()
+                {
+                    SampleReservationDetails[0],
+                    SampleReservationDetails[2],
+                    SampleReservationDetails[5],
+                    SampleReservationDetails[6]
+                }
             },
 
+            new User("abu@hotmail.com", "abu", "Abu", true){
+                ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/abu.png")),
+                Reservations = new List<MovieReservation>()
+                {
+                    SampleReservationDetails[1],
+                    SampleReservationDetails[2],
+                    SampleReservationDetails[3],
+                    SampleReservationDetails[5]
+                }
+            },
+
+            new User("donald@hotmail.com", "donald", "Donald Trump", true){
+                ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/donald.png")),
+                Reservations = new List<MovieReservation>()
+                {
+                    SampleReservationDetails[1],
+                    SampleReservationDetails[2],
+                    SampleReservationDetails[5]
+                }
+            }
         };
     }
 }

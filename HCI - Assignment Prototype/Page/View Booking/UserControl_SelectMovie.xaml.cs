@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.Class;
+using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Global;
 
 namespace HCI___Assignment_Prototype.Page.View_Booking {
@@ -23,6 +25,17 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
             InitializeComponent();
             ListView.ItemsSource = SampleData.SampleMovies;
 
+        }
+
+        private void ViewAvailabilityButton_OnClick(object sender , RoutedEventArgs e) {
+            BookTicketButton_OnClick(sender , e);
+        }
+
+        private void BookTicketButton_OnClick(object sender , RoutedEventArgs e) {
+            var b = sender as Button;
+            var selectedMovie = (Movie)b.Tag;
+            Global.Global.SelectedMovie = selectedMovie;
+            MainWindow.MainFrame.Navigate(new UserControl_BookingDetail());
         }
     }
 }
