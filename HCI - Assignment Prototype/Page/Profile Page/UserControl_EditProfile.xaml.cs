@@ -14,6 +14,7 @@ namespace HCI___Assignment_Prototype.Page.Profile_Page {
             NameField.Text = u.Username;
             PhoneField.Text = u.PhoneNumber;
             AddressField.Text = u.Address;
+            ProfilePicture.Source = u.ProfilePicture;
             
         }
 

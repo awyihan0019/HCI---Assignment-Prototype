@@ -11,7 +11,8 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
     public partial class Homepage_AfterLogin : UserControl {
         public Homepage_AfterLogin() {
             InitializeComponent();
-            UsernameButton.Tag = Global.Global.CurrentUser.Username;
+            UsernameButton.Content = Global.Global.CurrentUser.Username;
+            ProfilePicture.Source = Global.Global.CurrentUser.ProfilePicture;
         }
 
         private void ViewProfile(object sender, System.Windows.RoutedEventArgs e)
