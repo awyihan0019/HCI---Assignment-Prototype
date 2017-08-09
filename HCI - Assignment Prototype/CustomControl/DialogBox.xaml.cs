@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
@@ -26,7 +27,9 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         public static ResultEnum Show(string title , string message , string leftButtonText = "Got it!" ,
                                       string rightButtonText = null) {
+            CloseDialog();
             var p = new DialogBox();
+            _lastOpenedDialog = p;
             p.SetContent(title , message , leftButtonText , rightButtonText);
             p.DialogHost.IsOpen = true;
             p.ShowDialog();
@@ -44,11 +47,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
             Default.Visibility = Visibility.Visible;
         }
 
-        private static DialogBox _singleton_Custom;
+        private static DialogBox _lastOpenedDialog;
         public static void Show(UserControl content) {
-            _singleton_Custom.Hide();
+            CloseDialog();
             var p = new DialogBox();
-            _singleton_Custom = p;
+            _lastOpenedDialog = p;
             p.SetContent(content);
             p.DialogHost.IsOpen = true;
             if (p.Visibility == Visibility.Visible) return;
@@ -56,7 +59,9 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         public static void CloseDialog() {
-            _singleton_Custom.Hide();
+            if (_lastOpenedDialog == null) return;
+            _lastOpenedDialog.DialogHost.IsOpen = false;
+            _lastOpenedDialog.Hide();            
         }
 
         private void SetContent(UserControl content) {
@@ -67,12 +72,12 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void Button_Left_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.LeftButtonClicked;
-            Close();
+            Hide();
         }
 
         private void Button_Right_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.RightButtonClicked;
-            Close();
+            Hide();
         }
 
         private void SampleCode() {

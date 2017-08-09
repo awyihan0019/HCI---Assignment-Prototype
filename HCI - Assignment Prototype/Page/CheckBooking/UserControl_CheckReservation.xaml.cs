@@ -21,9 +21,9 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
     /// <summary>
     /// Interaction logic for UserControl_CheckBooking.xaml
     /// </summary>
-    public partial class UserControl_CheckBooking : UserControl
+    public partial class UserControl_CheckReservation : UserControl
     {
-        public UserControl_CheckBooking()
+        public UserControl_CheckReservation()
         {
             InitializeComponent();
             var incoming = SampleData.SampleReservationDetails.

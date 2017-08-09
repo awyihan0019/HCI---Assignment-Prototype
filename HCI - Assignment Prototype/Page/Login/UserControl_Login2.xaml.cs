@@ -13,18 +13,24 @@ namespace HCI___Assignment_Prototype.Page {
     public partial class UserControl_Login2 : UserControl {
         public UserControl_Login2() {
             InitializeComponent();
-            SentenceOne.Text += " " + Global.Global.OnlyUser.Username + "!";
+            SentenceOne.Text += " " + Global.Global.CurrentUser.Username + "!";
             PasswordBox.Focus();
             Keyboard.Focus(PasswordBox);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
-            if (PasswordBox.Password == Global.Global.OnlyUser.Password) {
+            if (PasswordBox.Password == Global.Global.CurrentUser.Password) {
+                if (Global.Global.CurrentUser.IsVerified == false) {
+                DialogBox.CloseDialog();
+                    MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
+                    return;
+                }
+                DialogBox.CloseDialog();
                 DialogBox.Show("Login Successful!", "", "OK");
                 MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());
             }
             else {
-                MainWindow.MainFrame.Navigate(new PasswordIncorrect());
+                DialogBox.Show(new PasswordIncorrect());
             }
         }
 

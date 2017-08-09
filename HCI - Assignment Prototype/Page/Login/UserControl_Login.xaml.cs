@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using HCI___Assignment_Prototype.Page.Login;
@@ -26,8 +27,10 @@ namespace HCI___Assignment_Prototype.Page {
 
         private void NextButton_OnClick(object sender, RoutedEventArgs e) {
             var email = Textbox_EmailFront.Text;
-            if (email == Global.Global.OnlyUser.Email)
+            if (Global.Global.Users.Any(x => x.Email == email)) {
+                Global.Global.CurrentUser = Global.Global.Users.Find(x => x.Email == email);
                 DialogBox.Show(new UserControl_Login2());
+            }
             else DialogBox .Show(new EmailDoesNotExist());
         }
     }

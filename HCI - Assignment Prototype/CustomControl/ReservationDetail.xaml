@@ -25,7 +25,7 @@
         </materialDesign:DrawerHost.RightDrawerContent>
         <materialDesign:Card  x:Name="Card" Padding="5" Margin="5">
             <DockPanel>
-                <Image x:Name="Image" DockPanel.Dock="Left" />
+                <Image x:Name="Image" Width="120" Height="120" Margin="10 10 5 10" Source="{Binding Image}" DockPanel.Dock="Left" />
                 <Grid DockPanel.Dock="Left" Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />

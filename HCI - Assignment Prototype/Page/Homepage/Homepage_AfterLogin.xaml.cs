@@ -11,6 +11,7 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
     public partial class Homepage_AfterLogin : UserControl {
         public Homepage_AfterLogin() {
             InitializeComponent();
+            UsernameButton.Tag = Global.Global.CurrentUser.Username;
         }
 
         private void ViewProfile(object sender, System.Windows.RoutedEventArgs e)
@@ -25,6 +26,7 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
                     case DialogBox.ResultEnum.LeftButtonClicked: return;
                     case DialogBox.ResultEnum.RightButtonClicked:
                         MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
+                        Global.Global.CurrentUser = null;
                         return;
             }
         }
@@ -34,7 +36,7 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         }
         private void CheckBooking(object sender, RoutedEventArgs e)
         {
-            MainWindow.MainFrame.Navigate(new UserControl_CheckBooking());
+            MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
         }
     }
 }

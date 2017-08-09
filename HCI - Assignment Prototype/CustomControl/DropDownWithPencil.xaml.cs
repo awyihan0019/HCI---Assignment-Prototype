@@ -24,9 +24,6 @@ namespace HCI___Assignment_Prototype.CustomControl {
         public DropDownWithPencil() {
             InitializeComponent();
             ComboBox.ItemsSource = new List<string>() { "qwe" , "wer" , "asd" };
-            OnItemsPropertyChanged(this, new DependencyPropertyChangedEventArgs(ItemsProperty, "","apple, banana, orange"));
-            LabelPropertyChangedCallback(this, new DependencyPropertyChangedEventArgs(LabelProperty, "","Test label"));
-            TextPropertyChangedCallback(this, new DependencyPropertyChangedEventArgs(TextProperty, "", "test text"));
 
         }
 
@@ -96,7 +93,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         // Using a DependencyProperty as the backing store for LabelProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LabelProperty =
-            DependencyProperty.Register("Label" , typeof(string) , typeof(TextboxWithPencil) ,
+            DependencyProperty.Register("Label" , typeof(string) , typeof(DropDownWithPencil) ,
                 new PropertyMetadata("Label" , LabelPropertyChangedCallback));
 
         private static void LabelPropertyChangedCallback(DependencyObject dependencyObject ,
@@ -116,7 +113,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register("Text" , typeof(string) , typeof(TextboxWithPencil) ,
+            DependencyProperty.Register("Text" , typeof(string) , typeof(DropDownWithPencil) ,
                 new PropertyMetadata("sample text . . . " , TextPropertyChangedCallback));
 
         private static void TextPropertyChangedCallback(DependencyObject dependencyObject ,
@@ -129,5 +126,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         #endregion
+
+        private void DropDownWithPencil_OnLoaded(object sender, RoutedEventArgs e) {
+            OnItemsPropertyChanged(this , new DependencyPropertyChangedEventArgs(ItemsProperty , "" , Items));
+            LabelPropertyChangedCallback(this , new DependencyPropertyChangedEventArgs(LabelProperty , "" , Label));
+            TextPropertyChangedCallback(this , new DependencyPropertyChangedEventArgs(TextProperty , "" , Text));
+        }
     }
 }
