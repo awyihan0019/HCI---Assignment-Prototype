@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Global;
 
 namespace HCI___Assignment_Prototype.Page {
     /// <summary>
@@ -43,13 +45,15 @@ namespace HCI___Assignment_Prototype.Page {
                     DialogBox.Show("Error . . ." , "Email is not in correct format." , "OK");
                     return;
                 }
-                if (email != Global.Global.OnlyUser.Email) {
+                if(Global.Global.Users.Any(x=> x.Email == email))
+                    DialogBox.Show("Error . . ." , $"The email of '{email}' has already been used." , "OK");
+                else {
                     Global.Global.Email = email;
                     ProgressDialog.Show("Creating profile . . .", "",
-                        () => { MainWindow.MainFrame.Navigate(new UserControl_SF_Verify()); });
-                }
-                else {
-                    DialogBox.Show("Error . . .", $"The email of '{email}' has already been used.", "OK");
+                        () => {
+                            MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
+                           Global.Global.Users.Add(new User(email, password, email)); 
+                        });
                 }
             }
         }
