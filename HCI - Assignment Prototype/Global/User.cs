@@ -8,6 +8,8 @@ namespace HCI___Assignment_Prototype.Global {
         public string Password;
         public string Username;
         public bool IsVerified;
+        public string PhoneNumber;
+        public string Address;
         public BitmapImage ProfilePicture = new BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png"));
         public List<MovieReservation> Reservations;
 
