@@ -6,22 +6,26 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.CheckBooking"
              xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             xmlns:class="clr-namespace:HCI___Assignment_Prototype.Class"
              mc:Ignorable="d">
+    <UserControl.DataContext>
+        <class:MovieReservation></class:MovieReservation>
+    </UserControl.DataContext>
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
         <TextBlock FontSize="30" Margin="2 2 2 2" HorizontalAlignment="Center" FontWeight="Bold">Update Reservation</TextBlock>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Orientation="Horizontal"
                     Margin="5">
             <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Center" Height="150"
-                   Width="150" Margin="15 5 5 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
+                   Width="150" Margin="15 5 5 5" Source="{Binding Image}" Stretch="Fill" />
             <StackPanel>
-                <TextBlock FontSize="25" FontWeight="Bold" Margin="5">Movie Name</TextBlock>
-                <TextBlock FontSize="25" Margin="5 0">(Rating)</TextBlock>
+                <TextBlock FontSize="25" FontWeight="Bold" Text="{Binding MovieName}" Margin="5"></TextBlock>
             </StackPanel>
         </StackPanel>
-        <customcontrol:DropDownWithPencil Label="Location" Text="Location" Margin="0 5"></customcontrol:DropDownWithPencil>
-        <customcontrol:DropDownWithPencil Label="Time" Text="Time" Margin="0 5"></customcontrol:DropDownWithPencil>
-        <customcontrol:DropDownWithPencil Label="Date" Text="Date" Margin="0 5"></customcontrol:DropDownWithPencil>
-        <customcontrol:DropDownWithPencil Label="Seat" Text="Seat" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Location" Text="{Binding Location}" Items="MV,The mines,Garden" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Time" Text="{Binding Time}" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Date" Text="{Binding Date}" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Seat" Text="{Binding NormalSeat}" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Combo" Text="{Binding FoodAndDrinks}" Margin="0 5"></customcontrol:DropDownWithPencil>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
