@@ -8,41 +8,44 @@
              mc:Ignorable="d">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
                 Margin="30">
-        <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Left" FontWeight="Bold">Your Profile</TextBlock>
-        <TextBlock FontSize="20" Margin="2 2 2 20" HorizontalAlignment="Left">faster960128@hotmail.com</TextBlock>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-            <Image x:Name="___HCI___Assignment_Prototype_component_dog_jpg" HorizontalAlignment="Left" Height="150"
-                   Width="150" Margin="15 5 15 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
-                        Margin="30">
-                <Button HorizontalAlignment="Right" Content="{materialDesign:PackIcon Kind=LeadPencil}"
-                        ToolTip="Edit Profile" Click="EditProfile_Click" />
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Name :</TextBlock>
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Aw Yi Han</TextBlock>
-                </StackPanel>
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Phone :</TextBlock>
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">012-XXXXXXX</TextBlock>
-                </StackPanel>
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Address :</TextBlock>
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">XX Taman Xxx</TextBlock>
-                </StackPanel>
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Email :</TextBlock>
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">faster960128@hotmail.com</TextBlock>
-                </StackPanel>
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Account Balance :</TextBlock>
-                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">RM 5. 99</TextBlock>
+        <TextBlock FontSize="30" Margin="2 2 2 0" HorizontalAlignment="Left" FontWeight="Bold">Your Profile</TextBlock>
+
+        <materialDesign:Card Padding="10">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Width="550">
+                <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="200" 
+                   Width="180" Margin="15 5 15 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                     Width="300"   Margin="30">
+                    <Button HorizontalAlignment="Right" Content="{materialDesign:PackIcon Kind=LeadPencil}"
+                        Margin="10 0 0 0" ToolTip="Edit Profile" Click="EditProfile_Click" />
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold" >Name :</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold" x:Name="NameField">Aw Yi Han</TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold">Phone :</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold" x:Name="PhoneField">012-XXXXXXX</TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left">Address :</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left" x:Name="AddressField">XX Taman Xxx</TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left">Email :</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left" x:Name="EmailField">faster960128@hotmail.com</TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left">Account Balance :</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left" x:Name="BalanceField">RM 5. 99</TextBlock>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
-        </StackPanel>
-        <GroupBox Grid.Column="0" Grid.Row="0" Header="Booking History" Margin="16" Height="200">
+        </materialDesign:Card>
+        
+        <GroupBox Grid.Column="0" Grid.Row="0" Header="Booking History" Margin="16" Height="200" Width="550">
             <TextBlock>none</TextBlock>
         </GroupBox>
-        <GroupBox Grid.Column="0" Grid.Row="0" Header="Favourite Movie" Margin="16" Height="200">
+        <GroupBox Grid.Column="0" Grid.Row="0" Header="Favourite Movie" Margin="16" Height="200" Width="550">
             <TextBlock>none</TextBlock>
         </GroupBox>
     </StackPanel>
