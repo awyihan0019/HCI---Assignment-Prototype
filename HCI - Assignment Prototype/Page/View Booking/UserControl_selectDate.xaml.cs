@@ -25,7 +25,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         public UserControl_SelectDate()
         {
             InitializeComponent();
-            DateTime[] date = SampleData.SampleMovies[0].Date.ToArray();
+            DateTime[] date = SampleData.SampleMovies[0].AvailableDate.ToArray();
             String[] fixedDate = new String[date.Length];
             for (int i = 0; i < fixedDate.Length; i++)
             {
