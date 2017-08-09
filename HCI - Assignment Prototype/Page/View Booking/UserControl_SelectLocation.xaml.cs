@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.Class;
 
 namespace HCI___Assignment_Prototype.Page.View_Booking
 {
@@ -34,7 +35,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
                 DialogBox.Show("You must select a location!", "", "OK");
             }
             else {
-                UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectDate());
+                UserControl_BookingDetail.CurrentPage = UserControl_BookingDetail.CurrentPageEnum.SelectDate;
                 Global.Global.MovieReservation.Location = ListView.SelectedItem.ToString();
             }
         }
