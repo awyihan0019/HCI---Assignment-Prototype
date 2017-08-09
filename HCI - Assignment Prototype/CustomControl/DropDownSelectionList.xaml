@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.CustomControl.DropDownSelectionList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             mc:Ignorable="d" >
+    <ComboBox ItemsSource="{Binding}">
+       <ComboBox.ItemTemplate>
+           <DataTemplate>
+               <StackPanel Orientation="Horizontal">
+                   <CheckBox IsChecked="{Binding IsSelected}"></CheckBox>
+                   <TextBlock Text="{Binding }"></TextBlock>
+               </StackPanel>
+           </DataTemplate>
+       </ComboBox.ItemTemplate>     
+    </ComboBox>
+</UserControl>

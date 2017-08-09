@@ -66,6 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CustomControl\DropDownSelectionList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControl\DropDownWithPencil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +122,9 @@
     <Compile Include="Class\Movie.cs" />
     <Compile Include="Class\MovieReservation.cs" />
     <Compile Include="Class\MovieReservation_Admin.cs" />
+    <Compile Include="CustomControl\DropDownSelectionList.xaml.cs">
+      <DependentUpon>DropDownSelectionList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\DropDownWithPencil.xaml.cs">
       <DependentUpon>DropDownWithPencil.xaml</DependentUpon>
     </Compile>
