@@ -33,6 +33,10 @@
                     <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Email :</TextBlock>
                     <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">faster960128@hotmail.com</TextBlock>
                 </StackPanel>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">Account Balance :</TextBlock>
+                    <TextBlock FontSize="15" Margin="0 2 5 10" HorizontalAlignment="Left">RM 5. 99</TextBlock>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
         <GroupBox Grid.Column="0" Grid.Row="0" Header="Booking History" Margin="16" Height="200">

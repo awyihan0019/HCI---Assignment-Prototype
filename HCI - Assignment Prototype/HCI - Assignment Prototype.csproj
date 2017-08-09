@@ -186,6 +186,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\Homepage_Admin\UserControl_HomePage_Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\Login\EmailDoesNotExist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -261,6 +265,9 @@
     </Compile>
     <Compile Include="Page\Homepage\Homepage_BottomPart.xaml.cs">
       <DependentUpon>Homepage_BottomPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Homepage_Admin\UserControl_HomePage_Admin.xaml.cs">
+      <DependentUpon>UserControl_HomePage_Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Login\EmailDoesNotExist.xaml.cs">
       <DependentUpon>EmailDoesNotExist.xaml</DependentUpon>

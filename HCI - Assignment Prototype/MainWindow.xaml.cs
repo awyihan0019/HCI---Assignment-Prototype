@@ -12,6 +12,9 @@ using HCI___Assignment_Prototype.Page.CheckBooking;
 using HCI___Assignment_Prototype.Page.Homepage;
 using HCI___Assignment_Prototype.Page.View_Booking;
 using MaterialDesignThemes.Wpf;
+using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Page.CheckBooking;
+using HCI___Assignment_Prototype.Page.CreateReservation_Admin;
 
 namespace HCI___Assignment_Prototype {
     /// <summary>

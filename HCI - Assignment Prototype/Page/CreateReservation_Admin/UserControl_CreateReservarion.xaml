@@ -27,7 +27,7 @@
         <TextBox
 	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" x:Name="DatePicker_ReleaseDate" Margin="5" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
+        <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
         <TextBlock FontSize="21" Margin="5" HorizontalAlignment="Center">Release Cinemas</TextBlock>
         <!-- Add scroll down list (cinemas) here) -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
