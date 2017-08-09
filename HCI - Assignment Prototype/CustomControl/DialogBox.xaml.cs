@@ -44,11 +44,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
             Default.Visibility = Visibility.Visible;
         }
 
-        private static DialogBox _singleton_Custom;
+        private static DialogBox _singletonCustom;
         public static void Show(UserControl content) {
-            _singleton_Custom.Hide();
-            var p = new DialogBox();
-            _singleton_Custom = p;
+            _singletonCustom?.Hide();
+            var p = new DialogBox();            
+            _singletonCustom = p;
             p.SetContent(content);
             p.DialogHost.IsOpen = true;
             if (p.Visibility == Visibility.Visible) return;
@@ -56,7 +56,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         public static void CloseDialog() {
-            _singleton_Custom.Hide();
+            _singletonCustom.Hide();
         }
 
         private void SetContent(UserControl content) {
@@ -67,12 +67,12 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void Button_Left_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.LeftButtonClicked;
-            Close();
+            Hide();
         }
 
         private void Button_Right_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.RightButtonClicked;
-            Close();
+            Hide();
         }
 
         private void SampleCode() {
