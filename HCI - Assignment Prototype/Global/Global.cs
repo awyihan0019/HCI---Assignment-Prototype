@@ -9,7 +9,7 @@ namespace HCI___Assignment_Prototype.Global {
             )
         {
             new User("clement@gmail.com", "clement99", "阿狗", true){
-                ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Global/Login/emptyuser.png"))
+                ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png"))
             },
 
         };

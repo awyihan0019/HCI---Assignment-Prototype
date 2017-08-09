@@ -6,7 +6,7 @@ namespace HCI___Assignment_Prototype.Global {
         public string Password;
         public string Username;
         public bool IsVerified;
-        public BitmapImage ProfilePicture = new BitmapImage(new System.Uri(@"pack://application:,,,/Global/Login/emptyuser.png"));
+        public BitmapImage ProfilePicture = new BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png"));
         public User(string email, string password, string username, bool isVerified = false) {
             Email = email;
             Password = password;
