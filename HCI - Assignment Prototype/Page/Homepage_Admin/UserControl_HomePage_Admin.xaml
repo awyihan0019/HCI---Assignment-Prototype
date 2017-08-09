@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.Homepage_Admin.UserControl_HomePage_Admin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Homepage_Admin"
+             mc:Ignorable="d" >
+    <StackPanel Orientation="Vertical" Width="1000">
+        <DockPanel>
+            <TextBlock FontSize="30" Margin="2 2 2 10" HorizontalAlignment="Left" FontWeight="Bold">Movie Reservation Detail</TextBlock>
+            <Button x:Name="Login" Margin="2 2 2 10" Click="Click_CreateNewReservation"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                Create New Reservation
+            </Button>
+        </DockPanel>
+        <StackPanel x:Name="MovieList"></StackPanel>
+    </StackPanel>
+</UserControl>
