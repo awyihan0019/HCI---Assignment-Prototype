@@ -14,6 +14,7 @@ namespace HCI___Assignment_Prototype.Page {
         public UserControl_Login2() {
             InitializeComponent();
             SentenceOne.Text += " " + Global.Global.CurrentUser.Username + "!";
+            Image.Source = Global.Global.CurrentUser.ProfilePicture;
             PasswordBox.Focus();
             Keyboard.Focus(PasswordBox);
         }
