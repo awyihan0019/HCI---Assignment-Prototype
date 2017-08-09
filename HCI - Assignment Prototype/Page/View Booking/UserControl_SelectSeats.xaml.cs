@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCI___Assignment_Prototype.CustomControl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         public UserControl_SelectSeats()
         {
             InitializeComponent();
+        }
+
+        private void Seat_Next(object sender, RoutedEventArgs e)
+        {
+            UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_DisplayBookDetail());
         }
     }
 }

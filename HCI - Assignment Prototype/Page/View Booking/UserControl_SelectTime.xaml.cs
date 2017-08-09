@@ -1,4 +1,5 @@
-﻿using HCI___Assignment_Prototype.Global;
+﻿using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Global;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,10 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         {
             MainWindow.MainFrame.GoBack();
         }
-        
+
+        private void Click_Button(object sender, RoutedEventArgs e)
+        {
+            UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectSeats());
+        }
     }
 }

@@ -25,9 +25,9 @@
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
                 CANCEL
             </Button>
-                <Button x:Name="Login" Margin="20 15 0 15"
+                <Button x:Name="Next_Button" Margin="20 15 0 15"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right" Click="Login_Click">
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right" Click="Click_Button">
                 NEXT
             </Button>
         </StackPanel>
