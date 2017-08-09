@@ -20,11 +20,12 @@ namespace HCI___Assignment_Prototype.Page {
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
             if (PasswordBox.Password == Global.Global.OnlyUser.Password) {
+                DialogBox.CloseDialog();
                 DialogBox.Show("Login Successful!", "", "OK");
                 MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());
             }
             else {
-                MainWindow.MainFrame.Navigate(new PasswordIncorrect());
+                DialogBox.Show(new PasswordIncorrect());
             }
         }
 
