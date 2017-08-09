@@ -20,23 +20,23 @@
                         Margin="10 0 0 0" ToolTip="Edit Profile" Click="EditProfile_Click" />
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                         <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold" >Name :</TextBlock>
-                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold" x:Name="NameField">Aw Yi Han</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left"  x:Name="NameField">Aw Yi Han</TextBlock>
                     </StackPanel>
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                         <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold">Phone :</TextBlock>
-                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left" FontWeight="Bold" x:Name="PhoneField">012-XXXXXXX</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20" HorizontalAlignment="Left"  x:Name="PhoneField">012-XXXXXXX</TextBlock>
                     </StackPanel>
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                         <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left">Address :</TextBlock>
-                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left" x:Name="AddressField">XX Taman Xxx</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20"  HorizontalAlignment="Left" x:Name="AddressField">XX Taman Xxx</TextBlock>
                     </StackPanel>
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                         <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left">Email :</TextBlock>
-                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left" x:Name="EmailField">faster960128@hotmail.com</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20"  HorizontalAlignment="Left" x:Name="EmailField">faster960128@hotmail.com</TextBlock>
                     </StackPanel>
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                         <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left">Account Balance :</TextBlock>
-                        <TextBlock FontSize="15" Margin="0 2 5 20" FontWeight="Bold" HorizontalAlignment="Left" x:Name="BalanceField">RM 5. 99</TextBlock>
+                        <TextBlock FontSize="15" Margin="0 2 5 20"  HorizontalAlignment="Left" x:Name="BalanceField">RM 5. 99</TextBlock>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
