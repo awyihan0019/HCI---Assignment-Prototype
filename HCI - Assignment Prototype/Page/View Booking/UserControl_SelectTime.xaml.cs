@@ -37,5 +37,6 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         {
             MainWindow.MainFrame.GoBack();
         }
+        
     }
 }

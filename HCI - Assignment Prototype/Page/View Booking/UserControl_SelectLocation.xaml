@@ -6,31 +6,31 @@
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.View_Booking"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" >
-    <StackPanel VerticalAlignment="Center">
-        <TextBlock x:Name="SentenceOne" FontSize="34" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">① Select Location</TextBlock>
-        <TextBlock FontSize="20" HorizontalAlignment="Center">Available Location</TextBlock>
-        <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <materialDesign:Card>
-                        <StackPanel HorizontalAlignment="Center">
+    <materialDesign:Card>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock x:Name="SentenceOne" FontSize="34" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">① Select Location</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">Available Location</TextBlock>
+            <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                        <StackPanel HorizontalAlignment="Center" >
                             <TextBlock Text="{Binding}" FontSize="20" />
                         </StackPanel>
-                    </materialDesign:Card>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="Cancel" Margin="0 15 20 0" Click="Click_Cancel"
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Cancel" Margin="0 15 20 15" Click="Click_Cancel"
                     Style="{StaticResource MaterialDesignFlatButton}" Width="100"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                CANCEL
-            </Button>
-            <Button x:Name="Login" Margin="20 15 0 0" Click="Click_locationNext"
+                    CANCEL
+                </Button>
+                <Button x:Name="Login" Margin="20 15 0 15" Click="Click_locationNext"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                NEXT
-            </Button>
+                    NEXT
+                </Button>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </materialDesign:Card>
 </UserControl>
