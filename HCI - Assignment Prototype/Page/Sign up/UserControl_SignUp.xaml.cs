@@ -49,7 +49,7 @@ namespace HCI___Assignment_Prototype.Page {
                         () => { MainWindow.MainFrame.Navigate(new UserControl_SF_Verify()); });
                 }
                 else {
-                    DialogBox.Show("Email already used", "Profile Not Created.\nEmail already used !!!", "OK");
+                    DialogBox.Show("Error . . .", $"The email of '{email}' has already been used.", "OK");
                 }
             }
         }
