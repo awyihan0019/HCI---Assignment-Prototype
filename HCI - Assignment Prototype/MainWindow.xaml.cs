@@ -31,7 +31,7 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new DropDownSelectionList()
+            Frame.Navigate(new Homepage_BeforeLogin()
             {
                 DataContext = new List<Item>()
                 {
