@@ -45,6 +45,7 @@
                 <Grid>
                     <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" />
                     <materialDesign:Snackbar x:Name="snackbar" />
+                    <customControl:TextboxWithPencil Text="Hello" IsPassword="True"></customControl:TextboxWithPencil>
                 </Grid>
             </ScrollViewer>
         </Grid>

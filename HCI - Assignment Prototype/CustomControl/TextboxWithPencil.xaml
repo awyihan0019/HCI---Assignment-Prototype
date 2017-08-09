@@ -5,13 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
-             mc:Ignorable="d">
+             mc:Ignorable="d"
+             Loaded="UserControl_Loaded">
     <Border Background="White" BorderThickness="0,0,0,1" BorderBrush="DarkGray">
         <StackPanel>
             <DockPanel>
                 <TextBlock x:Name="TextBlock_Label" VerticalAlignment="Center" FontWeight="Bold" Margin="10">Label</TextBlock>
                 <Grid Margin="5">
-                    <TextBox x:Name="TextBox" Visibility="Hidden" HorizontalAlignment="Stretch"
+                    <TextBox x:Name="TextBox" TextChanged="TextBox_TextChanged"  Visibility="Hidden" HorizontalAlignment="Stretch"
                              VerticalAlignment="Center" Margin="5">
                         hello
                     </TextBox>
