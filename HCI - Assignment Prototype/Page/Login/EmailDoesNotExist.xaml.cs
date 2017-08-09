@@ -12,6 +12,7 @@ namespace HCI___Assignment_Prototype.Page.Login {
         }
 
         private void CreateNewAccount_OnClick(object sender, RoutedEventArgs e) {
+            DialogBox.CloseDialog();
             MainWindow.MainFrame.Navigate(new UserControl_SignUp());
         }
 
