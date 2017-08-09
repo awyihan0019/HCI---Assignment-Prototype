@@ -50,11 +50,10 @@ namespace HCI___Assignment_Prototype.Page {
                 else {
                     ProgressDialog.Show("Creating profile . . ." , "" ,
                         () => {
-                            MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
                             var newUser = new User(email , password , email);
                             Global.SampleData.Users.Add(newUser);
                             Global.Global.CurrentUser = newUser;
-
+                            MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
                         });
                 }
             }

@@ -21,9 +21,9 @@
                 <TextBlock FontSize="25" FontWeight="Bold" Text="{Binding MovieName}" Margin="5"></TextBlock>
             </StackPanel>
         </StackPanel>
-        <customcontrol:DropDownWithPencil Label="Location" Text="{Binding Location}" Items="MV,The mines,Garden" Margin="0 5"></customcontrol:DropDownWithPencil>
-        <customcontrol:DropDownWithPencil Label="Time" Text="{Binding Time}" Margin="0 5"></customcontrol:DropDownWithPencil>
-        <customcontrol:DropDownWithPencil Label="Date" Text="{Binding Date}" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Location" Text="{Binding Location}" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Time" Text="{Binding Time}" Items="8:00p.m. - 10:00p.m.,1:00p.m. - 3:00p.m.,3:00p.m. - 5:00p.m.,5:00p.m. - 7:00p.m.,10:00p.m. - 12:00a.m.,12:00a.m. - 2:00a.m." Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil Label="Date" Text="{Binding Date}" Items="12 August 2017,13 August 2017,14 August 2017,15 August 2017,16 August 2017,18 August 2017" Margin="0 5"></customcontrol:DropDownWithPencil>
         <customcontrol:DropDownWithPencil Label="Seat" Text="{Binding NormalSeat}" Margin="0 5"></customcontrol:DropDownWithPencil>
         <customcontrol:DropDownWithPencil Label="Combo" Text="{Binding FoodAndDrinks}" Margin="0 5"></customcontrol:DropDownWithPencil>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

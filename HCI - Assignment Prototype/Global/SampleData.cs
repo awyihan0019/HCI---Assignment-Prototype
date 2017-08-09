@@ -105,7 +105,7 @@ namespace HCI___Assignment_Prototype.Global
                 "Samuel Hayden, Doom Slayer, Olivia Pierce"
                 ),
 
-            new Movie("Wolfenstein 2: The New Colossus",
+            new Movie("Wolfenstein 2",
                 new List<DateTime>(){
                     new DateTime(2017, 06, 19, 0, 0, 0),
                     new DateTime(2017, 06, 20, 0, 0, 0),
