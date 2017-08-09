@@ -1,4 +1,6 @@
-﻿using System.Windows.Media.Imaging;
+﻿using System.Collections.Generic;
+using System.Windows.Media.Imaging;
+using HCI___Assignment_Prototype.Class;
 
 namespace HCI___Assignment_Prototype.Global {
     public class User {
@@ -7,10 +9,17 @@ namespace HCI___Assignment_Prototype.Global {
         public string Username;
         public bool IsVerified;
         public BitmapImage ProfilePicture = new BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png"));
-        public User(string email, string password, string username, bool isVerified = false) {
+        public List<MovieReservation> Reservations;
+
+        public User() {
+            
+        }
+
+        public User(string email, string password, string username, bool isVerified = false , List<MovieReservation> reservations = null) {
             Email = email;
             Password = password;
             Username = username;
+            Reservations = reservations;
             IsVerified = isVerified;
         }
     }

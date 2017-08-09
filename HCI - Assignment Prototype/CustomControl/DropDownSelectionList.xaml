@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.CustomControl.DropDownSelectionList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             xmlns:class="clr-namespace:HCI___Assignment_Prototype.Class"
+             mc:Ignorable="d" >
+    <UserControl.DataContext>
+        <class:Item></class:Item>
+    </UserControl.DataContext>
+    <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+        <Grid>
+            <TextBlock x:Name="TextBlock" VerticalAlignment="Center" MinWidth="200"></TextBlock>
+            <ComboBox x:Name="ComboBox" VerticalAlignment="Center" DropDownOpened="ComboBox_OnDropDownOpened" DropDownClosed="ComboBox_OnDropDownClosed"
+            ItemsSource="{Binding}"
+                  Width="{Binding Path=ActualWidth, ElementName=TextBlock}"
+                  >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Click="Checkbox_OnClicked" IsChecked="{Binding IsSelected}"></CheckBox>
+                            <TextBlock Text="{Binding Content}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+        <Button Margin="10 0 0 0"  Click="ButtonBase_OnClick">OK</Button>
+    </StackPanel>
+</UserControl>
