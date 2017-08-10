@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.Page.View_Booking;
 
 namespace HCI___Assignment_Prototype.Page.CheckBooking {
     /// <summary>
@@ -42,6 +43,14 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
                         return;
                     }
             }
+        }
+
+        private void Seat_OnPencilButtonOnClick(object sender, EventArgs e) {
+            DialogBox.Show(new UserControl_SelectSeats());
+        }
+
+        private void Combo_OnPencilButtonOnClick(object sender, EventArgs e) {
+            
         }
     }
 }
