@@ -12,14 +12,14 @@
 	Padding="16"
 	Mode="PrimaryLight">
                 <StackPanel  Orientation="Horizontal">
-                    <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">⑤ Booking Detail</TextBlock>
+                    <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">⑥ Booking Detail</TextBlock>
                 </StackPanel>
             </materialDesign:ColorZone>
             <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding}" FontSize="20" />
+                            <TextBlock Text="{Binding MovieReservation}" FontSize="20" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -30,7 +30,7 @@
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
                     CANCEL
                 </Button>
-                <Button x:Name="Login" Margin="20 15 0 15" Click="Click_ConfirmBooking"
+                <Button x:Name="Confirm" Margin="20 15 0 15" Click="Click_ConfirmBooking"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
                     COMFIRM

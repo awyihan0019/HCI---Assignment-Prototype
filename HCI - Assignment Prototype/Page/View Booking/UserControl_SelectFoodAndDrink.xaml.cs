@@ -1,4 +1,5 @@
-﻿using HCI___Assignment_Prototype.CustomControl;
+﻿using HCI___Assignment_Prototype.Class;
+using HCI___Assignment_Prototype.CustomControl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,24 +30,20 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
         private void Click_ConfirmBooking(object sender, RoutedEventArgs e)
         {
-            TotalPayment = (ComboA.Number*6) + (ComboB.Number*8);
-            //CustomControl.UserControl_NumberCounter.NumberProperty
-            DialogBox.Show("Booking Payment", "Do you really want to make this reservation?\n\nTotal Price : RM " + TotalPayment, "CANCEL", "CONFRIM");
-            switch (DialogBox.Result)
-            {
-                case DialogBox.ResultEnum.LeftButtonClicked: return;
-                case DialogBox.ResultEnum.RightButtonClicked:
-                    ProgressDialog.Show("Making Reservation . . .", "",
-                        () => {
-                            DialogBox.Show("Payment Successed", "Your Reservation is made the e-ticket has been sent to your e-mail.", "OK");
-                        });
-                    return;
-            }
+
+            Global.Global.MovieReservation.FoodAndDrinks = new List<FoodAndDrinks>() {
+                new FoodAndDrinks("ComboA", ComboA.Number, 7.99),
+                new FoodAndDrinks("ComboB", ComboA.Number, 11.99),
+                new FoodAndDrinks("ComboC", ComboA.Number, 11.99),
+                new FoodAndDrinks("ComboD", ComboA.Number, 14.99),
+            };
+            UserControl_BookingDetail.CurrentPage++;
+
         }
 
         private void Click_cancelDetail(object sender, RoutedEventArgs e)
         {
-            MainWindow.MainFrame.GoBack();
+            UserControl_BookingDetail.CurrentPage--;
         }
     }
 }
