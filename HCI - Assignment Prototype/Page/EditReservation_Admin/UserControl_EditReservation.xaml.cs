@@ -24,5 +24,20 @@ namespace HCI___Assignment_Prototype.Page.EditReservation_Admin
         {
             InitializeComponent();
         }
+
+        private void SaveReservationCreate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cancel_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_UploadPoster(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
