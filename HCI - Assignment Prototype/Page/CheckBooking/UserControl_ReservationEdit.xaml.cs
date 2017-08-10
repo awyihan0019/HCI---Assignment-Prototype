@@ -21,6 +21,7 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
     public partial class UserControl_ReservationEdit : UserControl {
         public UserControl_ReservationEdit() {
             InitializeComponent();
+            this.DataContext = Global.Global.MovieReservation;
         }
 
         private void Cancel_OnClick(object sender , RoutedEventArgs e) {

@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using HCI___Assignment_Prototype.Class;
+using HCI___Assignment_Prototype.Page.CheckBooking;
 
 namespace HCI___Assignment_Prototype.CustomControl {
     /// <summary>
@@ -22,12 +23,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
                 case DialogBox.ResultEnum.RightButtonClicked:
                     break;
             }
-            MarkAsObsoleted("[CANCELLED]");
             DrawerHost.IsRightDrawerOpen = false;
-            //   var da = CustomAnimation.GetLeavingScreenAnimation(this.ActualHeight, 0, false);
-            //  this.BeginAnimation(HeightProperty, da);
+            ProgressDialog.Show("Cancelling reservation . . ." , "Please hold on for a few seconds." , () => {
+                MarkAsObsoleted("[CANCELLED]");
+            });
             MainWindow.Snackbar.MessageQueue.Enqueue("A reservation had been cancelled.");
-
         }
 
         public void MarkAsObsoleted(string message) {
@@ -35,6 +35,11 @@ namespace HCI___Assignment_Prototype.CustomControl {
             FeedbackLabel.Visibility = Visibility.Visible;
             FeedbackLabel.Text = message;
             Card.Opacity = 0.5;
+        }
+
+        private void EditButton_OnClick(object sender, RoutedEventArgs e) {
+            Global.Global.MovieReservation = (MovieReservation)this.DataContext;
+            MainWindow.MainFrame.Navigate(new UserControl_ReservationEdit());
         }
     }
 }
