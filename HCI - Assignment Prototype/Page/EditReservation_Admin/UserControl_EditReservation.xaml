@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.EditReservation_Admin.UserControl_EditReservation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.EditReservation_Admin"
+             xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             mc:Ignorable="d" >
+    <StackPanel  Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">Reservation Edit</TextBlock>
+        <TextBox
+	materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380"
+	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <customcontrol:DropDownWithPencil Width="380" FontSize="20" HorizontalAlignment="Center" Label="Rating" Text="Rating" Items="PG 18,U,PG 13" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <TextBox
+	Height="120"
+	MaxWidth="380"
+            Margin="5"
+	VerticalAlignment="Stretch"
+	materialDesign:HintAssist.Hint="Summary for the movie"
+	AcceptsReturn="True"
+            FontSize="15"
+	SpellCheck.IsEnabled="True"
+	TextWrapping="Wrap"
+	VerticalScrollBarVisibility="Auto"></TextBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image x:Name="PosterImage" Width="200" Height="200" Margin="10" Source = "insertimage.jpg" >
+            </Image>
+            <Button x:Name="UPLOAD" Click="Click_UploadPoster"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" VerticalAlignment="Bottom" Margin="10"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                UPLOAD POSTER
+            </Button>
+        </StackPanel>
+        <TextBox
+	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center"
+	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
+        <!-- Add scroll down list (cinemas) here) -->
+        <customcontrol:DropDownSelectionList FontSize="20" Margin="5" Text="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" Width="380" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+            <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
+                    Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                CANCEL
+            </Button>
+            <Button x:Name="Save" Click="SaveReservationCreate_Click" Width="100"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                SAVE
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
