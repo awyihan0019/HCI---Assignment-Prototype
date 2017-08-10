@@ -1,4 +1,5 @@
 ﻿using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Page.CheckBooking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,8 +88,10 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
             ProgressDialog.Show("Making Reservation . . .", "",
                 () =>
                 {
-                    DialogBox.Show("Payment Successed", "Your Reservation already made the e-ticket are sended to your e-mail.", "OK");
+                    DialogBox.Show("Payment Successful", "Your Reservation is already made, your e-tickets are sent to your e-mail.", "OK");
                 });
+
+            MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
         }
     }
 }
