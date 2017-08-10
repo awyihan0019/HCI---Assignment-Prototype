@@ -12,16 +12,18 @@ namespace HCI___Assignment_Prototype.Class
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+
             var s = (List<FoodAndDrinks>)value;
-            string comboes = "";
+            if (s == null) return "error converting";
+            string result = "";
             for (int i = 0; i < s.Count; i++)
             {
-                if (Global.Global.MovieReservation.FoodAndDrinks[i].Quantity != 0)
+                if (s[i].Quantity != 0)
                 {
-                    comboes += Global.Global.MovieReservation.FoodAndDrinks[i].Name + "(" + Global.Global.MovieReservation.FoodAndDrinks[i].Quantity + ") \n";
+                    result += s[i].Name + "(" + s[i].Quantity + "), ";
                 }
-            }
-            return comboes;
+            }            
+            return result.Trim(' ').Trim(',');
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
