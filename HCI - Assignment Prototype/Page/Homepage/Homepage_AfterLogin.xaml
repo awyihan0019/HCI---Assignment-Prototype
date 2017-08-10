@@ -30,7 +30,7 @@
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="CheckBooking">
                                     Check Booking
                                 </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center">
+                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="Click_TopUp">
                                     Top-Up
                                 </Button>
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="LogOut">

@@ -46,7 +46,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             }
             result = result.TrimEnd(' ');
             result = result.TrimEnd(',');
-            TextBlock.Text = result == "" ? "(No item selected)" : result;
+            TextBlock.Text = result == "" ? "Select Release Cinemas" : result;
             ComboBox.Text = "";
         }
 

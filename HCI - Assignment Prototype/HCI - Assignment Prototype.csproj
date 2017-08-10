@@ -230,6 +230,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\Top Up\UserControl_TopUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\Top Up\UserControl_TopUpProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\View Booking\UserControl_DisplayBookDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -304,6 +312,12 @@
     </Compile>
     <Compile Include="Page\Sign up\UserControl_SignUp.xaml.cs">
       <DependentUpon>UserControl_SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Top Up\UserControl_TopUp.xaml.cs">
+      <DependentUpon>UserControl_TopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Top Up\UserControl_TopUpProcess.xaml.cs">
+      <DependentUpon>UserControl_TopUpProcess.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\View Booking\UserControl_DisplayBookDetail.xaml.cs">
       <DependentUpon>UserControl_DisplayBookDetail.xaml</DependentUpon>

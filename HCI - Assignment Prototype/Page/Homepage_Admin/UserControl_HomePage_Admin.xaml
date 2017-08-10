@@ -6,9 +6,14 @@
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.Homepage_Admin"
              mc:Ignorable="d" >
     <StackPanel Orientation="Vertical" Width="1000">
+        <Button x:Name="SignOut" Margin="2 10 2 10" Click="SignOut_Click"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+            Sign Out
+        </Button>
         <DockPanel>
             <TextBlock FontSize="30" Margin="2 2 2 10" HorizontalAlignment="Left" FontWeight="Bold">Movie Reservation Detail</TextBlock>
-            <Button x:Name="Login" Margin="2 2 2 10" Click="Click_CreateNewReservation"
+            <Button x:Name="CreateReservation" Margin="2 2 2 10" Click="Click_CreateNewReservation"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
                 Create New Reservation

@@ -41,5 +41,18 @@ namespace HCI___Assignment_Prototype.Page.Homepage_Admin
         {
             MainWindow.MainFrame.Navigate(new UserControl_CreateReservarion());
         }
+
+        private void SignOut_Click(object sender, RoutedEventArgs e)
+        {
+            DialogBox.Show("Logout the account", "Do you really want to logout your account?", "Cancel", "Logout");
+            switch (DialogBox.Result)
+            {
+                case DialogBox.ResultEnum.LeftButtonClicked: return;
+                case DialogBox.ResultEnum.RightButtonClicked:
+                    MainWindow.MainFrame.Navigate(new Homepage_BeforeLogin());
+                    Global.Global.CurrentUser = null;
+                    return;
+            }
+        }
     }
 }
