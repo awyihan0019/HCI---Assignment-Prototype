@@ -27,6 +27,11 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         }
 
         private void Seat_Next(object sender, RoutedEventArgs e) {
+            if (SeatPlace.HighlightedSeats == "") {
+                DialogBox.Show("Excuse me . . .", "Please select a seat before you proceed.");
+                return;
+            }
+
             Global.Global.MovieReservation.NormalSeat = SeatPlace.HighlightedSeats;
             UserControl_BookingDetail.CurrentPage++;
         }

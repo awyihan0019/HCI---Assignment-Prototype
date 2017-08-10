@@ -35,6 +35,10 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
         }
 
         private void Click_Button(object sender , RoutedEventArgs e) {
+            if (ListView.SelectedItem == null) {
+                DialogBox.Show("Please select a time.","");
+                return;
+            }
             Global.Global.MovieReservation.Time = ListView.SelectedItem.ToString();
             UserControl_BookingDetail.CurrentPage++;
         }
