@@ -13,34 +13,64 @@ namespace HCI___Assignment_Prototype.Global
     {
         public static List<MovieReservation> SampleReservationDetails = new List<MovieReservation>(){
             new MovieReservation("Beauty and The Beast", "8:00p.m. - 10:00p.m.",
-                "30 June 2017", "GSC-MidValley", "A1, A2, A3", "-", "Comba A(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.jpg"))),
+                "30 June 2017", "GSC-MidValley", "A1, A2, A3", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo A", 3, 7.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.jpg"))),
 
             new MovieReservation("Wolfenstein 2: The New Colossus", "1:00p.m. - 3:00p.m.",
-                "10 July 2017", "GSC-NuSentral", "A6, A7", "-", "Comba B(2)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
+                "10 July 2017", "GSC-NuSentral", "A6, A7", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo B", 2, 11.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
 
             new MovieReservation("Der Untergang", "10:00p.m. - 12:00p.m.",
-                "13 August 2017", "GSC-SunwayPyramid", "A10, A11, A12", "-", "Comba A(1), Combo B(2)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg"))),
+                "13 August 2017", "GSC-SunwayPyramid", "A10, A11, A12", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo C", 3, 11.99)
+
+                },new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg"))),
 
             new MovieReservation("Beauty & The Beast", "3:00p.m. - 5:00p.m.",
-                "14 August 2017", "GSC-OneU", "A35", "-", "Comba A(1)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.jpg"))),
+                "14 August 2017", "GSC-OneU", "A35", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo D", 1 , 14.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.jpg"))),
 
             new MovieReservation("Wolfenstein 2: The New Colossus", "10:00p.m. - 12:00a.m.",
-                "20 August 2017", "GSC-OneU", "-", "CC1", "Comba A(2)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
+                "20 August 2017", "GSC-OneU", "-", "CC1", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo A", 1 , 7.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
 
             new MovieReservation("Dunkirk", "5:00p.m. - 7:00p.m.",
-                "25 August 2017", "GSC-MidValley", "A33, A34, A35", "-", "Comba B(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
+                "25 August 2017", "GSC-MidValley", "A33, A34, A35", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo B", 2, 11.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
 
             new MovieReservation("Doom", "10:00a.m. - 12:00p.m.",
-                "26 August 2017", "GSC-NuSentral", "A1, A2, A3", "-", "-", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
+                "26 August 2017", "GSC-NuSentral", "A1, A2, A3", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo C", 3, 11.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
 
             new MovieReservation("Dunkirk", "12:00a.m. - 2:00a.m.",
-                "29 August 2017", "GSC-OneU", "-", "CC2", "Comba A(2)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
+                "29 August 2017", "GSC-OneU", "-", "CC2", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo D", 1, 14.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
 
             new MovieReservation("Doom", "8:00p.m. - 10:00p.m.",
-                "30 August 2017", "GSC-Gardens", "A54, A55", "-", "Comba A(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
+                "30 August 2017", "GSC-Gardens", "A54, A55", "-", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks("Combo A", 1, 7.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
 
             new MovieReservation("Der Untergang", "12:00p.m. - 2:00p.m.",
-                "31 August 2017", "GSC-IpohParade", "A40", "CC4", "Comba A(3)", new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg")))
+                "31 August 2017", "GSC-IpohParade", "A40", "CC4", new List<FoodAndDrinks>(){
+                    new FoodAndDrinks ("Combo B", 1, 11.99)
+
+                }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg")))
             };
 
         public static List<Movie> SampleMovies = new List<Movie>()

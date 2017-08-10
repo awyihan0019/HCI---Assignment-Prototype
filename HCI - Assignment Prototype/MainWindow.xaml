@@ -13,26 +13,35 @@
             <DockPanel Margin="0" LastChildFill="True">
                 <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                           Mode="PrimaryMid" DockPanel.Dock="Top">
-                    <DockPanel>
-                        <Button x:Name="MenuToggleButton" Foreground="White"
+                    <StackPanel Orientation="Vertical">
+                        <DockPanel>
+                            <Button x:Name="MenuToggleButton" Foreground="White"
                                 Style="{StaticResource MaterialDesignFlatButton}" DockPanel.Dock="Left"
                                 Command="{x:Static NavigationCommands.BrowseBack}"
                                 IsEnabled="{TemplateBinding CanGoBack}">
 
-                            <materialDesign:PackIcon Kind="ArrowLeftBold" Height="30" Width="30" />
-                        </Button>
-                        <Button Foreground="White" Style="{StaticResource MaterialDesignFlatButton}"
+                                <materialDesign:PackIcon Kind="ArrowLeftBold" Height="30" Width="30" />
+                            </Button>
+                            <Button Foreground="White" Style="{StaticResource MaterialDesignFlatButton}"
                                 DockPanel.Dock="Left"
                                 Command="{x:Static NavigationCommands.BrowseForward}"
                                 IsEnabled="{TemplateBinding CanGoForward}">
-                            <materialDesign:PackIcon Kind="ArrowRightBold" Height="30" Width="30" />
-                        </Button>
-                        <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="White"
+                                <materialDesign:PackIcon Kind="ArrowRightBold" Height="30" Width="30" />
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="White"
                                 DockPanel.Dock="Right" Click="ExtraMenuButton_OnClick">
-                            <materialDesign:PackIcon Height="25" Width="25" Kind="DotsVertical" />
-                        </Button>
-                        <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" ToolTip="Go to homepage" Foreground="White" Click="HomeButton_OnClick" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Online Movie Ticket Booking System (OMTiBoS)</Button>
-                    </DockPanel>
+                                <materialDesign:PackIcon Height="25" Width="25" Kind="DotsVertical" />
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" ToolTip="Go to homepage" Foreground="White" Click="HomeButton_OnClick" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Online Movie Ticket Booking System (OMTiBoS)</Button>
+                        </DockPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">HOME</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">SHOWING NOW</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">COMING SOON</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">SUPPORT</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click_1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">CREDITS</Button>
+                        </StackPanel>
+                    </StackPanel>
                 </materialDesign:ColorZone>
                 <ContentPresenter />
             </DockPanel>
@@ -43,7 +52,7 @@
             <Image x:Name="Image" Source="Wallpaper3.png" Stretch="Fill"></Image>
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <Grid>
-                    <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" />
+                    <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" Navigated="Frame_Navigated" />
                     <materialDesign:Snackbar x:Name="snackbar" />
                 </Grid>
             </ScrollViewer>
