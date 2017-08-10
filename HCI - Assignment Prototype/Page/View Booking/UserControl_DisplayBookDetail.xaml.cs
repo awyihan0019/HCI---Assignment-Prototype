@@ -80,7 +80,8 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
         private void Click_cancelDetail(object sender, RoutedEventArgs e)
         {
-            UserControl_BookingDetail.CurrentPage--;
+            MainWindow.MainFrame.GoBack();
+            
         }
 
         private void Click_ConfirmBooking(object sender, RoutedEventArgs e)
