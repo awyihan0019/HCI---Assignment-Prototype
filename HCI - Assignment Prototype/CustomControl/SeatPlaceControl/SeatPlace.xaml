@@ -17,7 +17,10 @@
             <Grid x:Name="MiddleArea" Margin="15"></Grid>
             <Grid x:Name="RightArea" Margin="15" Visibility="Collapsed"></Grid>
         </StackPanel>
-        <Label x:Name="HighlightedSeatsLabel">Selected seats</Label>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontWeight="Bold">Selected seats :</Label>
+            <Label x:Name="HighlightedSeatsLabel"></Label>
+        </StackPanel>
     </StackPanel>
 </UserControl>
 

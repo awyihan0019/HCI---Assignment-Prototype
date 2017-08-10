@@ -24,7 +24,6 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
         public UserControl_SelectMovie() {
             InitializeComponent();
             ItemsControl.ItemsSource = SampleData.SampleMovies;
-
         }
 
         private void ViewAvailabilityButton_OnClick(object sender , RoutedEventArgs e) {

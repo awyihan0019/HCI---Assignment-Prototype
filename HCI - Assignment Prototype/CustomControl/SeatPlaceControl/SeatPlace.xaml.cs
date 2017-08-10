@@ -60,7 +60,7 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlaceControl {
             else {
                 HighlightedSeats = HighlightedSeats.Replace(seatLabel, "");
             }
-            HighlightedSeatsLabel.Content = HighlightedSeats;
+            HighlightedSeatsLabel.Content = HighlightedSeats.Trim();
         }
 
 
