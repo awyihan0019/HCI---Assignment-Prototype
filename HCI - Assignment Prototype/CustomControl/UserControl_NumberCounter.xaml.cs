@@ -44,6 +44,29 @@ namespace HCI___Assignment_Prototype.CustomControl
         }
         #endregion
 
+        #region
+
+
+        public string SubLabel
+        {
+            get { return (string)GetValue(SubLabelProperty); }
+            set { SetValue(SubLabelProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SubLabel.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SubLabelProperty =
+            DependencyProperty.Register("SubLabel", typeof(string), typeof(UserControl_NumberCounter), new PropertyMetadata("", SubLabelPropertyChangeCallBack));
+
+        private static void SubLabelPropertyChangeCallBack(DependencyObject dependence, DependencyPropertyChangedEventArgs e)
+        {
+            var d = dependence as UserControl_NumberCounter;
+            d.TextBlock_SubLabel.Text = (string)e.NewValue;
+        }
+
+        #endregion
+
+
+
         #region Number Property
 
 

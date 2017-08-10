@@ -18,8 +18,7 @@ namespace HCI___Assignment_Prototype.Page.Profile_Page {
 
         private void EditProfile_Click(object sender, RoutedEventArgs e) {
             MainWindow.MainFrame.Navigate(new UserControl_EditProfile());
-
-            
+  
         }
     }
 }
