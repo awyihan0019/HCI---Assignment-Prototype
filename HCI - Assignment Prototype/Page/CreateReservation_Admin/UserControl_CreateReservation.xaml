@@ -12,8 +12,15 @@
         <TextBox
 	materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <customcontrol:DropDownWithPencil Width="380" FontSize="20" HorizontalAlignment="Center" Label="Rating" Text="Rating" Items="PG 18,U,PG 13" Margin="0 5"></customcontrol:DropDownWithPencil>
+        <customcontrol:DropDownWithPencil x:Name="Category" Width="380" FontSize="20" HorizontalAlignment="Center" Label="Rating" Text="Rating" Items="PG 18,U,PG 13" Margin="0 5"></customcontrol:DropDownWithPencil>
         <TextBox
+	materialDesign:HintAssist.Hint="Movie Director" FontSize="20" x:Name="Director" Margin="5" VerticalAlignment="Center" Width="380"
+	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <TextBox
+	materialDesign:HintAssist.Hint="Movie Cast" FontSize="20" x:Name="Cast" Margin="5" VerticalAlignment="Center" Width="380"
+	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <TextBox
+            x:Name="description"
 	Height="120"
 	MaxWidth="380"
             Margin="5"
@@ -37,8 +44,9 @@
 	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
+        <customcontrol:DropDownSelectionList x:Name="RunningTime" FontSize="20" Margin="5" Text="Select Movie Running Time" Items="1h45m,2h,2h15m,2h30m,4h" Width="380" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
         <!-- Add scroll down list (cinemas) here) -->
-        <customcontrol:DropDownSelectionList FontSize="20" Margin="5" Text="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" Width="380" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
+        <customcontrol:DropDownSelectionList x:Name="cinemas" FontSize="20" Margin="5" Text="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" Width="380" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
             <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
