@@ -186,7 +186,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\EditReservation_Admin\UserControl_EditReservation.xaml">
+    <Page Include="Page\EditReservation_Admin\UserControl_EditReservation_Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,8 +285,8 @@
     <Compile Include="Page\CreateReservation_Admin\UserControl_CreateReservation.xaml.cs">
       <DependentUpon>UserControl_CreateReservation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\EditReservation_Admin\UserControl_EditReservation.xaml.cs">
-      <DependentUpon>UserControl_EditReservation.xaml</DependentUpon>
+    <Compile Include="Page\EditReservation_Admin\UserControl_EditReservation_Admin.xaml.cs">
+      <DependentUpon>UserControl_EditReservation_Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Homepage\Homepage_AfterLogin.xaml.cs">
       <DependentUpon>Homepage_AfterLogin.xaml</DependentUpon>
