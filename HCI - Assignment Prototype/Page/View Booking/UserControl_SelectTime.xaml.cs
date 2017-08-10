@@ -15,33 +15,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HCI___Assignment_Prototype.Page.View_Booking
-{
+namespace HCI___Assignment_Prototype.Page.View_Booking {
     /// <summary>
     /// Interaction logic for UserControl_SelectTime.xaml
     /// </summary>
-    public partial class UserControl_SelectTime : UserControl
-    {
-        public UserControl_SelectTime()
-        {
+    public partial class UserControl_SelectTime : UserControl {
+        public UserControl_SelectTime() {
             InitializeComponent();
             DateTime[] date = Global.Global.SelectedMovie.AvailableTime.ToArray();
             String[] fixedDate = new String[date.Length];
-            for (int i = 0; i < fixedDate.Length; i++)
-            {
+            for (int i = 0 ; i < fixedDate.Length ; i++) {
                 fixedDate[i] = date[i].ToString("hh:mm tt");
             }
             ListView.ItemsSource = fixedDate;
         }
 
-        private void Click_CancelTime(object sender, RoutedEventArgs e)
-        {
-            MainWindow.MainFrame.GoBack();
+        private void Click_CancelTime(object sender , RoutedEventArgs e) {
+            UserControl_BookingDetail.CurrentPage--;
         }
 
-        private void Click_Button(object sender, RoutedEventArgs e)
-        {
-            UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectSeats());
+        private void Click_Button(object sender , RoutedEventArgs e) {
+            Global.Global.MovieReservation.Time = ListView.SelectedItem.ToString();
+            UserControl_BookingDetail.CurrentPage++;
         }
     }
 }

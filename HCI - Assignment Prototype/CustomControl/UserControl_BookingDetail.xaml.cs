@@ -20,17 +20,26 @@ namespace HCI___Assignment_Prototype.CustomControl {
     /// </summary>
     public partial class UserControl_BookingDetail : UserControl {
         public static Frame DetailFrame;
-        public enum CurrentPageEnum { SelectMovie, SelectLocation, SelectDate, SelectTime, SelectSeat, SelectCombo }
+
+        public enum CurrentPageEnum {
+            SelectMovie = 0,
+            SelectLocation,
+            SelectDate,
+            SelectTime,
+            SelectSeat,
+            SelectCombo
+        }
 
         private static UserControl_BookingDetail _current;
         public UserControl_BookingDetail() {
             InitializeComponent();
-            frame.Navigate(new UserControl_SelectLocation());
             DetailFrame = frame;
             _current = this;
+            CurrentPage = CurrentPageEnum.SelectLocation;
         }
         private static Style _flatStyle = Application.Current.FindResource("MaterialDesignFlatButton") as Style;
         private static Style _accentStyle = Application.Current.FindResource("MaterialDesignRaisedButton") as Style;
+        private static CurrentPageEnum _currentPage;
 
         private void ResetButtonStyle() {
             MovieButton.Style = _flatStyle;
@@ -42,39 +51,63 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         public static CurrentPageEnum CurrentPage {
+            get => _currentPage;
             set {
-                _current.ResetButtonStyle();
                 Button b = null;
                 UserControl pageToGo = null;
-                switch (value) {
-                    case CurrentPageEnum.SelectMovie:
-                        b = _current.MovieButton;
-                        pageToGo = new UserControl_SelectMovie();
-                        break;
-                    case CurrentPageEnum.SelectCombo:
-                        b = _current.ComboButton;
-                        //pageToGo = new UserControl_SelectCombo();
-                        break;
-                    case CurrentPageEnum.SelectDate:
-                        b = _current.DateButton;
-                        pageToGo = new UserControl_SelectDate();
-                        break;
-                    case CurrentPageEnum.SelectLocation:
-                        b = _current.LocationButton;
-                        pageToGo = new UserControl_SelectLocation();
-                        break;
-                    case CurrentPageEnum.SelectSeat:
-                        b = _current.SeatButton;
-                        pageToGo = new UserControl_SelectSeats();
-                        break;
-                    case CurrentPageEnum.SelectTime:
-                        b = _current.TimeButton;
-                        pageToGo = new UserControl_SelectTime();
-                        break;
-                }
+                _currentPage = value;
+
+                //1. Set the content of current button
+                (b, pageToGo) = GetButtonAndPageToGo((_currentPage - 1));
+                if (b == null || pageToGo == null) return;
+                b.Content = GetContent(_currentPage - 1);
+
+                //2. Focus the next button
+                _current.ResetButtonStyle();
+                (b, pageToGo) = GetButtonAndPageToGo(_currentPage);
                 if (b != null) b.Style = _accentStyle;
                 if (pageToGo != null) DetailFrame.Navigate(pageToGo);
             }
+        }
+
+        private static string GetContent(CurrentPageEnum c) {
+            switch (c) {
+                case CurrentPageEnum.SelectMovie:
+                    return "Movie : " + Global.Global.MovieReservation.MovieName;
+                case CurrentPageEnum.SelectLocation:
+                    return "Location : " + Global.Global.MovieReservation.Location;
+                case CurrentPageEnum.SelectDate:
+                    return "Date : " + Global.Global.MovieReservation.Date;
+                case CurrentPageEnum.SelectTime:
+                    return "Time : " + Global.Global.MovieReservation.Time;
+                case CurrentPageEnum.SelectSeat:
+                    return "Seats : " + Global.Global.MovieReservation.NormalSeat;
+                case CurrentPageEnum.SelectCombo:
+                    return "Combo : " + Global.Global.MovieReservation.FoodAndDrinks;
+                default:
+                    return "";
+            }
+        }
+
+        private static (Button, UserControl) GetButtonAndPageToGo(CurrentPageEnum c) {
+            switch (c) {
+                case CurrentPageEnum.SelectMovie:
+                    return (_current.MovieButton, new UserControl_SelectMovie());
+                case CurrentPageEnum.SelectCombo:
+                    return (_current.ComboButton, new UserControl_SelectFoodAndDrink());
+                case CurrentPageEnum.SelectDate:
+                    return (_current.DateButton, new UserControl_SelectDate());
+                case CurrentPageEnum.SelectLocation:
+                    return (_current.LocationButton, new UserControl_SelectLocation());
+                case CurrentPageEnum.SelectSeat:
+                    return (_current.SeatButton, new UserControl_SelectSeats());
+                case CurrentPageEnum.SelectTime:
+                    return (_current.TimeButton, new UserControl_SelectTime());
+                default:
+                    MainWindow.MainFrame.Navigate(new UserControl_SelectMovie());
+                    break;
+            }
+            return (null, null);
         }
 
         private void MovieButton_OnClick(object sender , RoutedEventArgs e) {
@@ -83,6 +116,23 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void LocationButton_OnClick(object sender , RoutedEventArgs e) {
             CurrentPage = CurrentPageEnum.SelectLocation;
+        }
+
+
+        private void DateButton_OnClick(object sender , RoutedEventArgs e) {
+            CurrentPage = CurrentPageEnum.SelectDate;
+        }
+
+        private void TimeButton_OnClick(object sender , RoutedEventArgs e) {
+            CurrentPage = CurrentPageEnum.SelectTime;
+        }
+
+        private void SeatButton_OnClick(object sender , RoutedEventArgs e) {
+            CurrentPage = CurrentPageEnum.SelectSeat;
+        }
+
+        private void ComboButton_OnClick(object sender , RoutedEventArgs e) {
+            CurrentPage = CurrentPageEnum.SelectCombo;
         }
     }
 }

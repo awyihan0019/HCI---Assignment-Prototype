@@ -18,10 +18,10 @@
             </StackPanel.Resources>
             <Button x:Name="MovieButton" Click="MovieButton_OnClick">Movie :</Button>
             <Button x:Name="LocationButton" Click="LocationButton_OnClick">Location :</Button>
-            <Button x:Name="DateButton">Date :</Button>
-            <Button x:Name="TimeButton">Time :</Button>
-            <Button x:Name="SeatButton">Seat :</Button>
-            <Button x:Name="ComboButton">Combo :</Button>
+            <Button x:Name="DateButton" Click="DateButton_OnClick">Date :</Button>
+            <Button x:Name="TimeButton" Click="TimeButton_OnClick">Time :</Button>
+            <Button x:Name="SeatButton" Click="SeatButton_OnClick">Seat :</Button>
+            <Button x:Name="ComboButton" Click="ComboButton_OnClick">Combo :</Button>
         </StackPanel>
         <Frame x:Name="frame"></Frame>
     </StackPanel>

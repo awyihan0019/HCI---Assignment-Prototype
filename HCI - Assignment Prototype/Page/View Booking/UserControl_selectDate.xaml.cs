@@ -31,7 +31,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
         }
 
         private void Click_cancel(object sender , RoutedEventArgs e) {
-            MainWindow.MainFrame.GoBack();
+            UserControl_BookingDetail.CurrentPage--;
         }
 
         private void Click_dateNext(object sender , RoutedEventArgs e) {
@@ -39,8 +39,8 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
                 DialogBox.Show("You must select a location!" , "" , "OK");
             }
             else {
-                UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectTime());
-                Global.Global.MovieReservation.Time = ListView.SelectedItem.ToString();
+                Global.Global.MovieReservation.Date = ListView.SelectedItem.ToString();
+                UserControl_BookingDetail.CurrentPage++;
             }
         }
     }

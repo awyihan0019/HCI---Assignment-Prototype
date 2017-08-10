@@ -18,7 +18,7 @@
                     </StackPanel>
                 </materialDesign:ColorZone>
                 <StackPanel>
-                <seatplacecontrol:SeatPlace></seatplacecontrol:SeatPlace>
+                <seatplacecontrol:SeatPlace x:Name="SeatPlace"></seatplacecontrol:SeatPlace>
             </StackPanel>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock
