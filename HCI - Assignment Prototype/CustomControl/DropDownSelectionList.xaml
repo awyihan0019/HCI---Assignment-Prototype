@@ -11,7 +11,7 @@
     </UserControl.DataContext>
     <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
         <Grid>
-            <TextBlock x:Name="TextBlock" VerticalAlignment="Center" MinWidth="200"></TextBlock>
+            <TextBlock x:Name="TextBlock" VerticalAlignment="Center" Width="380"></TextBlock>
             <ComboBox x:Name="ComboBox" VerticalAlignment="Center" DropDownOpened="ComboBox_OnDropDownOpened" DropDownClosed="ComboBox_OnDropDownClosed"
             ItemsSource="{Binding}"
                   Width="{Binding Path=ActualWidth, ElementName=TextBlock}"
@@ -26,6 +26,8 @@
                 </ComboBox.ItemTemplate>
             </ComboBox>
         </Grid>
+        <!--
         <Button Margin="10 0 0 0"  Click="ButtonBase_OnClick">OK</Button>
+        -->
     </StackPanel>
 </UserControl>

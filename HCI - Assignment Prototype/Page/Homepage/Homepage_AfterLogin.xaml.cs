@@ -3,6 +3,7 @@ using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Profile_Page;
 using System.Windows.Controls;
 using HCI___Assignment_Prototype.Page.CheckBooking;
+using HCI___Assignment_Prototype.Page.Top_Up;
 
 namespace HCI___Assignment_Prototype.Page.Homepage {
     /// <summary>
@@ -43,6 +44,11 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         private void ProfilePicture_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             UserPopup.IsOpen = !UserPopup.IsOpen;
+        }
+        
+        private void Click_TopUp(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainFrame.Navigate(new UserControl_TopUp());
         }
     }
 }
