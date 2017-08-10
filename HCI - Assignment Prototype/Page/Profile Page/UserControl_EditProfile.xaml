@@ -14,7 +14,7 @@
             <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="150"
                    Width="150" Margin="15 5 5 5" Source="/HCI - Assignment Prototype;component/dog.jpg" Stretch="Fill" />
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
-                    Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" />
+                    Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" Click="Button_Click" />
         </StackPanel>
         <customcontrol:TextboxWithPencil x:Name="PasswordField" Label="Password"/>
         <customcontrol:TextboxWithPencil x:Name="NameField" Label="Name"/>
@@ -23,12 +23,12 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                    ToolTip="Cancel the editing" HorizontalAlignment="Right">
                 CANCEL
             </Button>
             <Button x:Name="Login" Click="Save_Click" Width="100"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                    ToolTip="Save the changes" HorizontalAlignment="Right">
                 SAVE
             </Button>
         </StackPanel>
