@@ -27,11 +27,8 @@ namespace HCI___Assignment_Prototype.Page.Homepage_Admin
         public UserControl_HomePage_Admin()
         {
             InitializeComponent();
-            var incoming = SampleData.SampleReservationDetails.
-                Where(m => DateTime.Parse(m.Date) >= DateTime.Today).ToList();
-            var expired = SampleData.SampleReservationDetails.
-                Where(m => DateTime.Parse(m.Date) < DateTime.Today).ToList();
-            foreach (var item in incoming)
+            var data = SampleData.SampleReservationDetails_Admin;
+            foreach (var item in data)
             {
                 MovieList.Children.Add(new ReservationDetail_Admin() { DataContext = item });
             }

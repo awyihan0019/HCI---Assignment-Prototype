@@ -8,24 +8,21 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d">
     <UserControl.DataContext>
-        <class:MovieReservation />
+        <class:MovieReservation_Admin />
     </UserControl.DataContext>
     <materialDesign:DrawerHost x:Name="DrawerHost">
         <materialDesign:DrawerHost.RightDrawerContent>
             <StackPanel>
-                <TextBlock TextWrapping="Wrap" FontSize="15" MaxWidth="160" Margin="10 10 10 0">Do you really want to cancel this reservation?</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="15" MaxWidth="160" Margin="10 10 10 0">Do you really want to disable this reservation profile?</TextBlock>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Margin="10" 
-                            Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
-                            CommandParameter="{x:Static Dock.Right}"
-                            >NO</Button>
+                    <Button Margin="10" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}" CommandParameter="{x:Static Dock.Right}" >NO</Button>
                     <Button Margin="0 0 10 0" Click="YesButton_OnClick">YES</Button>
                 </StackPanel>
             </StackPanel>
         </materialDesign:DrawerHost.RightDrawerContent>
         <materialDesign:Card  x:Name="Card" Padding="5" Margin="5">
             <DockPanel>
-                <Image x:Name="Image" DockPanel.Dock="Left" />
+                <Image x:Name="Image" Width="120" Height="120" Source="{Binding Image}" DockPanel.Dock="Left" />
                 <Grid DockPanel.Dock="Left" Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -55,14 +52,14 @@
                     <TextBlock Margin="5 0" Grid.Column="1" Grid.Row="4" > :</TextBlock>
                     <TextBlock Margin="5 0" Grid.Column="1" Grid.Row="5" > :</TextBlock>
                     <TextBlock Grid.Column="2" Grid.Row="0" Text="{Binding MovieName}" />
-                    <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Time}" />
-                    <TextBlock Grid.Column="2" Grid.Row="2" Text="{Binding Date}" />
-                    <TextBlock Grid.Column="2" Grid.Row="3" Text="{Binding Location}" />
-                    <TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding NormalSeat}" />
-                    <TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding CoupleSeat}" />
+                    <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Category}" />
+                    <TextBlock Grid.Column="2" Grid.Row="2" Text="{Binding TrailerLink}" />
+                    <TextBlock Grid.Column="2" Grid.Row="3" Text="{Binding ReleaseDate}" />
+                    <TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding Cinemas}" />
+                    <TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding Description}" />
                 </Grid>
                 <Grid DockPanel.Dock="Right" HorizontalAlignment="Right">
-                    <TextBlock x:Name="ExpiredLabel" Opacity="1" Visibility="Hidden" HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" FontFamily="Consolas" Margin="0 0 5 0">[EXPIRED]</TextBlock>
+                    <TextBlock x:Name="FeedbackLabel" Opacity="1" Visibility="Hidden" HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" FontFamily="Consolas" Margin="0 0 5 0">[EXPIRED]</TextBlock>
                     <StackPanel x:Name="ToolBox" Orientation="Horizontal">
                         <StackPanel.Resources>
                             <Style TargetType="materialDesign:PackIcon">
@@ -71,10 +68,9 @@
                                 <Setter Property="Height" Value="100" />
                             </Style>
                         </StackPanel.Resources>
-                        
-                        <Button Style="{StaticResource MaterialDesignToolButton}" ToolTip="Cancel this reservation" Content="{materialDesign:PackIcon Kind=Delete}" Click="DeleteButton_OnClick" />
-                        <Button Style="{StaticResource MaterialDesignToolButton}" ToolTip="Edit this reservation"
-                    Content="{materialDesign:PackIcon Kind=LeadPencil}" />
+
+                        <Button Style="{StaticResource MaterialDesignToolButton}" ToolTip="Disable this reservation" Content="{materialDesign:PackIcon Kind=CloseBox}" Click="DisableButton_OnClick" />
+                        <Button Style="{StaticResource MaterialDesignToolButton}" ToolTip="Edit this reservation" Content="{materialDesign:PackIcon Kind=LeadPencil}" />
                     </StackPanel>
                 </Grid>
             </DockPanel>

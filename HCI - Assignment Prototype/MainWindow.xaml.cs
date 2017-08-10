@@ -45,5 +45,20 @@ namespace HCI___Assignment_Prototype {
             else
                 MainFrame.Navigate(new Homepage_AfterLogin());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new UserControl_SelectMovie());
+        }
+
+        private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

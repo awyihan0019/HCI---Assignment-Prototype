@@ -16,26 +16,23 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI___Assignment_Prototype.Class;
 
-namespace HCI___Assignment_Prototype.Page.CheckBooking
-{
+namespace HCI___Assignment_Prototype.Page.CheckBooking {
     /// <summary>
     /// Interaction logic for UserControl_CheckBooking.xaml
     /// </summary>
-    public partial class UserControl_CheckReservation : UserControl
-    {
-        public UserControl_CheckReservation()
-        {
+    public partial class UserControl_CheckReservation : UserControl {
+        public UserControl_CheckReservation() {
             InitializeComponent();
-            var incoming = SampleData.SampleReservationDetails.
+            var data = Global.Global.CurrentUser.Reservations;
+            var incoming = data.
                 Where(m => DateTime.Parse(m.Date) >= DateTime.Today).ToList();
-            var expired = SampleData.SampleReservationDetails.
+            var expired = data.
                 Where(m => DateTime.Parse(m.Date) < DateTime.Today).ToList();
-            foreach (var item in incoming)
-            {
+            foreach (var item in incoming) {
                 BookingList.Children.Add(new ReservationDetail() { DataContext = item });
             }
             foreach (var item in expired) {
-               var r = new ReservationDetail(){DataContext = item};
+                var r = new ReservationDetail() { DataContext = item };
                 r.MarkAsObsoleted("[EXPIRED]");
                 BookingList.Children.Add(r);
 
