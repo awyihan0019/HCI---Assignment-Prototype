@@ -27,12 +27,12 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="Cancel" Margin="0 15 20 15" Click="Click_CancelTime"
                     Style="{StaticResource MaterialDesignFlatButton}" Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                CANCEL
+                     HorizontalAlignment="Right">
+                BACK
             </Button>
                 <Button x:Name="Next_Button" Margin="20 15 0 15"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right" Click="Click_Button">
+                    HorizontalAlignment="Right" Click="Click_Button">
                 NEXT
             </Button>
         </StackPanel>

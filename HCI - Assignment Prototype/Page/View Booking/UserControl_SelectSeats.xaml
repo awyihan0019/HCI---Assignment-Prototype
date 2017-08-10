@@ -41,7 +41,7 @@
                 <Button
 	Style="{StaticResource MaterialDesignFlatButton}"
 	HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,15,20,15" Width="100">
-                    CANCEL
+                    BACK
                 </Button>
                 <Button
 	Width="100"
