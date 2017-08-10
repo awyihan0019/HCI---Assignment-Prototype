@@ -33,11 +33,12 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
             Global.Global.MovieReservation.FoodAndDrinks = new List<FoodAndDrinks>() {
                 new FoodAndDrinks("ComboA", ComboA.Number, 7.99),
-                new FoodAndDrinks("ComboB", ComboA.Number, 11.99),
-                new FoodAndDrinks("ComboC", ComboA.Number, 11.99),
-                new FoodAndDrinks("ComboD", ComboA.Number, 14.99),
+                new FoodAndDrinks("ComboB", ComboB.Number, 11.99),
+                new FoodAndDrinks("ComboC", ComboC.Number, 11.99),
+                new FoodAndDrinks("ComboD", ComboD.Number, 14.99),
             };
-            UserControl_BookingDetail.CurrentPage++;
+            //UserControl_DisplayBookDetail
+            MainWindow.MainFrame.Navigate(new UserControl_DisplayBookDetail());
 
         }
 

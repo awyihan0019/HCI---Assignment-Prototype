@@ -24,6 +24,57 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         public UserControl_DisplayBookDetail()
         {
             InitializeComponent();
+            double ticketTotal = Global.Global.MovieReservation.NormalSeat.Split(' ').Length * 15.9;
+            double comboATotal = Global.Global.MovieReservation.FoodAndDrinks[0].Quantity * Global.Global.MovieReservation.FoodAndDrinks[0].Price;
+            double comboBTotal = Global.Global.MovieReservation.FoodAndDrinks[1].Quantity * Global.Global.MovieReservation.FoodAndDrinks[1].Price;
+            double comboCTotal = Global.Global.MovieReservation.FoodAndDrinks[2].Quantity * Global.Global.MovieReservation.FoodAndDrinks[2].Price;
+            double comboDTotal = Global.Global.MovieReservation.FoodAndDrinks[3].Quantity * Global.Global.MovieReservation.FoodAndDrinks[3].Price;
+            double TotalPayment = ticketTotal + comboATotal + comboBTotal + comboCTotal + comboDTotal;
+
+            ticketQuantity.Content = Global.Global.MovieReservation.NormalSeat.Split(' ').Length;
+            ComboAQuantity.Content = Global.Global.MovieReservation.FoodAndDrinks[0].Quantity;
+            ComboBQuantity.Content = Global.Global.MovieReservation.FoodAndDrinks[1].Quantity;
+            ComboCQuantity.Content = Global.Global.MovieReservation.FoodAndDrinks[2].Quantity;
+            ComboDQuantity.Content = Global.Global.MovieReservation.FoodAndDrinks[3].Quantity;
+
+            TicketTotal.Content = "RM " + (Global.Global.MovieReservation.NormalSeat.Split(' ').Length * 15.9).ToString();
+            ComboATotal.Content = "RM " + Global.Global.MovieReservation.FoodAndDrinks[0].Quantity * Global.Global.MovieReservation.FoodAndDrinks[0].Price;
+            ComboBTotal.Content = "RM " + Global.Global.MovieReservation.FoodAndDrinks[1].Quantity * Global.Global.MovieReservation.FoodAndDrinks[1].Price;
+            ComboCTotal.Content = "RM " + Global.Global.MovieReservation.FoodAndDrinks[2].Quantity * Global.Global.MovieReservation.FoodAndDrinks[2].Price;
+            ComboDTotal.Content = "RM " + Global.Global.MovieReservation.FoodAndDrinks[3].Quantity * Global.Global.MovieReservation.FoodAndDrinks[3].Price;
+            Total.Content = "RM " + TotalPayment;
+
+            for (int i = 0; i < Global.Global.MovieReservation.FoodAndDrinks.Count; i++)
+            {
+                if(Global.Global.MovieReservation.FoodAndDrinks[i].Quantity == 0)
+                {
+                    if(i == 0)
+                    {
+                        LabelA.Visibility = Visibility.Collapsed;
+                        ComboAQuantity.Visibility = Visibility.Collapsed;
+                        ComboATotal.Visibility = Visibility.Collapsed;
+                    }
+                    else if(i == 1)
+                    {
+                        LabelB.Visibility = Visibility.Collapsed;
+                        ComboBQuantity.Visibility = Visibility.Collapsed;
+                        ComboBTotal.Visibility = Visibility.Collapsed;
+                    }
+                    else if(i == 2)
+                    {
+                        LabelC.Visibility = Visibility.Collapsed;
+                        ComboCQuantity.Visibility = Visibility.Collapsed;
+                        ComboCTotal.Visibility = Visibility.Collapsed;
+                    }
+                    else if(i == 3)
+                    {
+                        LabelD.Visibility = Visibility.Collapsed;
+                        ComboDQuantity.Visibility = Visibility.Collapsed;
+                        ComboDTotal.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            
         }
 
         private void Click_cancelDetail(object sender, RoutedEventArgs e)
@@ -33,37 +84,12 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
         private void Click_ConfirmBooking(object sender, RoutedEventArgs e)
         {
-            double ticketTotal = Global.Global.MovieReservation.NormalSeat.Split(' ').Length * 15.9;
-            double comboATotal = Global.Global.MovieReservation.FoodAndDrinks[0].Quantity * Global.Global.MovieReservation.FoodAndDrinks[0].Price;
-            double comboBTotal = Global.Global.MovieReservation.FoodAndDrinks[1].Quantity * Global.Global.MovieReservation.FoodAndDrinks[1].Price;
-            double comboCTotal = Global.Global.MovieReservation.FoodAndDrinks[2].Quantity * Global.Global.MovieReservation.FoodAndDrinks[2].Price;
-            double comboDTotal = Global.Global.MovieReservation.FoodAndDrinks[3].Quantity * Global.Global.MovieReservation.FoodAndDrinks[3].Price;
-            double TotalPayment = ticketTotal + comboATotal + comboBTotal + comboCTotal + comboDTotal;
-
-            DialogBox.Show("Booking Payment", "Do you really want to make this reservation?\n\n" +
-                "Number of Ticket  : " + Global.Global.MovieReservation.NormalSeat.Split(' ').Length + $"RM { ticketTotal : F2}"
-                +
-                "Number of Combo A  : " + Global.Global.MovieReservation.FoodAndDrinks[0].Quantity + $"RM { comboATotal : F2}"
-                +
-                "Number of Combo B  : " + Global.Global.MovieReservation.FoodAndDrinks[1].Quantity + $"RM { comboBTotal : F2}"
-                +
-                "Number of Combo C  : " + Global.Global.MovieReservation.FoodAndDrinks[2].Quantity + $"RM { comboCTotal:  F2}"
-                +
-                "Number of Combo D  : " + Global.Global.MovieReservation.FoodAndDrinks[3].Quantity + $"RM { comboDTotal : F2}"
-                +
-                "Total Price : RM " + TotalPayment, "CANCEL", "CONFRIM");
-
-            //CustomControl.UserControl_NumberCounter.NumberProperty
-            switch (DialogBox.Result)
-            {
-                case DialogBox.ResultEnum.LeftButtonClicked: return;
-                case DialogBox.ResultEnum.RightButtonClicked:
-                    ProgressDialog.Show("Making Reservation . . .", "",
-                        () => {
-                            DialogBox.Show("Payment Successed", "Your Reservation already made the e-ticket are sended to your e-mail.", "OK");
-                        });
-                    return;
-            }
+            ProgressDialog.Show("Making Reservation . . .", "",
+                () =>
+                {
+                    DialogBox.Show("Payment Successed", "Your Reservation already made the e-ticket are sended to your e-mail.", "OK");
+                });
         }
     }
 }
+
