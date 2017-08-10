@@ -6,7 +6,6 @@
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" Loaded="DropDownWithPencil_OnLoaded">
-    <materialDesign:Card>
         <Border Background="White" BorderThickness="0,0,0,1" BorderBrush="DarkGray">
             <StackPanel>
                 <DockPanel>
@@ -30,5 +29,4 @@
                 </StackPanel>
             </StackPanel>
         </Border>
-    </materialDesign:Card>
 </UserControl>
