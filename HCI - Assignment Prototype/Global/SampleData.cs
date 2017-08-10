@@ -77,11 +77,11 @@ namespace HCI___Assignment_Prototype.Global
         {
             new Movie("Dunkirk",
                 new List<DateTime>(){
-                    new DateTime(2017, 07, 19, 0, 0, 0),
-                    new DateTime(2017, 07, 20, 0, 0, 0),
-                    new DateTime(2017, 07, 21, 0, 0, 0),
-                    new DateTime(2017, 07, 22, 0, 0, 0),
-                    new DateTime(2017, 07, 23, 0, 0, 0)
+                    new DateTime(2017, 08, 19, 0, 0, 0),
+                    new DateTime(2017, 08, 20, 0, 0, 0),
+                    new DateTime(2017, 08, 21, 0, 0, 0),
+                    new DateTime(2017, 08, 22, 0, 0, 0),
+                    new DateTime(2017, 08, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
                     new DateTime(1, 1, 1, 8, 30, 0),
@@ -137,11 +137,11 @@ namespace HCI___Assignment_Prototype.Global
 
             new Movie("Wolfenstein 2",
                 new List<DateTime>(){
-                    new DateTime(2017, 06, 19, 0, 0, 0),
-                    new DateTime(2017, 06, 20, 0, 0, 0),
-                    new DateTime(2017, 06, 21, 0, 0, 0),
-                    new DateTime(2017, 06, 22, 0, 0, 0),
-                    new DateTime(2017, 06, 23, 0, 0, 0)
+                    new DateTime(2017, 10, 19, 0, 0, 0),
+                    new DateTime(2017, 10, 20, 0, 0, 0),
+                    new DateTime(2017, 10, 21, 0, 0, 0),
+                    new DateTime(2017, 10, 22, 0, 0, 0),
+                    new DateTime(2017, 10, 23, 0, 0, 0)
                 },
                 new List<DateTime>(){
                     new DateTime(1, 1, 1, 8, 30, 0),
@@ -197,11 +197,11 @@ namespace HCI___Assignment_Prototype.Global
 
             new Movie("Beauty and The Beast",
                 new List<DateTime>(){
-                    new DateTime(2017, 08, 19, 0, 0, 0),
-                    new DateTime(2017, 08, 20, 0, 0, 0),
-                    new DateTime(2017, 08, 21, 0, 0, 0),
-                    new DateTime(2017, 08, 22, 0, 0, 0),
-                    new DateTime(2017, 08, 23, 0, 0, 0)
+                    new DateTime(2017, 08, 24, 0, 0, 0),
+                    new DateTime(2017, 08, 25, 0, 0, 0),
+                    new DateTime(2017, 08, 26, 0, 0, 0),
+                    new DateTime(2017, 08, 27, 0, 0, 0),
+                    new DateTime(2017, 08, 28, 0, 0, 0)
                 },
                 new List<DateTime>(){
                     new DateTime(1, 1, 1, 10, 30, 0),
