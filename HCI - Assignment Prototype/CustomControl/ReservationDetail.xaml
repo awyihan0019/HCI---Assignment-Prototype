@@ -7,6 +7,9 @@
 			 xmlns:class="clr-namespace:HCI___Assignment_Prototype.Class"
 			 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
 			 mc:Ignorable="d">
+    <UserControl.Resources>
+        <class:FoodAndDrink_Converter x:Key="converter" />
+    </UserControl.Resources>
 	<UserControl.DataContext>
 		<class:MovieReservation />
 	</UserControl.DataContext>
@@ -63,7 +66,7 @@
 					<TextBlock Grid.Column="2" Grid.Row="3" Text="{Binding Location}" />
 					<TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding NormalSeat}" />
 					<TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding CoupleSeat}" />
-					<TextBlock Grid.Column="2" Grid.Row="6" Text="{Binding FoodAndDrinks}" />
+                    <TextBlock Grid.Column="2" Grid.Row="6" Text="{Binding FoodAndDrinks, Converter={StaticResource converter}}" />
 				</Grid>
 				<Grid DockPanel.Dock="Right" HorizontalAlignment="Right">
 					<TextBlock x:Name="FeedbackLabel" Opacity="1" Visibility="Hidden" HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" FontFamily="Consolas" Margin="0 0 5 0">[EXPIRED]</TextBlock>
