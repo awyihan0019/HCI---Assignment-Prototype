@@ -32,7 +32,7 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new Homepage_BeforeLogin());
+            Frame.Navigate(new UserControl_CreateReservarion());
         }
 
         private void ExtraMenuButton_OnClick(object sender , RoutedEventArgs e) {

@@ -55,13 +55,13 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 20">
                     <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
 					Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
-					ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+					HorizontalAlignment="Right">
                         CANCEL
                     </Button>
-                    <Button x:Name="Save" Click="SaveReservationCreate_Click" Width="100"
+                    <Button x:Name="Save" Click="SaveReservationCreate_Click"
 					Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5"
-					ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                        SAVE
+					HorizontalAlignment="Right">
+                        CREATE PROFILE
                     </Button>
                 </StackPanel>
             </StackPanel>
