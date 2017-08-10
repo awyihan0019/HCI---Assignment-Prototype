@@ -30,6 +30,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void Button_Save_OnClick(object sender , RoutedEventArgs e) {
             TextBlock.Text = TextBox.Text;
+            Text = TextBlock.Text;
             GoToUneditableMode();
         }
 
