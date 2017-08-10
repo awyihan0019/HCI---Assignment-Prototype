@@ -55,8 +55,8 @@
                     <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Category}" />
                     <TextBlock Grid.Column="2" Grid.Row="2" Text="{Binding TrailerLink}" />
                     <TextBlock Grid.Column="2" Grid.Row="3" Text="{Binding ReleaseDate}" />
-                    <TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding Cinemas}" />
-                    <TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding Description}" />
+                    <TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding Cinemas}" MaxWidth="300" TextWrapping="Wrap" />
+                    <TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding Description}" MaxWidth="300" TextWrapping="Wrap" />
                 </Grid>
                 <Grid DockPanel.Dock="Right" HorizontalAlignment="Right">
                     <TextBlock x:Name="FeedbackLabel" Opacity="1" Visibility="Hidden" HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" FontFamily="Consolas" Margin="0 0 5 0">[EXPIRED]</TextBlock>
