@@ -97,7 +97,7 @@
                 <Button x:Name="Confirm" Margin="20 15 0 15" Click="Click_ConfirmBooking"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
                      HorizontalAlignment="Right">
-                    COMFIRM
+                    CONFIRM
                 </Button>
             </StackPanel>
         </StackPanel>
