@@ -41,7 +41,17 @@ namespace HCI___Assignment_Prototype.Page.CreateReservation_Admin
                             ProgressDialog.Show("Creating Reservation......", "", () => {
                                 DialogBox.Show("", "Reservation successfully created!", "OK");
                                 
-                                Global.SampleData.SampleReservationDetails_Admin.Add(new Class.MovieReservation_Admin(Textbox_MovieName.Text, Category.Text, Textbox_TrailerURL.Text, DatePicker_ReleaseDate.Text, cinemas.Text, description.Text, RunningTime.Text, Director.Text, Cast.Text, (BitmapImage)PosterImage.Source));
+                                Global.SampleData.SampleReservationDetails_Admin.Add(
+                                    new Class.MovieReservation_Admin(
+                                        Textbox_MovieName.Text, 
+                                        ComboBox_Rating.Text, 
+                                        Textbox_TrailerURL.Text, 
+                                        DatePicker_ReleaseDate.Text, Cinemas.Text, 
+                                        Textbox_Summary.Text, 
+                                        RunningTime.Text, 
+                                        Director.Text, 
+                                        Cast.Text, 
+                                        (BitmapImage)PosterImage.Source));
                                 MainWindow.MainFrame.Navigate(new UserControl_HomePage_Admin());
                             });
                             return;
@@ -60,7 +70,7 @@ namespace HCI___Assignment_Prototype.Page.CreateReservation_Admin
             {
                 var newImage = new BitmapImage(new Uri(op.FileName));
                 PosterImage.Source = newImage;
-                
+                UploadPosterButton.Content = "CHANGE IMAGE";
             }
         }
     }

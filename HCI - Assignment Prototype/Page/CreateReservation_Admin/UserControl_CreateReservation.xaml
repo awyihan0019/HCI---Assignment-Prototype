@@ -5,60 +5,66 @@
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			 xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.CreateReservation_Admin"
-             xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
-             mc:Ignorable="d" >
-    <StackPanel>
-        <TextBlock HorizontalAlignment="Center" FontSize="30" Margin="2 2 2 20" FontWeight="Bold">Create New Reservation</TextBlock>
-        <TextBox
-	materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380"
-	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <customcontrol:DropDownWithPencil x:Name="Category" Width="380" FontSize="20" HorizontalAlignment="Center" Label="Rating" Text="Rating" Items="PG 18,U,PG 13" Margin="0 5"></customcontrol:DropDownWithPencil>
-        <TextBox
-	materialDesign:HintAssist.Hint="Movie Director" FontSize="20" x:Name="Director" Margin="5" VerticalAlignment="Center" Width="380"
-	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <TextBox
-	materialDesign:HintAssist.Hint="Movie Cast" FontSize="20" x:Name="Cast" Margin="5" VerticalAlignment="Center" Width="380"
-	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <TextBox
-            x:Name="description"
-	Height="120"
-	MaxWidth="380"
-            Margin="5"
-	VerticalAlignment="Stretch"
-	materialDesign:HintAssist.Hint="Summary for the movie"
-	AcceptsReturn="True"
-            FontSize="15"
-	SpellCheck.IsEnabled="True"
-	TextWrapping="Wrap"
-	VerticalScrollBarVisibility="Auto"></TextBox>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Image x:Name="PosterImage" Width="200" Height="200" Margin="10" Source = "insertimage.jpg" >
-            </Image>
-            <Button x:Name="UPLOAD" Click="Click_UploadPoster"
-                    Style="{StaticResource MaterialDesignRaisedDarkButton}" VerticalAlignment="Bottom" Margin="10"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                UPLOAD POSTER
-            </Button>
+			 xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+			 mc:Ignorable="d" >
+    <materialDesign:Card Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel>
+            <materialDesign:ColorZone
+                Padding="16"
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                CornerRadius="3"
+                Mode="PrimaryLight">
+                <StackPanel  Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="DemiBold">Create New Reservation Profile</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+            <StackPanel Margin="10">
+                <Grid HorizontalAlignment="Center">
+                    <Image Cursor="Hand" MouseUp="Click_UploadPoster" x:Name="PosterImage" Width="200" Height="200" Margin="10" Source = "insertimage.jpg" ></Image>
+                    <Button  x:Name="UploadPosterButton" Click="Click_UploadPoster" Style="{StaticResource MaterialDesignRaisedDarkButton}" VerticalAlignment="Bottom" Margin="10" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">UPLOAD POSTER</Button>
+                </Grid>
+                <TextBox materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <ComboBox
+            Width="380" 
+			x:Name="ComboBox_Rating"
+			FontSize="20" Margin="5"
+			materialDesign:HintAssist.Hint="Rating"
+			Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    <ComboBoxItem>U</ComboBoxItem>
+                    <ComboBoxItem>PG13</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                </ComboBox>
+                <TextBox materialDesign:HintAssist.Hint="Movie Director" FontSize="20" x:Name="Director" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <TextBox materialDesign:HintAssist.Hint="Movie Cast" FontSize="20" x:Name="Cast" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <TextBox x:Name="Textbox_Summary"  MaxWidth="380" MaxHeight="300" FontSize="20" Margin="5" VerticalAlignment="Stretch" materialDesign:HintAssist.Hint="Summary for the movie" Style="{StaticResource MaterialDesignFloatingHintTextBox}" AcceptsReturn="True"  SpellCheck.IsEnabled="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"></TextBox>
+                <TextBox materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <DatePicker materialDesign:HintAssist.Hint="Release Date" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5 15 5 10" Width="380" VerticalAlignment="Center"   HorizontalAlignment="Center"></DatePicker>
+                <customcontrol:DropDownSelectionList x:Name="Cinemas" MinWidth="380" FontSize="20" Margin="5" Label="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
+                <ComboBox
+            x:Name="RunningTime"
+            materialDesign:HintAssist.Hint="Running time"
+            FontSize="20" Margin="5" Width="380"
+            Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    <ComboBoxItem>&lt; 1h</ComboBoxItem>
+                    <ComboBoxItem>1h30m</ComboBoxItem>
+                    <ComboBoxItem>2h</ComboBoxItem>
+                    <ComboBoxItem>2h30m</ComboBoxItem>
+                    <ComboBoxItem>3h</ComboBoxItem>
+                    <ComboBoxItem>&gt; 3h</ComboBoxItem>
+                </ComboBox>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 20">
+                    <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
+					Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
+					ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                        CANCEL
+                    </Button>
+                    <Button x:Name="Save" Click="SaveReservationCreate_Click" Width="100"
+					Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5"
+					ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                        SAVE
+                    </Button>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
-        <TextBox
-	materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center"
-	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <DatePicker materialDesign:HintAssist.Hint="Release Date" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
-        <customcontrol:DropDownSelectionList x:Name="RunningTime" FontSize="20" Margin="5" Text="Select Movie Running Time" Items="1h45m,2h,2h15m,2h30m,4h" Width="380" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
-        <!-- Add scroll down list (cinemas) here) -->
-        <customcontrol:DropDownSelectionList x:Name="cinemas" FontSize="20" Margin="5" Text="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" Width="380" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
-            <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
-                    Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                CANCEL
-            </Button>
-            <Button x:Name="Save" Click="SaveReservationCreate_Click" Width="100"
-                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                SAVE
-            </Button>
-        </StackPanel>
-    </StackPanel>
-
+    </materialDesign:Card>
 </UserControl>
