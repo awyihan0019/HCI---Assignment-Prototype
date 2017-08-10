@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI___Assignment_Prototype.Class;
+using HCI___Assignment_Prototype.Page.View_Booking;
 
 namespace HCI___Assignment_Prototype.Page.CheckBooking {
     /// <summary>
@@ -23,7 +24,26 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
     public partial class UserControl_CheckReservation : UserControl {
         public UserControl_CheckReservation() {
             InitializeComponent();
+            this.Loaded += UserControl_CheckReservation_Loaded;
+        }
+
+        private void UserControl_CheckReservation_Loaded(object sender , RoutedEventArgs e) {
             var data = Global.Global.CurrentUser.Reservations;
+            if (data == null) {
+                DialogBox.Show("You have no booking history yet!", "Do you want to make some movie ticket reservation?",
+                    "No", "YES PLEASE");
+                switch (DialogBox.Result) {
+                    case DialogBox.ResultEnum.LeftButtonClicked:
+                        MainWindow.MainFrame.GoBack();
+                        break;
+                    case DialogBox.ResultEnum.RightButtonClicked:
+                        MainWindow.MainFrame.Navigate(new UserControl_SelectMovie());
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+                return;
+            }
             var incoming = data.
                 Where(m => DateTime.Parse(m.Date) >= DateTime.Today).ToList();
             var expired = data.
