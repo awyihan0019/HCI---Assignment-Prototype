@@ -8,9 +8,14 @@
              mc:Ignorable="d" >
     <materialDesign:Card>
     <StackPanel VerticalAlignment="Center">
-        <TextBlock x:Name="SentenceOne" FontSize="34" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">③ Select Time</TextBlock>
-        <TextBlock FontSize="20" HorizontalAlignment="Center">Available Time</TextBlock>
-        <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
+            <materialDesign:ColorZone
+	Padding="16"
+	Mode="PrimaryLight">
+                <StackPanel  Orientation="Horizontal">
+                    <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">③ Select Time</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+            <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Center">

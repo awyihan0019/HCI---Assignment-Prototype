@@ -238,6 +238,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\View Booking\UserControl_SelectFoodAndDrink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\View Booking\UserControl_SelectLocation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -306,6 +310,9 @@
     </Compile>
     <Compile Include="Page\View Booking\UserControl_selectDate.xaml.cs">
       <DependentUpon>UserControl_selectDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\View Booking\UserControl_SelectFoodAndDrink.xaml.cs">
+      <DependentUpon>UserControl_SelectFoodAndDrink.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\View Booking\UserControl_SelectLocation.xaml.cs">
       <DependentUpon>UserControl_SelectLocation.xaml</DependentUpon>

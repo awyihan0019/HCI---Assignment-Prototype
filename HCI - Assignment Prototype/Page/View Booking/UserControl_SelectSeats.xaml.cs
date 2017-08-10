@@ -28,7 +28,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
 
         private void Seat_Next(object sender, RoutedEventArgs e)
         {
-            UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_DisplayBookDetail());
+            UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectFoodAndDrink());
         }
     }
 }

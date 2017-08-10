@@ -10,8 +10,14 @@
     <materialDesign:Card>
     <Grid>
         <StackPanel VerticalAlignment="Center" Orientation="Vertical" >
-            <TextBlock x:Name="SentenceOne" FontSize="34" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">④ Select Seat</TextBlock>
-            <StackPanel>
+                <materialDesign:ColorZone
+	Padding="16"
+	Mode="PrimaryLight">
+                    <StackPanel  Orientation="Horizontal">
+                        <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">④ Select Seat</TextBlock>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+                <StackPanel>
                 <seatplacecontrol:SeatPlace></seatplacecontrol:SeatPlace>
             </StackPanel>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
