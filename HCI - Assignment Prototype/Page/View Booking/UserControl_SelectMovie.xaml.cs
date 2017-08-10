@@ -31,9 +31,14 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
         }
 
         private void BookTicketButton_OnClick(object sender , RoutedEventArgs e) {
+            if (Global.Global.CurrentUser == null) {
+                DialogBox.Show("Please log in to your account first", "", "OK");
+                return;
+            }
             var b = sender as Button;
             var selectedMovie = (Movie)b.Tag;
             Global.Global.SelectedMovie = selectedMovie;
+            Global.Global.MovieReservation.Image = selectedMovie.ImageUri;
             Global.Global.MovieReservation.MovieName = Global.Global.SelectedMovie.Name;
             MainWindow.MainFrame.Navigate(new UserControl_BookingDetail());
         }
