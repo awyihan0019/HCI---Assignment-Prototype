@@ -46,6 +46,14 @@ namespace HCI___Assignment_Prototype {
                 MainFrame.Navigate(new Homepage_AfterLogin());
         }
 
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            if (Global.Global.CurrentUser == null || Global.Global.CurrentUser.IsVerified == false)
+                MainFrame.Navigate(new Homepage_BeforeLogin());
+            else
+                MainFrame.Navigate(new Homepage_AfterLogin());
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new UserControl_SelectMovie());
@@ -59,6 +67,11 @@ namespace HCI___Assignment_Prototype {
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void Support_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
