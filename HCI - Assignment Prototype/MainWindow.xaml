@@ -35,11 +35,11 @@
                             <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" ToolTip="Go to homepage" Foreground="White" Click="HomeButton_OnClick" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Online Movie Ticket Booking System (OMTiBoS)</Button>
                         </DockPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">HOME</Button>
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">SHOWING NOW</Button>
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">COMING SOON</Button>
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">SUPPORT</Button>
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="40" Foreground="White" Click="Button_Click_1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="5 20 5 5">CREDITS</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">HOME</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">SHOWING NOW</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">COMING SOON</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">SUPPORT</Button>
+                            <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click_1"  HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">CREDITS</Button>
                         </StackPanel>
                     </StackPanel>
                 </materialDesign:ColorZone>
