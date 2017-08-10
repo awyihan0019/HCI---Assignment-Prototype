@@ -38,7 +38,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
                 case DialogBox.ResultEnum.RightButtonClicked:
                     ProgressDialog.Show("Making Reservation . . .", "",
                         () => {
-                            DialogBox.Show("Payment Successed", "Your Reservation already made the e-ticket are sended to your e-mail.", "OK");
+                            DialogBox.Show("Payment Successed", "Your Reservation is made the e-ticket has been sent to your e-mail.", "OK");
                         });
                     return;
             }

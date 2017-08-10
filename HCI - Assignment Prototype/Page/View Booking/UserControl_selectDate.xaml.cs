@@ -36,7 +36,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
 
         private void Click_dateNext(object sender , RoutedEventArgs e) {
             if (ListView.SelectedItem == null) {
-                DialogBox.Show("You must select a location!" , "" , "OK");
+                DialogBox.Show("Please select a date." , "" , "OK");
             }
             else {
                 Global.Global.MovieReservation.Date = ListView.SelectedItem.ToString();

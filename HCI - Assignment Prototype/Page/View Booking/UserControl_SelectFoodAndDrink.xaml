@@ -27,7 +27,7 @@
             </ListView>
             <customcontrol:UserControl_NumberCounter x:Name="ComboA" Label="Combo A (RM 7.99)" SubLabel="1 Regular Drink + 1 Regular Popcorn"></customcontrol:UserControl_NumberCounter>
             <customcontrol:UserControl_NumberCounter x:Name="ComboB" Label="Combo B (RM 11.99)" SubLabel="2 Regular Drink + 2 Large Popcorn"></customcontrol:UserControl_NumberCounter>
-            <customcontrol:UserControl_NumberCounter x:Name="ComboC" Label="Combo C (RM 11.99)" SubLabel="2 Regular + 6pcs Chicken Nuggets"></customcontrol:UserControl_NumberCounter>
+            <customcontrol:UserControl_NumberCounter x:Name="ComboC" Label="Combo C (RM 11.99)" SubLabel="2 Regular Drink + 6pcs Chicken Nuggets"></customcontrol:UserControl_NumberCounter>
             <customcontrol:UserControl_NumberCounter x:Name="ComboD" Label="Combo D (RM 14.99)" SubLabel="3 Large Drink + 3 Large Popcorn"></customcontrol:UserControl_NumberCounter>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="Cancel" Margin="0 15 20 15" Click="Click_cancelDetail"

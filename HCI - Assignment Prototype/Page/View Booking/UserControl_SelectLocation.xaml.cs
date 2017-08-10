@@ -32,7 +32,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
         private void Click_locationNext(object sender, RoutedEventArgs e)
         {
             if (ListView.SelectedItem == null) {
-                DialogBox.Show("You must select a location!", "", "OK");
+                DialogBox.Show("Please select a location.", "", "OK");
             }
             else {
                 Global.Global.MovieReservation.Location = ListView.SelectedItem.ToString();

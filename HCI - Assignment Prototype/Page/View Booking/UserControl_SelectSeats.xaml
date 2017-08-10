@@ -26,7 +26,7 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,15,20,15" Width="100"> BACK </Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,15,20,15" Width="100" Click="BackButton_onClick"> BACK </Button>
                     <Button Width="100" Style="{StaticResource MaterialDesignRaisedButton}" Click="Seat_Next" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20,15,0,15"> NEXT </Button>
                 </StackPanel>
             </StackPanel>
