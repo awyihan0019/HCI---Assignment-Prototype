@@ -44,9 +44,7 @@ namespace HCI___Assignment_Prototype.CustomControl
         }
         #endregion
 
-        #region
-
-
+        #region SubLabelProperty
         public string SubLabel
         {
             get { return (string)GetValue(SubLabelProperty); }
@@ -64,8 +62,6 @@ namespace HCI___Assignment_Prototype.CustomControl
         }
 
         #endregion
-
-
 
         #region Number Property
 
@@ -92,13 +88,29 @@ namespace HCI___Assignment_Prototype.CustomControl
 
         #endregion
 
+        #region MinimumProperty
+
+
+
+        public int Minimum {
+            get { return (int)GetValue(MinimumProperty); }
+            set { SetValue(MinimumProperty , value); }
+        }
+
+        public static readonly DependencyProperty MinimumProperty =
+            DependencyProperty.Register("Minimum" , typeof(int) , typeof(UserControl_NumberCounter) , new PropertyMetadata(0));
+
+     
+
+        #endregion
+
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             Number++;
         }
 
-        private void Button_Minus_Click(object sender, RoutedEventArgs e)
-        {
+        private void Button_Minus_Click(object sender, RoutedEventArgs e) {
+            if (Number == Minimum) return;
             Number--;
         }
     }
