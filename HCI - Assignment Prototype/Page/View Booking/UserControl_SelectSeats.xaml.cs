@@ -26,9 +26,9 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
             InitializeComponent();
         }
 
-        private void Seat_Next(object sender, RoutedEventArgs e)
-        {
-            UserControl_BookingDetail.DetailFrame.Navigate(new UserControl_SelectFoodAndDrink());
+        private void Seat_Next(object sender, RoutedEventArgs e) {
+            Global.Global.MovieReservation.NormalSeat = SeatPlace.HighlightedSeats;
+            UserControl_BookingDetail.CurrentPage++;
         }
     }
 }

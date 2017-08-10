@@ -9,18 +9,18 @@
              mc:Ignorable="d">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <TextBlock HorizontalAlignment="Center" FontWeight="Bold" Style="{StaticResource MaterialDesignDisplay1TextBlock}">Select Movies</TextBlock>
-        <ListView Margin="10" x:Name="ListView" >
-            <ListView.DataContext>
+        <ItemsControl Margin="10" x:Name="ItemsControl" >
+            <ItemsControl.DataContext>
                 <class:Movie></class:Movie>
-            </ListView.DataContext>
-            <ListView.ItemsPanel>
+            </ItemsControl.DataContext>
+            <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel HorizontalAlignment="Stretch"></StackPanel>
                 </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-            <ListView.ItemTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <materialDesign:Card Padding="10">
+                    <materialDesign:Card Padding="10" Margin="0 5 0 0">
                         <Grid Width="800" HorizontalAlignment="Stretch">
                             <StackPanel Orientation="Horizontal">
                                 <Image Width="200" Height="200" Margin="10" Source="{Binding ImageUri}"></Image>
@@ -64,8 +64,8 @@
                         </Grid>
                     </materialDesign:Card>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </StackPanel>
 </UserControl>
 

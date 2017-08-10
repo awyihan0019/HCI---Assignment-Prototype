@@ -35,14 +35,13 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
                 DialogBox.Show("You must select a location!", "", "OK");
             }
             else {
-                UserControl_BookingDetail.CurrentPage = UserControl_BookingDetail.CurrentPageEnum.SelectDate;
                 Global.Global.MovieReservation.Location = ListView.SelectedItem.ToString();
+                UserControl_BookingDetail.CurrentPage++;
             }
         }
 
-        private void Click_Cancel(object sender, RoutedEventArgs e)
-        {
-            MainWindow.MainFrame.GoBack();
+        private void Click_Cancel(object sender, RoutedEventArgs e) {
+            UserControl_BookingDetail.CurrentPage--;
         }
     }
 }

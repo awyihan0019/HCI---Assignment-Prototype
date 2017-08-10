@@ -23,7 +23,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
     public partial class UserControl_SelectMovie : UserControl {
         public UserControl_SelectMovie() {
             InitializeComponent();
-            ListView.ItemsSource = SampleData.SampleMovies;
+            ItemsControl.ItemsSource = SampleData.SampleMovies;
 
         }
 
@@ -35,6 +35,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
             var b = sender as Button;
             var selectedMovie = (Movie)b.Tag;
             Global.Global.SelectedMovie = selectedMovie;
+            Global.Global.MovieReservation.MovieName = Global.Global.SelectedMovie.Name;
             MainWindow.MainFrame.Navigate(new UserControl_BookingDetail());
         }
     }
