@@ -17,6 +17,7 @@ using MaterialDesignThemes.Wpf;
 using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.CheckBooking;
 using HCI___Assignment_Prototype.Page.CreateReservation_Admin;
+using HCI___Assignment_Prototype.Page.Homepage_Admin;
 
 namespace HCI___Assignment_Prototype {
     /// <summary>
@@ -31,7 +32,7 @@ namespace HCI___Assignment_Prototype {
             MainFrame = Frame;
             Snackbar = this.snackbar;
             Snackbar.MessageQueue = new SnackbarMessageQueue();
-            Frame.Navigate(new UserControl_SelectMovie());
+            Frame.Navigate(new UserControl_HomePage_Admin());
         }
 
         private void ExtraMenuButton_OnClick(object sender , RoutedEventArgs e) {
