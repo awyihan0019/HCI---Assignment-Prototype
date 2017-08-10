@@ -1,4 +1,5 @@
 ﻿using HCI___Assignment_Prototype.CustomControl;
+using HCI___Assignment_Prototype.Page.Homepage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace HCI___Assignment_Prototype.Page.Top_Up
         {
             ProgressDialog.Show("Processing Top-Up......", "", () => {
                 DialogBox.Show("", "Top-Up successfully!", "OK");
-                MainWindow.MainFrame.GoBack();
+                MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());
             });
         }
     }
