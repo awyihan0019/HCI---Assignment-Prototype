@@ -293,6 +293,10 @@ namespace HCI___Assignment_Prototype.Global
         public static List<User> Users = new List<User>(
         )
         {
+            new User("admin@admin.com", "admin", "Muthu", true)
+            {
+                IsAdmin = true
+            },
             new User("clement@gmail.com", "clement99", "阿狗", true){
                 ProfilePicture = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png")),
                 Reservations = new List<MovieReservation>()
