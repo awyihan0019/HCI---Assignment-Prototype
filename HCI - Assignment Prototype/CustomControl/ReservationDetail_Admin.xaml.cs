@@ -26,11 +26,28 @@ namespace HCI___Assignment_Prototype.CustomControl
         }
 
         private void YesButton_OnClick(object sender, RoutedEventArgs e) {
-            throw new NotImplementedException();
+            DialogBox.Show("WARNING!" , "Are you sure you want to disable the reservation profile?" , "NO" , "YES");
+            switch (DialogBox.Result) {
+                case DialogBox.ResultEnum.LeftButtonClicked: return;
+                case DialogBox.ResultEnum.RightButtonClicked:
+                    break;
+            }
+            DrawerHost.IsRightDrawerOpen = false;
+            ProgressDialog.Show("Updating server . . .","Tearing down profile from production server . . .", () => {
+            MarkAsObsoleted("[DISABLED]");
+                
+            });
         }
 
-        private void DeleteButton_OnClick(object sender, RoutedEventArgs e) {
-            throw new NotImplementedException();
+        public void MarkAsObsoleted(string message) {
+            ToolBox.Visibility = Visibility.Hidden;
+            FeedbackLabel.Visibility = Visibility.Visible;
+            FeedbackLabel.Text = message;
+            Card.Opacity = 0.5;
+        }
+
+        private void DisableButton_OnClick(object sender, RoutedEventArgs e) {
+            this.DrawerHost.IsRightDrawerOpen = true;
         }
     }
 }

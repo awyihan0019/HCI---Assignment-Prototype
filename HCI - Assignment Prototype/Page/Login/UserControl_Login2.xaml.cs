@@ -5,6 +5,7 @@ using HCI___Assignment_Prototype.CustomControl;
 using HCI___Assignment_Prototype.Page.Login;
 using HCI___Assignment_Prototype.Page.Homepage;
 using HCI___Assignment_Prototype.Global;
+using HCI___Assignment_Prototype.Page.Homepage_Admin;
 
 namespace HCI___Assignment_Prototype.Page {
     /// <summary>
@@ -21,12 +22,15 @@ namespace HCI___Assignment_Prototype.Page {
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) {
             if (PasswordBox.Password == Global.Global.CurrentUser.Password) {
-                if (Global.Global.CurrentUser.IsVerified == false) {
                 DialogBox.CloseDialog();
+                if (Global.Global.CurrentUser.IsAdmin) {
+                    MainWindow.MainFrame.Navigate(new UserControl_HomePage_Admin());
+                    return;
+                }
+                if (Global.Global.CurrentUser.IsVerified == false) {
                     MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
                     return;
                 }
-                DialogBox.CloseDialog();
                 DialogBox.Show("Login Successful!", "", "OK");
                 MainWindow.MainFrame.Navigate(new Homepage_AfterLogin());
             }

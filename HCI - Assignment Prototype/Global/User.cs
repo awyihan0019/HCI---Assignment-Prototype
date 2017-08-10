@@ -12,6 +12,7 @@ namespace HCI___Assignment_Prototype.Global {
         public string Address;
         public BitmapImage ProfilePicture = new BitmapImage(new System.Uri(@"pack://application:,,,/Page/Login/emptyuser.png"));
         public List<MovieReservation> Reservations;
+        public bool IsAdmin = false;
 
         public User() {
             
