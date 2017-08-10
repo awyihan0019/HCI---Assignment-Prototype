@@ -89,6 +89,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking
                 () =>
                 {
                     DialogBox.Show("Payment Successful", "Your Reservation is already made, your e-tickets are sent to your e-mail.", "OK");
+                    Global.Global.CurrentUser.Reservations.Add(Global.Global.MovieReservation);
                 });
 
             MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
