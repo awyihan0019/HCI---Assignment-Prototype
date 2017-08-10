@@ -43,6 +43,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void Button_Save_OnClick(object sender , RoutedEventArgs e) {
             TextBlock.Text = ComboBox.Text;
+            Text = TextBlock.Text;
             GoToUneditableMode();
         }
 

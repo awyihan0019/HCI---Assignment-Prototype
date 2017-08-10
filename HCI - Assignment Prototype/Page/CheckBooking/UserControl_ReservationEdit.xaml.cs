@@ -36,8 +36,16 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
                 case DialogBox.ResultEnum.RightButtonClicked:
                     {
                         ProgressDialog.Show("Updating profile......", "", () => {
+                            var c = Global.Global.MovieReservation;
+                            c.Location = LocationField.Text;
+                            c.Time = TimeField.Text;
+                            c.Date = DateField.Text;
+                            //c.NormalSeat = SeatField.Text;
+                            //c.FoodAndDrinks = ComboField.Text;
+                            Global.Global.CurrentUser.Reservations.RemoveAll(x => x.UID == c.UID);
+                            Global.Global.CurrentUser.Reservations.Add(c);
                             DialogBox.Show("", "Profile successfully updated!", "OK");
-                            MainWindow.MainFrame.GoBack();
+                            MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
                         });
 
                         return;
