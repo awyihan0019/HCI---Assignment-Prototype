@@ -28,7 +28,7 @@ namespace HCI___Assignment_Prototype.Page.Top_Up
 
         private void TopUp_Click(object sender, RoutedEventArgs e)
         {
-            DialogBox.Show("Top-Up", "Do you really want make this Top-Up\n\nAmount : " + Amount, "CANCEL", "CONFIRM");
+            DialogBox.Show("Top-Up", "Do you really want make this Top-Up\n\nAmount : " + Amount.TextBlock.Text, "CANCEL", "CONFIRM");
             switch(DialogBox.Result)
             {
                 case DialogBox.ResultEnum.LeftButtonClicked: return;
