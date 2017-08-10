@@ -15,60 +15,88 @@
                     <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">⑥ Booking Detail</TextBlock>
                 </StackPanel>
             </materialDesign:ColorZone>
-            <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding MovieReservation}" FontSize="20" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Grid  HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Bold"/>
-                <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Ticket"/>
-                <Label x:Name="LabelA" Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo A"/>
-                <Label x:Name="LabelB" Grid.Row="3" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo B"/>
-                <Label x:Name="LabelC" Grid.Row="4" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo C"/>
-                <Label x:Name="LabelD" Grid.Row="5" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo D"/>
-                <Label Grid.Row="6" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Total"/>
-                <Label Grid.Row="0" Grid.Column="1" FontSize="20" FontWeight="Bold" Content="Quantity"/>
-                <Label HorizontalAlignment="Center" x:Name="ticketQuantity" Grid.Row="1" Grid.Column="1" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Center" x:Name="ComboAQuantity" Grid.Row="2" Grid.Column="1" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Center" x:Name="ComboBQuantity" Grid.Row="3" Grid.Column="1" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Center" x:Name="ComboCQuantity" Grid.Row="4" Grid.Column="1" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Center" x:Name="ComboDQuantity" Grid.Row="5" Grid.Column="1" FontSize="20"  Content=""/>
-                <Label Grid.Row="0" Grid.Column="2" FontSize="20" FontWeight="Bold" Content="Total Price"/>
-                <Label HorizontalAlignment="Left" x:Name="TicketTotal" Grid.Row="1" Grid.Column="2" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Left" x:Name="ComboATotal" Grid.Row="2" Grid.Column="2" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Left" x:Name="ComboBTotal" Grid.Row="3" Grid.Column="2" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Left" x:Name="ComboCTotal" Grid.Row="4" Grid.Column="2" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Left" x:Name="ComboDTotal" Grid.Row="5" Grid.Column="2" FontSize="20"  Content=""/>
-                <Label HorizontalAlignment="Left" x:Name="Total" Grid.Row="6" Grid.Column="2" FontSize="20" FontWeight="Bold" Content=""/>
-            </Grid>
+            <StackPanel Orientation="Horizontal">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="240"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Movie"/>
+                    <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Location"/>
+                    <Label Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Date"/>
+                    <Label Grid.Row="3" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Time"/>
+                    <Label Grid.Row="4" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Seat"/>
+                    <Label Grid.Row="5" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo"/>
+                    <Label x:Name="Movie" Grid.Row="0" Grid.Column="1" FontSize="20"/>
+                    <Label x:Name="Location" Grid.Row="1" Grid.Column="1" FontSize="20"/>
+                    <Label x:Name="Date" Grid.Row="2" Grid.Column="1" FontSize="20"/>
+                    <Label x:Name="Time" Grid.Row="3" Grid.Column="1" FontSize="20"/>
+                    <Label x:Name="Seat" Grid.Row="4" Grid.Column="1" FontSize="20"/>
+                    <Label x:Name="Combo" Grid.Row="5" Grid.Column="1" FontSize="20"/>
+                </Grid>
+                <Grid  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Ticket"/>
+                    <Label x:Name="LabelA" Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo A"/>
+                    <Label x:Name="LabelB" Grid.Row="3" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo B"/>
+                    <Label x:Name="LabelC" Grid.Row="4" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo C"/>
+                    <Label x:Name="LabelD" Grid.Row="5" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Combo D"/>
+                    <Label Grid.Row="6" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Total"/>
+                    <Label Grid.Row="0" Grid.Column="1" FontSize="20" FontWeight="Bold" Content="Quantity"/>
+                    <Label HorizontalAlignment="Center" x:Name="ticketQuantity" Grid.Row="1" Grid.Column="1" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboAQuantity" Grid.Row="2" Grid.Column="1" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboBQuantity" Grid.Row="3" Grid.Column="1" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboCQuantity" Grid.Row="4" Grid.Column="1" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboDQuantity" Grid.Row="5" Grid.Column="1" FontSize="20"  Content=""/>
+                    <!-- -->
+                    <Label Grid.Row="0" Grid.Column="2" FontSize="20" FontWeight="Bold" Content="Per Price"/>
+                    <Label HorizontalAlignment="Left" x:Name="TicketPrice" Grid.Row="1" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboAPrice" Grid.Row="2" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboBPrice" Grid.Row="3" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboCPrice" Grid.Row="4" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboDPrice" Grid.Row="5" Grid.Column="2" FontSize="20"  Content=""/>
+                    <!-- -->
+                    <Label Grid.Row="0" Grid.Column="3" FontSize="20" FontWeight="Bold" Content="Total Price"/>
+                    <Label HorizontalAlignment="Left" x:Name="TicketTotal" Grid.Row="1" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboATotal" Grid.Row="2" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboBTotal" Grid.Row="3" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboCTotal" Grid.Row="4" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="ComboDTotal" Grid.Row="5" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Left" x:Name="Total" Grid.Row="6" Grid.Column="2" FontSize="20" FontWeight="Bold" Content=""/>
+                </Grid>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="Cancel" Margin="0 15 20 15" Click="Click_cancelDetail"
                     Style="{StaticResource MaterialDesignFlatButton}" Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
-                    CANCEL
+                   HorizontalAlignment="Right">
+                    BACK
                 </Button>
                 <Button x:Name="Confirm" Margin="20 15 0 15" Click="Click_ConfirmBooking"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">
+                     HorizontalAlignment="Right">
                     COMFIRM
                 </Button>
             </StackPanel>
