@@ -19,7 +19,7 @@
         <customcontrol:TextboxWithPencil IsPassword="True" x:Name="PasswordField" Label="Password"/>
         <customcontrol:TextboxWithPencil x:Name="NameField" Label="Name"/>
         <customcontrol:TextboxWithPencil x:Name="PhoneField" Label="Phone"/>
-        <customcontrol:TextboxWithPencil x:Name="AddressField" Label="Adress"/>
+        <customcontrol:TextboxWithPencil x:Name="AddressField" Label="Address"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
                     Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5"
