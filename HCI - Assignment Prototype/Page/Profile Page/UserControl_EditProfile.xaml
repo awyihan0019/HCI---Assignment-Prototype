@@ -16,7 +16,7 @@
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" Click="Button_Click" />
         </StackPanel>
-        <customcontrol:TextboxWithPencil x:Name="PasswordField" Label="Password"/>
+        <customcontrol:TextboxWithPencil IsPassword="True" x:Name="PasswordField" Label="Password"/>
         <customcontrol:TextboxWithPencil x:Name="NameField" Label="Name"/>
         <customcontrol:TextboxWithPencil x:Name="PhoneField" Label="Phone"/>
         <customcontrol:TextboxWithPencil x:Name="AddressField" Label="Adress"/>
