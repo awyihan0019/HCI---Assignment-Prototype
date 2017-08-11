@@ -30,7 +30,7 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
         private void UserControl_CheckReservation_Loaded(object sender , RoutedEventArgs e) {
             var data = Global.Global.CurrentUser.Reservations;
             if (data == null) {
-                DialogBox.Show("You have no booking history yet!", "Do you want to make some movie ticket reservation?",
+                DialogBox.Show("You have no booking history yet!", "Do you want to book some movie tickets?",
                     "No", "YES PLEASE");
                 switch (DialogBox.Result) {
                     case DialogBox.ResultEnum.LeftButtonClicked:
