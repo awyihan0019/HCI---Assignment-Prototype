@@ -24,12 +24,19 @@ namespace HCI___Assignment_Prototype.CustomControl {
             InitializeComponent();
         }
 
+        private void UpdateDisplayingResult() {
+            string result = "";
+            foreach (Item item in ComboBox.Items) {
+                if (item.IsSelected) result += item.Content + ", ";
+            }
+            result = result.TrimEnd(' ');
+            result = result.TrimEnd(',');
+            Text = result;
+        }
+        #region EventHandlers
+
         private void ComboBox_OnDropDownClosed(object sender , EventArgs e) {
             UpdateDisplayingResult();
-        }
-
-        private void ButtonBase_OnClick(object sender , RoutedEventArgs e) {
-            ComboBox.IsDropDownOpen = false;
         }
 
         private void ComboBox_OnDropDownOpened(object sender , EventArgs e) {
@@ -40,16 +47,15 @@ namespace HCI___Assignment_Prototype.CustomControl {
             UpdateDisplayingResult();
         }
 
-        private void UpdateDisplayingResult() {
-            string result = "";
-            foreach (Item item in ComboBox.Items) {
-                if (item.IsSelected) result += item.Content + ", ";
-            }
-            result = result.TrimEnd(' ');
-            result = result.TrimEnd(',');
-            Text = result;
+
+        private void ComboBox_OnSelectionChanged(object sender , SelectionChangedEventArgs e) {
+            UpdateDisplayingResult();
         }
 
+        private void ComboBoxItem_onMouseUp(object sender , MouseButtonEventArgs e) {
+            UpdateDisplayingResult();
+        }
+        #endregion
         #region ItemsProperty
 
 
@@ -112,12 +118,12 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         // Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LabelProperty =
-            DependencyProperty.Register("Label" , typeof(string) , typeof(DropDownSelectionList) , new PropertyMetadata("", OnLabelPropertyChanged));
+            DependencyProperty.Register("Label" , typeof(string) , typeof(DropDownSelectionList) , new PropertyMetadata("" , OnLabelPropertyChanged));
 
-        private static void OnLabelPropertyChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e) {
+        private static void OnLabelPropertyChanged(DependencyObject dependencyObject , DependencyPropertyChangedEventArgs e) {
             var d = dependencyObject as DropDownSelectionList;
-            var newValue = (string) e.NewValue;
-            HintAssist.SetHint(d, newValue);
+            var newValue = (string)e.NewValue;
+            HintAssist.SetHint(d , newValue);
         }
 
         #endregion

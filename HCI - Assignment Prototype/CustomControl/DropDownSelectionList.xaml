@@ -13,13 +13,18 @@
     <StackPanel x:Name="StackPanel" HorizontalAlignment="Stretch"  Orientation="Horizontal">
         <Grid>
             <TextBlock x:Name="TextBlock" MinWidth="{Binding ElementName=StackPanel, Path=ActualWidth}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="0 0 0 5"></TextBlock>
-            <ComboBox
+            <ComboBox SelectionChanged="ComboBox_OnSelectionChanged"
                 x:Name="ComboBox" HorizontalAlignment="Stretch"
                 Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                       VerticalAlignment="Center" DropDownOpened="ComboBox_OnDropDownOpened" DropDownClosed="ComboBox_OnDropDownClosed"
             ItemsSource="{Binding}"
                   MinWidth="{Binding Path=ActualWidth, ElementName=TextBlock}"
                   >
+                <ComboBox.Resources>
+                <Style TargetType="ComboBoxItem">
+                    <EventSetter Event="MouseUp" Handler="ComboBoxItem_onMouseUp"></EventSetter>
+                </Style>
+                </ComboBox.Resources>
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
