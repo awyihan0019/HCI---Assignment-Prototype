@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI___Assignment_Prototype.Class;
+using MaterialDesignThemes.Wpf;
 
 namespace HCI___Assignment_Prototype.CustomControl {
     /// <summary>
@@ -46,8 +47,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             }
             result = result.TrimEnd(' ');
             result = result.TrimEnd(',');
-            TextBlock.Text = result == "" ? "Select Release Cinemas" : result;
-            ComboBox.Text = "";
+            Text = result;
         }
 
         #region ItemsProperty
@@ -90,8 +90,34 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private static void OnTextPropertyChanged(DependencyObject d , DependencyPropertyChangedEventArgs e) {
             var dropDownSelectionList = d as DropDownSelectionList;
-            var newValue = (string)e.NewValue;
+            var newValue = ((string)e.NewValue).Trim();
+            if (newValue != "") {
+                dropDownSelectionList.ComboBox.Text = " ";
+            }
+            else {
+                dropDownSelectionList.ComboBox.Text = "";
+            }
             dropDownSelectionList.TextBlock.Text = newValue;
+        }
+
+        #endregion
+
+        #region LabelProperty
+
+
+        public string Label {
+            get { return (string)GetValue(LabelProperty); }
+            set { SetValue(LabelProperty , value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty LabelProperty =
+            DependencyProperty.Register("Label" , typeof(string) , typeof(DropDownSelectionList) , new PropertyMetadata("", OnLabelPropertyChanged));
+
+        private static void OnLabelPropertyChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e) {
+            var d = dependencyObject as DropDownSelectionList;
+            var newValue = (string) e.NewValue;
+            HintAssist.SetHint(d, newValue);
         }
 
         #endregion

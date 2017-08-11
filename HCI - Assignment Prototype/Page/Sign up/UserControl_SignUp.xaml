@@ -5,28 +5,38 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page"
-             mc:Ignorable="d" Height="500">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="400"
-                Margin="30">
-        <TextBlock FontSize="30" Margin="2 2 2 20" HorizontalAlignment="Center" FontWeight="Bold">Sign up</TextBlock>
-
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox
+             mc:Ignorable="d">
+    <materialDesign:Card Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel>
+            <materialDesign:ColorZone
+				Padding="16"
+				materialDesign:ShadowAssist.ShadowDepth="Depth2"
+				CornerRadius="3"
+				Mode="PrimaryLight">
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="DemiBold">Sign up your account</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" >
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBox
 	materialDesign:HintAssist.Hint="Email" FontSize="20" x:Name="Textbox_EmailFront" Margin="5" VerticalAlignment="Center" Width="380"
 	Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            
-        </StackPanel>
-        <PasswordBox
+
+                </StackPanel>
+                <PasswordBox
 	x:Name="PasswordBox" FontSize="20"
 	materialDesign:HintAssist.Hint="Password" Margin="5 2 5 10"
 	Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-        <PasswordBox
+                <PasswordBox
 	x:Name="Passwordbox_PasswordReenter" KeyUp="PasswordBox_KeyUp"  FontSize="20"
 	materialDesign:HintAssist.Hint="Re-Enter Password" Margin="5 2 5 10"
 	Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="Cancel" Margin="0 15 20 0" Click="CancelButton_Click" Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" HorizontalAlignment="Right"> CANCEL </Button>
-            <Button x:Name="Login" Margin="20 15 0 0" Click="CreateProfile_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Center"> CREATE PROFILE </Button>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 20" HorizontalAlignment="Center">
+                    <Button x:Name="Cancel" Margin="0 15 20 0" Click="CancelButton_Click" Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" HorizontalAlignment="Right">CANCEL</Button>
+                    <Button x:Name="Login" Margin="20 15 0 0" Click="CreateProfile_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Center">CREATE PROFILE</Button>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </materialDesign:Card>
 </UserControl>

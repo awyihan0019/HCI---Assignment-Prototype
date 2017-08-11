@@ -5,16 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HCI___Assignment_Prototype.CustomControl"
              xmlns:class="clr-namespace:HCI___Assignment_Prototype.Class"
-             mc:Ignorable="d" >
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" HorizontalAlignment="Stretch" MinWidth="200">
     <UserControl.DataContext>
         <class:Item></class:Item>
     </UserControl.DataContext>
-    <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+    <StackPanel x:Name="StackPanel" HorizontalAlignment="Stretch"  Orientation="Horizontal">
         <Grid>
-            <TextBlock x:Name="TextBlock" VerticalAlignment="Center" Width="380"></TextBlock>
-            <ComboBox x:Name="ComboBox" VerticalAlignment="Center" DropDownOpened="ComboBox_OnDropDownOpened" DropDownClosed="ComboBox_OnDropDownClosed"
+            <TextBlock x:Name="TextBlock" MinWidth="{Binding ElementName=StackPanel, Path=ActualWidth}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="0 0 0 5"></TextBlock>
+            <ComboBox
+                x:Name="ComboBox" HorizontalAlignment="Stretch"
+                Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                      VerticalAlignment="Center" DropDownOpened="ComboBox_OnDropDownOpened" DropDownClosed="ComboBox_OnDropDownClosed"
             ItemsSource="{Binding}"
-                  Width="{Binding Path=ActualWidth, ElementName=TextBlock}"
+                  MinWidth="{Binding Path=ActualWidth, ElementName=TextBlock}"
                   >
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
