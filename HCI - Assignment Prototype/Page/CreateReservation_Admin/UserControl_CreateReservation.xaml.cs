@@ -32,6 +32,7 @@ namespace HCI___Assignment_Prototype.Page.CreateReservation_Admin
 
         private void SaveReservationCreate_Click(object sender, RoutedEventArgs e)
         {
+            if (Textbox_MovieName.Text != "" && ComboBox_Rating.Text != "" && Textbox_TrailerURL.Text != "" && DatePicker_ReleaseDate.Text != "" && Cinemas.Text != "" && Textbox_Summary.Text != "" && RunningTime.Text != "" && Director.Text != "" && Cast.Text != "" && PosterImage.Source.ToString() != "pack://application:,,,/HCI - Assignment Prototype;component/page/createreservation_admin/insertimage.jpg") {
                 DialogBox.Show("Do you really want to create this reservation", "", "CANCEL", "SAVE");
                 switch (DialogBox.Result)
                 {
@@ -40,23 +41,28 @@ namespace HCI___Assignment_Prototype.Page.CreateReservation_Admin
                         {
                             ProgressDialog.Show("Creating Reservation......", "", () => {
                                 DialogBox.Show("", "Reservation successfully created!", "OK");
-                                
+
                                 Global.SampleData.SampleReservationDetails_Admin.Add(
                                     new Class.MovieReservation_Admin(
-                                        Textbox_MovieName.Text, 
-                                        ComboBox_Rating.Text, 
-                                        Textbox_TrailerURL.Text, 
-                                        DatePicker_ReleaseDate.Text, Cinemas.Text, 
-                                        Textbox_Summary.Text, 
-                                        RunningTime.Text, 
-                                        Director.Text, 
-                                        Cast.Text, 
+                                        Textbox_MovieName.Text,
+                                        ComboBox_Rating.Text,
+                                        Textbox_TrailerURL.Text,
+                                        DatePicker_ReleaseDate.Text, Cinemas.Text,
+                                        Textbox_Summary.Text,
+                                        RunningTime.Text,
+                                        Director.Text,
+                                        Cast.Text,
                                         (BitmapImage)PosterImage.Source));
                                 MainWindow.MainFrame.Navigate(new UserControl_HomePage_Admin());
                             });
                             return;
                         }
                 }
+            }
+            else
+            {
+                DialogBox.Show("You must complete your reservation detail before you create", "", "OK");
+            }
         }
 
         private void Click_UploadPoster(object sender, RoutedEventArgs e)
