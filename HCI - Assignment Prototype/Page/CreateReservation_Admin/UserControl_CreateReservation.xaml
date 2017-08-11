@@ -23,9 +23,10 @@
                     <Image Cursor="Hand" MouseUp="Click_UploadPoster" x:Name="PosterImage" Width="200" Height="200" Margin="10" Source = "insertimage.jpg" ></Image>
                     <Button  x:Name="UploadPosterButton" Click="Click_UploadPoster" Style="{StaticResource MaterialDesignRaisedDarkButton}" VerticalAlignment="Bottom" Margin="10" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" HorizontalAlignment="Right">UPLOAD POSTER</Button>
                 </Grid>
-                <TextBox materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <TextBox Text="" materialDesign:HintAssist.Hint="Movie Name" FontSize="20" x:Name="Textbox_MovieName" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <ComboBox
             Width="380" 
+                    Text=""
 			x:Name="ComboBox_Rating"
 			FontSize="20" Margin="5"
 			materialDesign:HintAssist.Hint="Rating"
@@ -34,14 +35,15 @@
                     <ComboBoxItem>PG13</ComboBoxItem>
                     <ComboBoxItem>18</ComboBoxItem>
                 </ComboBox>
-                <TextBox materialDesign:HintAssist.Hint="Movie Director" FontSize="20" x:Name="Director" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox materialDesign:HintAssist.Hint="Movie Cast" FontSize="20" x:Name="Cast" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox x:Name="Textbox_Summary"  MaxWidth="380" MaxHeight="300" FontSize="20" Margin="5" VerticalAlignment="Stretch" materialDesign:HintAssist.Hint="Summary for the movie" Style="{StaticResource MaterialDesignFloatingHintTextBox}" AcceptsReturn="True"  SpellCheck.IsEnabled="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"></TextBox>
-                <TextBox materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <DatePicker materialDesign:HintAssist.Hint="Release Date" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5 15 5 10" Width="380" VerticalAlignment="Center"   HorizontalAlignment="Center"></DatePicker>
-                <customcontrol:DropDownSelectionList x:Name="Cinemas" MinWidth="380" FontSize="20" Margin="5" Label="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
+                <TextBox Text="" materialDesign:HintAssist.Hint="Movie Director" FontSize="20" x:Name="Director" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <TextBox Text="" materialDesign:HintAssist.Hint="Movie Cast" FontSize="20" x:Name="Cast" Margin="5" VerticalAlignment="Center" Width="380" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <TextBox Text="" x:Name="Textbox_Summary"  MaxWidth="380" MaxHeight="300" FontSize="20" Margin="5" VerticalAlignment="Stretch" materialDesign:HintAssist.Hint="Summary for the movie" Style="{StaticResource MaterialDesignFloatingHintTextBox}" AcceptsReturn="True"  SpellCheck.IsEnabled="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"></TextBox>
+                <TextBox Text="" materialDesign:HintAssist.Hint="Trailer URL" FontSize="20" x:Name="Textbox_TrailerURL" Margin="5" VerticalAlignment="Center" Width="380" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <DatePicker Text="" materialDesign:HintAssist.Hint="Release Date" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" FontSize="20" Focusable="False" x:Name="DatePicker_ReleaseDate" Margin="5 15 5 10" Width="380" VerticalAlignment="Center"   HorizontalAlignment="Center"></DatePicker>
+                <customcontrol:DropDownSelectionList Text="" x:Name="Cinemas" MinWidth="380" FontSize="20" Margin="5" Label="Select Release Cinemas" Items="GSC-MidValley,GSC-NuSentral,GSC-SunwayPyramid,GSC-OneU,GSC-Gardens,GSC-IpohParade" HorizontalAlignment="Center" ></customcontrol:DropDownSelectionList>
                 <ComboBox
             x:Name="RunningTime"
+                    Text=""
             materialDesign:HintAssist.Hint="Running time"
             FontSize="20" Margin="5" Width="380"
             Style="{StaticResource MaterialDesignFloatingHintComboBox}">
