@@ -58,12 +58,8 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
         }
 
         private void Combo_OnPencilButtonOnClick(object sender, EventArgs e) {
-            
+            DialogBox.Show(new UserControl_ReselectFoodAndDrink());
         }
-
-        private void ComboField_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

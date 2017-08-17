@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="HCI___Assignment_Prototype.Page.CheckBooking.UserControl_ReselectFoodAndDrink"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.CheckBooking"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:customcontrol="clr-namespace:HCI___Assignment_Prototype.CustomControl"
+             mc:Ignorable="d">
+    <materialDesign:Card>
+        <StackPanel VerticalAlignment="Center">
+            <materialDesign:ColorZone
+	Padding="16"
+	Mode="PrimaryLight">
+                <StackPanel  Orientation="Horizontal">
+                    <TextBlock x:Name="SentenceOne" FontSize="34" HorizontalAlignment="Center" FontWeight="Bold">Select Food and Drink</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+            <ListView Margin="10" x:Name="ListView" HorizontalAlignment="Center" Width="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding}" FontSize="20" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <customcontrol:UserControl_NumberCounter x:Name="ComboA" Label="Combo A (RM 7.99)" SubLabel="1 Regular Drink + 1 Regular Popcorn"></customcontrol:UserControl_NumberCounter>
+            <customcontrol:UserControl_NumberCounter x:Name="ComboB" Label="Combo B (RM 11.99)" SubLabel="2 Regular Drink + 2 Large Popcorn"></customcontrol:UserControl_NumberCounter>
+            <customcontrol:UserControl_NumberCounter x:Name="ComboC" Label="Combo C (RM 11.99)" SubLabel="2 Regular Drink + 6pcs Chicken Nuggets"></customcontrol:UserControl_NumberCounter>
+            <customcontrol:UserControl_NumberCounter x:Name="ComboD" Label="Combo D (RM 14.99)" SubLabel="3 Large Drink + 3 Large Popcorn"></customcontrol:UserControl_NumberCounter>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Cancel" Margin="0 15 20 15" Click="Click_cancelDetail"
+                    Style="{StaticResource MaterialDesignFlatButton}" Width="100"
+                     HorizontalAlignment="Right">
+                    BACK
+                </Button>
+                <Button x:Name="ReCalculate_Payment" Margin="20 15 0 15" Click="Click_ReConfirmBooking"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"
+                     HorizontalAlignment="Right">
+                    CONFIRM
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </materialDesign:Card>
+</UserControl>
