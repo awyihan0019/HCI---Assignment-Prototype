@@ -15,6 +15,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             RightButtonClicked
         }
 
+        public static object ReturnedValue { get; set; }
 
         public static ResultEnum Result;
 
