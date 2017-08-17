@@ -74,12 +74,12 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void Button_Left_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.LeftButtonClicked;
-            Hide();
+            Close();
         }
 
         private void Button_Right_OnClick(object sender , RoutedEventArgs e) {
             _result = ResultEnum.RightButtonClicked;
-            Hide();
+            Close();
         }
 
         private void SampleCode() {
@@ -112,6 +112,10 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void DialogHost_OnDialogClosing(object sender, DialogClosingEventArgs eventargs) {
             this.Close();
+        }
+
+        private void DialogBox_OnClosing(object sender, CancelEventArgs e) {
+            DialogHost.IsOpen = false;
         }
     }
 }
