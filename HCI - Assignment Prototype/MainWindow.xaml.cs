@@ -88,7 +88,7 @@ namespace HCI___Assignment_Prototype {
 
         private void Frame_OnNavigating(object sender , NavigatingCancelEventArgs e) {
             if (Frame.Content == null) return;
-            if (Frame.Content.GetType() == typeof(UserControl_BookingDetail)) {
+            if (Frame.Content.GetType() == typeof(UserControl_BookingDetail) && e.Content.GetType() != typeof(UserControl_DisplayBookDetail)) {
                 DialogBox.Show("Did you really want to leave this page?" , "Changes you made will not be saved." , "STAY" , "LEAVE");
                 switch (DialogBox.Result) {
                     case DialogBox.ResultEnum.LeftButtonClicked:
