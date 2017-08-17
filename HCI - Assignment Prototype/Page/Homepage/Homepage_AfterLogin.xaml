@@ -19,27 +19,25 @@
                                 Click="CheckBooking">Check Booking</Button>
                         <Button Width="120" HorizontalAlignment="Right" Margin="0 0 10 0" ToolTip="Go to your profile" x:Name="YourProfile" 
                                 Click="ViewProfile">Your Profile</Button>
-                        <Button x:Name="UsernameButton" Click="UserButton_OnClick"
-                    Style="{StaticResource MaterialDesignFlatButton}"
-                     HorizontalAlignment="Right">
-                        </Button>
-                        <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="30"
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="UsernameButton" Click="UserButton_OnClick" Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Right"></Button>
+                            <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="30"
                    Width="30" Margin="0 5 5 5"  Stretch="Fill" MouseUp="ProfilePicture_MouseDown"/>
+                            <Popup x:Name="UserPopup" PopupAnimation="Slide"  AllowsTransparency="True" StaysOpen="False">
+                                <materialDesign:Card  Margin="10">
+                                    <StackPanel  HorizontalAlignment="Center" Width="134" Background="White">
+
+                                        <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="Click_TopUp">
+                                            Top-Up
+                                        </Button>
+                                        <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="LogOut">
+                                            Logout
+                                        </Button>
+                                    </StackPanel>
+                                </materialDesign:Card>
+                            </Popup>
+                        </StackPanel>
                     </StackPanel>
-
-                    <Popup x:Name="UserPopup" PopupAnimation="Slide"  AllowsTransparency="True" StaysOpen="False">
-                        <materialDesign:Card  Margin="10">
-                            <StackPanel  HorizontalAlignment="Center" Width="134" Background="White">
-
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="Click_TopUp">
-                                    Top-Up
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="LogOut">
-                                    Logout
-                                </Button>
-                            </StackPanel>
-                        </materialDesign:Card>
-                    </Popup>
                 </StackPanel>
             </Grid>
             <local:Homepage_BottomPart></local:Homepage_BottomPart>
