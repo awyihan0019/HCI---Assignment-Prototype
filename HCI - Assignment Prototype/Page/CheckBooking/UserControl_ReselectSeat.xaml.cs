@@ -25,14 +25,14 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
         public UserControl_ReselectSeat()
         {
             InitializeComponent();
-            String numberOfsEAT = Global.Global.MovieReservation.NormalSeat;
-            Seat = coutSeat(numberOfsEAT, ' ');
-            String[] seats = numberOfsEAT.Split(' ');
+            String numberOfSeat = Global.Global.MovieReservation.NormalSeat;
+            Seat = coutSeat(numberOfSeat, ' ');
+            String[] seats = numberOfSeat.Split(' ');
             for(int i = 0; i < seats.Count(); i++)
             {
                 Char row = seats[i][0];
-                int column = int.Parse(seats[i].Substring(0));
-                //edit here
+                int column = int.Parse(seats[i].Substring(1));
+                SeatPlace.SelectSeat(row, column);
             }
         }
 
@@ -45,8 +45,8 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
             }
             else if(coutSeat(SeatPlace.HighlightedSeats, ' ') < Seat)
             {
-                //vincent here!!!!
-                DialogBox.Show("Your selected seat are not !!!!! :" + (Seat + 1), "", "COMFIRM", "CANCEL");
+                
+                DialogBox.Show("Your selected seat does not match the original amount. Original Seat Amount: " + (Seat + 1), "", "OK");
                 switch (DialogBox.Result)
                 {
                     case DialogBox.ResultEnum.LeftButtonClicked:
@@ -58,7 +58,7 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
                 }
             }
             else
-                DialogBox.Show("Seat Editing must not exceed the original amount :" + (Seat + 1), "", "COMFIRM");
+                DialogBox.Show("Seat Editing must not exceed the original amount :" + (Seat + 1), "", "OK");
         }
 
         private void BackButton_onClick(object sender, RoutedEventArgs e)

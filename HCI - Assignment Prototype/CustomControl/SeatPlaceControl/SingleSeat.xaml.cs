@@ -52,6 +52,7 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlace {
                 case SeatStateEnum.Highlighted:
                     seat.Image.Source = new BitmapImage(new Uri(@"seat_black.png" , UriKind.Relative));
                     seat.Label.Foreground = Brushes.White;
+                    seat.Label.Visibility = Visibility.Visible;
                     break;
                 case SeatStateEnum.Occupied:
                     seat.Image.Source = new BitmapImage(new Uri(@"seat_red.png" , UriKind.Relative));
