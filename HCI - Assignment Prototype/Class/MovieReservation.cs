@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Media.Imaging;
 
 namespace HCI___Assignment_Prototype.Class {
@@ -17,6 +18,7 @@ namespace HCI___Assignment_Prototype.Class {
             CoupleSeat = coupleSeat;
             FoodAndDrinks = foodAndDrinks;
             Image = image;
+            WhenIsThisBook = DateTime.Now;            
         }
 
         private static int _nextUid = 0;
@@ -29,5 +31,6 @@ namespace HCI___Assignment_Prototype.Class {
         public string CoupleSeat { get; set; }
         public List<FoodAndDrinks> FoodAndDrinks { get; set; }
         public BitmapImage Image { get; set; }
+        public DateTime WhenIsThisBook { get; set; }  
     }
 }

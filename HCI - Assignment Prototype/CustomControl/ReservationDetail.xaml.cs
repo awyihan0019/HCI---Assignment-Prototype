@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using HCI___Assignment_Prototype.Class;
 using HCI___Assignment_Prototype.Page.CheckBooking;
@@ -17,6 +18,14 @@ namespace HCI___Assignment_Prototype.CustomControl {
         }
 
         private void YesButton_OnClick(object sender , RoutedEventArgs e) {
+            var thisReservation = this.DataContext as MovieReservation;
+            if (thisReservation.WhenIsThisBook < (DateTime.Now.Add(new TimeSpan(1, 0, 0)))) {
+                DialogBox.Show("Apologies.", "You cannot cancel a movie reservation you made within 24 hours.");
+                return;
+            }
+                
+
+
             DialogBox.Show("WARNING!" , "Are you sure you want to cancel the reservation?\n[Note: This action cannot be undone]" , "NO" , "YES");
             switch (DialogBox.Result) {
                 case DialogBox.ResultEnum.LeftButtonClicked: return;
