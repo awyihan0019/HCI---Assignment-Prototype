@@ -62,6 +62,10 @@ namespace HCI___Assignment_Prototype.CustomControl {
             set { TextBox.IsReadOnly = !value; }
         }
 
+        public object PencilToolTip {
+            get { return Button_Pencil.ToolTip; }
+            set { Button_Pencil.ToolTip = value; }
+        }
 
         #region LabelProperty
 
