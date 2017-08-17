@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using HCI___Assignment_Prototype.Class;
+using MaterialDesignThemes.Wpf;
 
 namespace HCI___Assignment_Prototype.CustomControl {
     /// <summary>
@@ -15,6 +16,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
             RightButtonClicked
         }
 
+        public static object ReturnedValue { get; set; }
 
         public static ResultEnum Result;
 
@@ -106,6 +108,10 @@ namespace HCI___Assignment_Prototype.CustomControl {
                 ta.From = new Thickness(0 , 0 , ActualWidth / 3 , 0);
             }
                 (e.Content as UIElement)?.BeginAnimation(MarginProperty , ta);
+        }
+
+        private void DialogHost_OnDialogClosing(object sender, DialogClosingEventArgs eventargs) {
+            this.Close();
         }
     }
 }

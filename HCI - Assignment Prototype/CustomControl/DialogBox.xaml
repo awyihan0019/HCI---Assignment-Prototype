@@ -8,7 +8,7 @@
         Title="DialogBoxx" ShowInTaskbar="False" WindowState="Maximized" AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-        <materialDesign:DialogHost x:Name="DialogHost" IsOpen="False">
+        <materialDesign:DialogHost x:Name="DialogHost" DialogClosing="DialogHost_OnDialogClosing" CloseOnClickAway="True" IsOpen="False">
             <materialDesign:DialogHost.DialogContent>
                 <Grid>
                     <Border x:Name="Custom" Visibility="Hidden" Padding="20">
