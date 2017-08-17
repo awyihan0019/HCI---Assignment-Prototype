@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using HCI___Assignment_Prototype.Page.View_Booking;
 
 namespace HCI___Assignment_Prototype.Page.Homepage {
     /// <summary>
@@ -30,6 +31,10 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         private static Random random= new Random();
         private void Timer_Tick(object sender , EventArgs e) {
             Transitioner.SelectedIndex = random.Next() % 10;
+        }
+
+        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e) {
+            MainWindow.MainFrame.Navigate(new UserControl_SelectMovie());
         }
     }
 }
