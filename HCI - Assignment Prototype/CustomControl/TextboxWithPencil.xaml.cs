@@ -50,6 +50,10 @@ namespace HCI___Assignment_Prototype.CustomControl {
             Button_Pencil.Visibility = Visible;
         }
 
+        public string PendingText {
+            get { return TextBox.Text; }
+            set { TextBox.Text = value; }
+        }
 
         #region LabelProperty
 
