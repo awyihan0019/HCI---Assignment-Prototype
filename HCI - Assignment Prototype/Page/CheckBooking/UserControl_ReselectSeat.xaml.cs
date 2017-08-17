@@ -21,19 +21,48 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
     /// </summary>
     public partial class UserControl_ReselectSeat : UserControl
     {
+        public int Seat;
         public UserControl_ReselectSeat()
         {
             InitializeComponent();
+            String numberOfsEAT = Global.Global.MovieReservation.NormalSeat;
+            Seat = coutSeat(numberOfsEAT, ',');
         }
 
-        private void SeatReselect_Next(object sender, RoutedEventArgs e) {
-            DialogBox.ReturnedValue = SeatPlace.HighlightedSeats;
-            DialogBox.CloseDialog();
+        private void SeatReselect_Next(object sender, RoutedEventArgs e)
+        {
+            if (coutSeat(SeatPlace.HighlightedSeats, ' ') == Seat)
+            {
+                DialogBox.ReturnedValue = SeatPlace.HighlightedSeats;
+                DialogBox.CloseDialog();
+            }
+            else if(coutSeat(SeatPlace.HighlightedSeats, ' ') < Seat)
+            {
+                //vincent here!!!!
+                DialogBox.Show("Your selected seat are not !!!!! :" + (Seat + 1), "", "COMFIRM", "CANCEL");
+                switch (DialogBox.Result)
+                {
+                    case DialogBox.ResultEnum.LeftButtonClicked:
+                        DialogBox.ReturnedValue = SeatPlace.HighlightedSeats;
+                        DialogBox.CloseDialog();
+                        break;
+                    case DialogBox.ResultEnum.RightButtonClicked:
+                        break;
+                }
+            }
+            else
+                DialogBox.Show("Seat Editing must not exceed the original amount :" + (Seat + 1), "", "COMFIRM");
         }
 
         private void BackButton_onClick(object sender, RoutedEventArgs e)
         {
             DialogBox.CloseDialog();
+        }
+
+        private int coutSeat(String seat, Char coutValue)
+        {
+            int count = seat.Count(ch => ch == coutValue);
+            return count;
         }
     }
 }
