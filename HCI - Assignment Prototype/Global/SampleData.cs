@@ -13,19 +13,19 @@ namespace HCI___Assignment_Prototype.Global
     {
         public static List<MovieReservation> SampleReservationDetails = new List<MovieReservation>(){
             new MovieReservation("Beauty and The Beast", "8:00p.m. - 10:00p.m.",
-                "30 June 2017", "GSC-MidValley", "A1, A2, A3", "-", new List<FoodAndDrinks>(){
+                "30 June 2017", "GSC-MidValley", "A1 A2 A3", "-", new List<FoodAndDrinks>(){
                     new FoodAndDrinks("Combo A", 3, 7.99)
 
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/beauty&beast.jpg"))),
 
             new MovieReservation("Wolfenstein 2: The New Colossus", "1:00p.m. - 3:00p.m.",
-                "10 July 2017", "GSC-NuSentral", "A6, A7", "-", new List<FoodAndDrinks>(){
+                "10 July 2017", "GSC-NuSentral", "A6 A7", "-", new List<FoodAndDrinks>(){
                     new FoodAndDrinks("Combo B", 2, 11.99)
 
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
 
             new MovieReservation("Der Untergang", "10:00p.m. - 12:00p.m.",
-                "13 August 2017", "GSC-SunwayPyramid", "A10, A11, A12", "-", new List<FoodAndDrinks>(){
+                "13 August 2017", "GSC-SunwayPyramid", "A10 A11 A12", "-", new List<FoodAndDrinks>(){
                     new FoodAndDrinks("Combo C", 3, 11.99)
 
                 },new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/deruntergang.jpg"))),
@@ -43,13 +43,13 @@ namespace HCI___Assignment_Prototype.Global
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/wolfenstein2.jpg"))),
 
             new MovieReservation("Dunkirk", "5:00p.m. - 7:00p.m.",
-                "25 August 2017", "GSC-MidValley", "A33, A34, A35", "-", new List<FoodAndDrinks>(){
+                "25 August 2017", "GSC-MidValley", "A33 A34 A35", "-", new List<FoodAndDrinks>(){
                     new FoodAndDrinks("Combo B", 2, 11.99)
 
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
 
             new MovieReservation("Doom", "10:00a.m. - 12:00p.m.",
-                "26 August 2017", "GSC-NuSentral", "A1, A2, A3", "-", new List<FoodAndDrinks>(){
+                "26 August 2017", "GSC-NuSentral", "A1 A2 A3", "-", new List<FoodAndDrinks>(){
                     new FoodAndDrinks("Combo C", 3, 11.99)
 
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
@@ -61,7 +61,7 @@ namespace HCI___Assignment_Prototype.Global
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/dunkirk.jpg"))),
 
             new MovieReservation("Doom", "8:00p.m. - 10:00p.m.",
-                "30 August 2017", "GSC-Gardens", "A54, A55", "-", new List<FoodAndDrinks>(){
+                "30 August 2017", "GSC-Gardens", "A54 A55", "-", new List<FoodAndDrinks>(){
                     new FoodAndDrinks("Combo A", 1, 7.99)
 
                 }, new BitmapImage(new Uri(@"pack://application:,,,/Global/MovieIcon/doom.png"))),
