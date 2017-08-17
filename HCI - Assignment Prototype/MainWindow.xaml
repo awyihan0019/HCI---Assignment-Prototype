@@ -37,10 +37,10 @@
                         <DockPanel>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" DockPanel.Dock="Left">
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Home_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">HOME</Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">SHOWING NOW</Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">COMING SOON</Button>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="ShowingNowButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">SHOWING NOW</Button>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="ShowingNowButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">COMING SOON</Button>
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Support_Click" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">SUPPORT</Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="Button_Click_1"  HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">CREDITS</Button>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Click="CreditButton_Click"  HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5 10 5 0">CREDITS</Button>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right">
                                 <StackPanel.Resources>
@@ -68,7 +68,7 @@
             <Image x:Name="Image" Source="Wallpaper3.png" Stretch="Fill"></Image>
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <Grid>
-                    <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" Navigated="Frame_Navigated" />
+                    <Frame x:Name="Frame" Template="{DynamicResource ControlTemplateForNavigator}" Navigating="Frame_OnNavigating" Navigated="Frame_Navigated" />
                     <materialDesign:Snackbar x:Name="snackbar" />
                 </Grid>
             </ScrollViewer>
