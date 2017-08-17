@@ -6,6 +6,7 @@
 			 xmlns:local="clr-namespace:HCI___Assignment_Prototype.Page.View_Booking"
 			 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
 			 mc:Ignorable="d" >
+   
 	<materialDesign:Card VerticalAlignment="Center" HorizontalAlignment="Center">
 		<StackPanel VerticalAlignment="Center">
 			<materialDesign:ColorZone
@@ -43,6 +44,11 @@
                     <Label x:Name="Combo" Grid.Row="5" Grid.Column="1" FontSize="20"/>
                 </Grid>
                 <Grid  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                    <Grid.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                        </Style>
+                    </Grid.Resources>
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
@@ -55,8 +61,8 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="120" />
                         <ColumnDefinition Width="120" />
-                        <ColumnDefinition Width="120" />
-                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="170" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Bold"/>
                     <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" Content="Ticket"/>
@@ -72,20 +78,20 @@
                     <Label HorizontalAlignment="Center" x:Name="ComboCQuantity" Grid.Row="4" Grid.Column="1" FontSize="20"  Content=""/>
                     <Label HorizontalAlignment="Center" x:Name="ComboDQuantity" Grid.Row="5" Grid.Column="1" FontSize="20"  Content=""/>
                     <!-- -->
-                    <Label Grid.Row="0" Grid.Column="2" FontSize="20" FontWeight="Bold" Content="Per Price"/>
-                    <Label HorizontalAlignment="Left" x:Name="TicketPrice" Grid.Row="1" Grid.Column="2" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboAPrice" Grid.Row="2" Grid.Column="2" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboBPrice" Grid.Row="3" Grid.Column="2" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboCPrice" Grid.Row="4" Grid.Column="2" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboDPrice" Grid.Row="5" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label Grid.Row="0" Grid.Column="2" FontSize="20" FontWeight="Bold" Content="Per Price (RM)"/>
+                    <Label HorizontalAlignment="Center" x:Name="TicketPrice" Grid.Row="1" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboAPrice" Grid.Row="2" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboBPrice" Grid.Row="3" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboCPrice" Grid.Row="4" Grid.Column="2" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboDPrice" Grid.Row="5" Grid.Column="2" FontSize="20"  Content=""/>
                     <!-- -->
-                    <Label Grid.Row="0" Grid.Column="3" FontSize="20" FontWeight="Bold" Content="Total Price"/>
-                    <Label HorizontalAlignment="Left" x:Name="TicketTotal" Grid.Row="1" Grid.Column="3" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboATotal" Grid.Row="2" Grid.Column="3" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboBTotal" Grid.Row="3" Grid.Column="3" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboCTotal" Grid.Row="4" Grid.Column="3" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="ComboDTotal" Grid.Row="5" Grid.Column="3" FontSize="20"  Content=""/>
-                    <Label HorizontalAlignment="Left" x:Name="Total" Grid.Row="6" Grid.Column="2" FontSize="20" FontWeight="Bold" Content=""/>
+                    <Label Grid.Row="0" Grid.Column="3" FontSize="20" FontWeight="Bold" Content="Total Price (RM)"/>
+                    <Label HorizontalAlignment="Center" x:Name="TicketTotal" Grid.Row="1" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboATotal" Grid.Row="2" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboBTotal" Grid.Row="3" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboCTotal" Grid.Row="4" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="ComboDTotal" Grid.Row="5" Grid.Column="3" FontSize="20"  Content=""/>
+                    <Label HorizontalAlignment="Center" x:Name="Total" Grid.Row="6" Grid.Column="3" FontSize="20" FontWeight="Bold" Content=""/>
                 </Grid>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

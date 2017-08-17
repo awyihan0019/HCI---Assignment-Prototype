@@ -4,6 +4,7 @@ using HCI___Assignment_Prototype.Page.Profile_Page;
 using System.Windows.Controls;
 using HCI___Assignment_Prototype.Page.CheckBooking;
 using HCI___Assignment_Prototype.Page.Top_Up;
+using HCI___Assignment_Prototype.Page.View_Booking;
 
 namespace HCI___Assignment_Prototype.Page.Homepage {
     /// <summary>
@@ -49,6 +50,11 @@ namespace HCI___Assignment_Prototype.Page.Homepage {
         private void Click_TopUp(object sender, RoutedEventArgs e)
         {
             MainWindow.MainFrame.Navigate(new UserControl_TopUp());
+        }
+
+        private void BookTicket_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainFrame.Navigate(new UserControl_SelectMovie());
         }
     }
 }

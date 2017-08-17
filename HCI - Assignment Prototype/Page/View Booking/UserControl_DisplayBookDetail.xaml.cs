@@ -41,12 +41,18 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
             ComboCQuantity.Content = comboCQuantity;
             ComboDQuantity.Content = comboDQuantity;
 
-            TicketTotal.Content = "RM " + ticketTotal;
-            ComboATotal.Content = "RM " + comboATotal; 
-            ComboBTotal.Content = "RM " + comboBTotal; 
-            ComboCTotal.Content = "RM " + comboCTotal; 
-            ComboDTotal.Content = "RM " + comboDTotal; 
-            Total.Content = "RM " + TotalPayment;
+            TicketPrice.Content = "12.90";
+            ComboAPrice.Content = Global.Global.MovieReservation.FoodAndDrinks[0].Price;
+            ComboBPrice.Content = Global.Global.MovieReservation.FoodAndDrinks[1].Price;
+            ComboCPrice.Content = Global.Global.MovieReservation.FoodAndDrinks[2].Price;
+            ComboDPrice.Content = Global.Global.MovieReservation.FoodAndDrinks[3].Price;
+
+            TicketTotal.Content = ticketTotal.ToString("N2");
+            ComboATotal.Content = comboATotal.ToString("N2"); 
+            ComboBTotal.Content = comboBTotal.ToString("N2"); 
+            ComboCTotal.Content = comboCTotal.ToString("N2"); 
+            ComboDTotal.Content = comboDTotal.ToString("N2"); 
+            Total.Content = TotalPayment.ToString("N2");
 
             string comboes =null;
 
