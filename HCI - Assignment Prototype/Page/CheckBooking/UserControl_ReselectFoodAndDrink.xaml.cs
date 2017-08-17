@@ -15,30 +15,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HCI___Assignment_Prototype.Page.CheckBooking
-{
+namespace HCI___Assignment_Prototype.Page.CheckBooking {
     /// <summary>
     /// Interaction logic for UserControl_ReselectFoodAndDrink.xaml
     /// </summary>
-    public partial class UserControl_ReselectFoodAndDrink : UserControl
-    {
-        public UserControl_ReselectFoodAndDrink()
-        {
+    public partial class UserControl_ReselectFoodAndDrink : UserControl {
+        public UserControl_ReselectFoodAndDrink() {
             InitializeComponent();
         }
 
-        private void Click_ReConfirmBooking(object sender, RoutedEventArgs e)
-        {
-            Global.Global.MovieReservation.FoodAndDrinks = new List<FoodAndDrinks>() {
+        private void Click_ReConfirmBooking(object sender , RoutedEventArgs e) {
+            DialogBox.ReturnedValue = new List<FoodAndDrinks>() {
                 new FoodAndDrinks("ComboA", ComboA.Number, 7.99),
                 new FoodAndDrinks("ComboB", ComboB.Number, 11.99),
                 new FoodAndDrinks("ComboC", ComboC.Number, 11.99),
                 new FoodAndDrinks("ComboD", ComboD.Number, 14.99),
             };
+            DialogBox.CloseDialog();
         }
 
-        private void Click_cancelDetail(object sender, RoutedEventArgs e)
-        {
+        private void Click_cancelDetail(object sender , RoutedEventArgs e) {
             DialogBox.CloseDialog();
         }
     }

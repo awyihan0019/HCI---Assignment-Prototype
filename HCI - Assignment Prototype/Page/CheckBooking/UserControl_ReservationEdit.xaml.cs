@@ -42,7 +42,8 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
                             c.Time = TimeField.Text;
                             c.Date = DateField.Text;
                             c.NormalSeat = SeatField.Text;
-                            //c.FoodAndDrinks = ComboField.Text;
+                            if ((new FoodAndDrink_Converter().Convert(c.FoodAndDrinks , null , null , null) as string) != ComboField.Text)
+                                c.FoodAndDrinks = _newFoodAndDrinks;
                             Global.Global.CurrentUser.Reservations.RemoveAll(x => x.UID == c.UID);
                             Global.Global.CurrentUser.Reservations.Add(c);
                             DialogBox.Show("" , "Profile successfully updated!" , "OK");
@@ -56,12 +57,18 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
 
         private void Seat_OnPencilButtonOnClick(object sender , EventArgs e) {
             DialogBox.Show(new UserControl_ReselectSeat());
-            SeatField.PendingText = (string)DialogBox.ReturnedValue;
+            var newSeats = DialogBox.ReturnedValue as string;
+            if (newSeats == null) return;
+            SeatField.PendingText = newSeats;
         }
 
-        private void Combo_OnPencilButtonOnClick(object sender, EventArgs e) {
+        private List<FoodAndDrinks> _newFoodAndDrinks;
+        private void Combo_OnPencilButtonOnClick(object sender , EventArgs e) {
             DialogBox.Show(new UserControl_ReselectFoodAndDrink());
+            var movieReservation = this.DataContext as MovieReservation;
+            if (movieReservation == null) return;
+            _newFoodAndDrinks = (List<FoodAndDrinks>)DialogBox.ReturnedValue;
+            ComboField.PendingText = new FoodAndDrink_Converter().Convert(_newFoodAndDrinks , null , null , null) as string;
         }
-        
     }
 }
