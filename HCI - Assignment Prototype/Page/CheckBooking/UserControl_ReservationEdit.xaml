@@ -28,7 +28,7 @@
         <customcontrol:DropDownWithPencil x:Name="TimeField" Label="Time" Text="{Binding Time}" Items="8:00p.m. - 10:00p.m.,1:00p.m. - 3:00p.m.,3:00p.m. - 5:00p.m.,5:00p.m. - 7:00p.m.,10:00p.m. - 12:00a.m.,12:00a.m. - 2:00a.m." ></customcontrol:DropDownWithPencil>
         <customcontrol:DropDownWithPencil x:Name="DateField" Label="Date" Text="{Binding Date}" Items="12 August 2017,13 August 2017,14 August 2017,15 August 2017,16 August 2017,18 August 2017"></customcontrol:DropDownWithPencil>
         <customcontrol:TextboxWithPencil x:Name="SeatField" Label="Seat" Text="{Binding NormalSeat}" PencilButtonOnClick="Seat_OnPencilButtonOnClick"></customcontrol:TextboxWithPencil>
-        <customcontrol:TextboxWithPencil x:Name="ComboField" Label="Combo" Text="{Binding FoodAndDrinks, Converter={StaticResource converter}}" PencilButtonOnClick="Combo_OnPencilButtonOnClick" Loaded="ComboField_Loaded" ></customcontrol:TextboxWithPencil>
+        <customcontrol:TextboxWithPencil x:Name="ComboField" Label="Combo" Text="{Binding FoodAndDrinks, Converter={StaticResource converter}}" PencilButtonOnClick="Combo_OnPencilButtonOnClick"></customcontrol:TextboxWithPencil>
         <StackPanel Orientation="Horizontal" Margin="1"  HorizontalAlignment="Center">
         <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100" Style="{StaticResource MaterialDesignFlatButton}" Margin="20 5 20 5" HorizontalAlignment="Right"> CANCEL </Button>
         <Button x:Name="Login" Click="SaveReservationEdit_Click" Width="100" Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="20 5 20 5" HorizontalAlignment="Right"> SAVE </Button>
