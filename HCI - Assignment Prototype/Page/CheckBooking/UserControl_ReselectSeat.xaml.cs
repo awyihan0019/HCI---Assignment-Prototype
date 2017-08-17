@@ -46,7 +46,7 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
             else if(coutSeat(SeatPlace.HighlightedSeats, ' ') < Seat)
             {
                 
-                DialogBox.Show("Your selected seat does not match the original amount. Original Seat Amount: " + (Seat + 1), "", "CONFIRM", "CANCEL");
+                DialogBox.Show("Your selected seat does not match the original amount. Original Seat Amount: " + (Seat + 1), "", "OK");
                 switch (DialogBox.Result)
                 {
                     case DialogBox.ResultEnum.LeftButtonClicked:
@@ -58,7 +58,7 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
                 }
             }
             else
-                DialogBox.Show("Seat Editing must not exceed the original amount :" + (Seat + 1), "", "CONFIRM");
+                DialogBox.Show("Seat Editing must not exceed the original amount :" + (Seat + 1), "", "OK");
         }
 
         private void BackButton_onClick(object sender, RoutedEventArgs e)
