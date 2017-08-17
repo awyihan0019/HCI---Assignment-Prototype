@@ -54,11 +54,16 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
         }
 
         private void Seat_OnPencilButtonOnClick(object sender, EventArgs e) {
-            DialogBox.Show(new UserControl_SelectSeats());
+            DialogBox.Show(new UserControl_ReselectSeat());
         }
 
         private void Combo_OnPencilButtonOnClick(object sender, EventArgs e) {
             
+        }
+
+        private void ComboField_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

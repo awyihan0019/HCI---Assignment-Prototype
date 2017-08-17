@@ -179,6 +179,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\CheckBooking\UserControl_ReselectSeat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\CheckBooking\UserControl_ReservationEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -279,6 +283,9 @@
   <ItemGroup>
     <Compile Include="Page\CheckBooking\UserControl_CheckReservation.xaml.cs">
       <DependentUpon>UserControl_CheckReservation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\CheckBooking\UserControl_ReselectSeat.xaml.cs">
+      <DependentUpon>UserControl_ReselectSeat.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\CheckBooking\UserControl_ReservationEdit.xaml.cs">
       <DependentUpon>UserControl_ReservationEdit.xaml</DependentUpon>
