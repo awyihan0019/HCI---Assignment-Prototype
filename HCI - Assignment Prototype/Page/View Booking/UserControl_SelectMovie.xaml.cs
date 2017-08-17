@@ -38,6 +38,7 @@ namespace HCI___Assignment_Prototype.Page.View_Booking {
             var b = sender as Button;
             var selectedMovie = (Movie)b.Tag;
             Global.Global.SelectedMovie = selectedMovie;
+            Global.Global.MovieReservation = new MovieReservation();
             Global.Global.MovieReservation.Image = selectedMovie.ImageUri;
             Global.Global.MovieReservation.MovieName = Global.Global.SelectedMovie.Name;
             MainWindow.MainFrame.Navigate(new UserControl_BookingDetail());

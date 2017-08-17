@@ -16,10 +16,11 @@
             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"
                     Content="{materialDesign:PackIcon Kind=LeadPencil}" ToolTip="Edit Picture" Click="Button_Click" />
         </StackPanel>
-        <customcontrol:TextboxWithPencil IsPassword="True" x:Name="PasswordField" Label="Password" ToolTip="Edit Your Password"/>
-        <customcontrol:TextboxWithPencil x:Name="NameField" Label="Name" ToolTip="Edit Your Name"/>
-        <customcontrol:TextboxWithPencil PhoneNumberOnly="True" x:Name="PhoneField" Label="Phone" ToolTip="Edit Your Handphone Number"/>
-        <customcontrol:TextboxWithPencil x:Name="AddressField" Label="Address" ToolTip="Edit Your Address"/>
+        
+        <customcontrol:TextboxWithPencil IsPassword="True" x:Name="PasswordField" Label="Password" PencilToolTip="Edit Your Password"/>
+        <customcontrol:TextboxWithPencil x:Name="NameField" Label="Name" PencilToolTip="Edit Your Name"/>
+        <customcontrol:TextboxWithPencil x:Name="PhoneField" Label="Phone" PencilToolTip="Edit Your Handphone Number"/>
+        <customcontrol:TextboxWithPencil x:Name="AddressField" Label="Address" PencilToolTip="Edit Your Address"/>
         
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="Cancel" Click="Cancel_OnClick" Width="100"
