@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="DialogBoxx" ShowInTaskbar="False" WindowState="Maximized" AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" WindowStartupLocation="CenterScreen">
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Closing="DialogBox_OnClosing">
     <Grid>
         <materialDesign:DialogHost x:Name="DialogHost" DialogClosing="DialogHost_OnDialogClosing" CloseOnClickAway="True" IsOpen="False">
             <materialDesign:DialogHost.DialogContent>
