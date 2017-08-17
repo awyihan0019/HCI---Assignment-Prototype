@@ -26,7 +26,14 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
         {
             InitializeComponent();
             String numberOfsEAT = Global.Global.MovieReservation.NormalSeat;
-            Seat = coutSeat(numberOfsEAT, ',');
+            Seat = coutSeat(numberOfsEAT, ' ');
+            String[] seats = numberOfsEAT.Split(' ');
+            for(int i = 0; i < seats.Count(); i++)
+            {
+                Char row = seats[i][0];
+                int column = int.Parse(seats[i].Substring(0));
+                //edit here
+            }
         }
 
         private void SeatReselect_Next(object sender, RoutedEventArgs e)
