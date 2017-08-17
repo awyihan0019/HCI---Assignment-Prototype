@@ -15,10 +15,10 @@
                     <StackPanel Orientation="Horizontal">
                         <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="130" HorizontalAlignment="Right" Margin="0 0 10 0" ToolTip="Book Movies Now" x:Name="BookTicket"
                                 Click="BookTicket_Click">Book Ticket</Button>
-                        <Button Width="120" HorizontalAlignment="Right" Margin="0 0 10 0" ToolTip="Go to your profile" x:Name="YourProfile" 
-                                Click="ViewProfile">Your Profile</Button>
                         <Button Width="130" HorizontalAlignment="Right" Margin="0 0 10 0" ToolTip="Check your booking" x:Name="CheckMovieBooking"
                                 Click="CheckBooking">Check Booking</Button>
+                        <Button Width="120" HorizontalAlignment="Right" Margin="0 0 10 0" ToolTip="Go to your profile" x:Name="YourProfile" 
+                                Click="ViewProfile">Your Profile</Button>
                         <Button x:Name="UsernameButton" Click="UserButton_OnClick"
                     Style="{StaticResource MaterialDesignFlatButton}"
                      HorizontalAlignment="Right">
