@@ -13,6 +13,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
     /// </summary>
     public partial class TextboxWithPencil : UserControl {
         public event EventHandler PencilButtonOnClick;
+
         public TextboxWithPencil() {
             InitializeComponent();
         }
@@ -20,7 +21,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
         private void Button_Pencil_OnClick(object sender , RoutedEventArgs e) {
             GoToEditableMode();
             Keyboard.Focus(TextBox);
-            PencilButtonOnClick?.Invoke(this,null);
+            PencilButtonOnClick?.Invoke(this , null);
         }
 
         private void Button_Cancel_OnClick(object sender , RoutedEventArgs e) {
@@ -39,7 +40,8 @@ namespace HCI___Assignment_Prototype.CustomControl {
             StackPanel_Bottom.BeginAnimation(HeightProperty , da);
             TextBox.Visibility = Visible;
             TextBlock.Visibility = Hidden;
-            Button_Pencil.Visibility = Hidden;
+            if (IsEditableByTyping)
+                Button_Pencil.Visibility = Hidden;
         }
 
         private void GoToUneditableMode() {
@@ -48,6 +50,16 @@ namespace HCI___Assignment_Prototype.CustomControl {
             TextBox.Visibility = Collapsed;
             TextBlock.Visibility = Visible;
             Button_Pencil.Visibility = Visible;
+        }
+
+        public string PendingText {
+            get { return TextBox.Text; }
+            set { TextBox.Text = value; }
+        }
+
+        public bool IsEditableByTyping {
+            get { return !TextBox.IsReadOnly; }
+            set { TextBox.IsReadOnly = !value; }
         }
 
 

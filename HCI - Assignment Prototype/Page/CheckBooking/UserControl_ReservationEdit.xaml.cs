@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI___Assignment_Prototype.Class;
+using HCI___Assignment_Prototype.CustomControl.SeatPlaceControl;
 using HCI___Assignment_Prototype.Page.View_Booking;
 
 namespace HCI___Assignment_Prototype.Page.CheckBooking {
@@ -33,18 +35,18 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
             DialogBox.Show("Do you really want to update this reservation" , "" , "CANCEL" , "SAVE");
             switch (DialogBox.Result) {
                 case DialogBox.ResultEnum.LeftButtonClicked: return;
-                case DialogBox.ResultEnum.RightButtonClicked:
-                    {
-                        ProgressDialog.Show("Updating profile......", "", () => {
+                case DialogBox.ResultEnum.RightButtonClicked: {
+                        ProgressDialog.Show("Updating profile......" , "" , () => {
                             var c = Global.Global.MovieReservation;
                             c.Location = LocationField.Text;
                             c.Time = TimeField.Text;
                             c.Date = DateField.Text;
-                            //c.NormalSeat = SeatField.Text;
-                            //c.FoodAndDrinks = ComboField.Text;
+                            c.NormalSeat = SeatField.Text;
+                            if ((new FoodAndDrink_Converter().Convert(c.FoodAndDrinks , null , null , null) as string) != ComboField.Text)
+                                c.FoodAndDrinks = _newFoodAndDrinks;
                             Global.Global.CurrentUser.Reservations.RemoveAll(x => x.UID == c.UID);
                             Global.Global.CurrentUser.Reservations.Add(c);
-                            DialogBox.Show("", "Profile successfully updated!", "OK");
+                            DialogBox.Show("" , "Profile successfully updated!" , "OK");
                             MainWindow.MainFrame.Navigate(new UserControl_CheckReservation());
                         });
 
@@ -53,13 +55,20 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking {
             }
         }
 
-        private void Seat_OnPencilButtonOnClick(object sender, EventArgs e) {
+        private void Seat_OnPencilButtonOnClick(object sender , EventArgs e) {
             DialogBox.Show(new UserControl_ReselectSeat());
+            var newSeats = DialogBox.ReturnedValue as string;
+            if (newSeats == null) return;
+            SeatField.PendingText = newSeats;
         }
 
-        private void Combo_OnPencilButtonOnClick(object sender, EventArgs e) {
+        private List<FoodAndDrinks> _newFoodAndDrinks;
+        private void Combo_OnPencilButtonOnClick(object sender , EventArgs e) {
             DialogBox.Show(new UserControl_ReselectFoodAndDrink());
+            var movieReservation = this.DataContext as MovieReservation;
+            if (movieReservation == null) return;
+            _newFoodAndDrinks = (List<FoodAndDrinks>)DialogBox.ReturnedValue;
+            ComboField.PendingText = new FoodAndDrink_Converter().Convert(_newFoodAndDrinks , null , null , null) as string;
         }
-        
     }
 }
