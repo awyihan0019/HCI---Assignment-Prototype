@@ -19,10 +19,10 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         private void YesButton_OnClick(object sender , RoutedEventArgs e) {
             var thisReservation = this.DataContext as MovieReservation;
-            if (thisReservation.WhenIsThisBook < (DateTime.Now.Add(new TimeSpan(1, 0, 0)))) {
-                DialogBox.Show("Sorry", "You cannot cancel a movie reservation that was made under 24 hours time.");
-                return;
-            }
+          //  if (thisReservation.WhenIsThisBook < (DateTime.Now.Add(new TimeSpan(1, 0, 0)))) {
+          //      DialogBox.Show("Sorry", "You cannot cancel a movie reservation that was made under 24 hours time.");
+          //      return;
+          //  }
             DateTime date;
             DateTime.TryParse(thisReservation.Date, out date);
             if (date < DateTime.Now.Add(new TimeSpan(1, 0, 0))) {

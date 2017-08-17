@@ -31,6 +31,6 @@ namespace HCI___Assignment_Prototype.Class {
         public string CoupleSeat { get; set; }
         public List<FoodAndDrinks> FoodAndDrinks { get; set; }
         public BitmapImage Image { get; set; }
-        public DateTime WhenIsThisBook { get; set; }  
+        public DateTime WhenIsThisBook { get; set; }
     }
 }
