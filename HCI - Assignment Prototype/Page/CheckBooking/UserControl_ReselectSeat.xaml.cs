@@ -26,9 +26,9 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
             InitializeComponent();
         }
 
-        private void SeatReselect_Next(object sender, RoutedEventArgs e)
-        {
-            Global.Global.MovieReservation.NormalSeat = SeatPlace.HighlightedSeats;
+        private void SeatReselect_Next(object sender, RoutedEventArgs e) {
+            DialogBox.ReturnedValue = SeatPlace.HighlightedSeats;
+            DialogBox.CloseDialog();
         }
 
         private void BackButton_onClick(object sender, RoutedEventArgs e)
