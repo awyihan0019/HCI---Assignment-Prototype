@@ -11,25 +11,24 @@
         <StackPanel>
             <Grid HorizontalAlignment="Stretch" Margin="0,10,0,0">
                 <customControl:SearchBar HorizontalAlignment="Left" Margin="10 0 0 0"></customControl:SearchBar>
+                <Button Width="120" HorizontalAlignment="Right" Margin="0 0 180 0" ToolTip="Go to your profile" x:Name="YourProfile" 
+                        Click="ViewProfile">Your Profile</Button>
+                <Button Width="130" HorizontalAlignment="Right" Margin="0 0 320 0" ToolTip="Check your booking" x:Name="CheckMovieBooking"
+                        Click="CheckBooking">Check Booking</Button>
                 <StackPanel HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="UsernameButton" Click="UserButton_OnClick"
                     Style="{StaticResource MaterialDesignFlatButton}"
                      HorizontalAlignment="Right">
-                                    </Button>
-                                    <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="30"
+                        </Button>
+                        <Image x:Name="ProfilePicture" HorizontalAlignment="Left" Height="30"
                    Width="30" Margin="0 5 5 5"  Stretch="Fill" MouseUp="ProfilePicture_MouseDown"/>
                     </StackPanel>
-               
+
                     <Popup x:Name="UserPopup" PopupAnimation="Slide"  AllowsTransparency="True" StaysOpen="False">
                         <materialDesign:Card  Margin="10">
                             <StackPanel  HorizontalAlignment="Center" Width="134" Background="White">
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="ViewProfile">
-                                    Your Profile
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="CheckBooking">
-                                    Check Booking
-                                </Button>
+
                                 <Button Style="{StaticResource MaterialDesignFlatButton}"  Width="150" HorizontalAlignment="Center" Click="Click_TopUp">
                                     Top-Up
                                 </Button>
