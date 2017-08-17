@@ -28,7 +28,7 @@
                                 IsEnabled="{TemplateBinding CanGoForward}">
                                 <materialDesign:PackIcon Kind="ArrowRightBold" Height="30" Width="30" />
                             </Button>
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="White"
+                            <Button Style="{StaticResource MaterialDesignFlatButton}" Visibility="Hidden" Foreground="White"
                                 DockPanel.Dock="Right" Click="ExtraMenuButton_OnClick">
                                 <materialDesign:PackIcon Height="25" Width="25" Kind="DotsVertical" />
                             </Button>
