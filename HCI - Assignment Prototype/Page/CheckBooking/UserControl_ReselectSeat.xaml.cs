@@ -25,14 +25,14 @@ namespace HCI___Assignment_Prototype.Page.CheckBooking
         public UserControl_ReselectSeat()
         {
             InitializeComponent();
-            String numberOfsEAT = Global.Global.MovieReservation.NormalSeat;
-            Seat = coutSeat(numberOfsEAT, ' ');
-            String[] seats = numberOfsEAT.Split(' ');
+            String numberOfSeat = Global.Global.MovieReservation.NormalSeat;
+            Seat = coutSeat(numberOfSeat, ' ');
+            String[] seats = numberOfSeat.Split(' ');
             for(int i = 0; i < seats.Count(); i++)
             {
                 Char row = seats[i][0];
-                //int column = int.Parse(seats[i].Substring(0));
-                //edit here
+                int column = int.Parse(seats[i].Substring(1));
+                SeatPlace.SelectSeat(row, column);
             }
         }
 

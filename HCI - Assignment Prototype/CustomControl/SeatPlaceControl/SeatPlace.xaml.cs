@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using HCI___Assignment_Prototype.CustomControl.SeatPlace;
@@ -15,6 +16,15 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlaceControl {
             BuildLabelling();
         }
 
+        public void SelectSeat(char rowChar , int column) {
+            var grid = MiddleArea;
+            int row = rowChar - 'A';
+            var child = grid.Children.Cast<UIElement>()
+                .Where(x => Grid.GetRow(x) == row && Grid.GetColumn(x) == column - 1).ToList()[0];
+            if ((child as SingleSeat) != null) {
+                (child as SingleSeat).SeatState = SingleSeat.SeatStateEnum.Highlighted;
+            }
+        }
         private void BuildLabelling() {
             for (int i = 0 ; i < LabelArea.RowDefinitions.Count ; i++) {
                 var label = new Label() {
@@ -58,7 +68,7 @@ namespace HCI___Assignment_Prototype.CustomControl.SeatPlaceControl {
                 HighlightedSeats += " " + seatLabel;
             }
             else {
-                HighlightedSeats = HighlightedSeats.Replace(seatLabel, "");
+                HighlightedSeats = HighlightedSeats.Replace(seatLabel , "");
             }
             HighlightedSeats = HighlightedSeats.Trim();
             HighlightedSeatsLabel.Content = HighlightedSeats;
