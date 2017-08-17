@@ -65,6 +65,10 @@ namespace HCI___Assignment_Prototype.CustomControl {
             Button_Pencil.Visibility = Visible;
         }
 
+        public object PencilTooltip {
+            get { return Button_Pencil.ToolTip; }
+            set { Button_Pencil.ToolTip = value; }
+        }
 
         #region ItemsProperty
         public string Items {
@@ -128,7 +132,7 @@ namespace HCI___Assignment_Prototype.CustomControl {
 
         #endregion
 
-        private void DropDownWithPencil_OnLoaded(object sender, RoutedEventArgs e) {
+        private void DropDownWithPencil_OnLoaded(object sender , RoutedEventArgs e) {
             OnItemsPropertyChanged(this , new DependencyPropertyChangedEventArgs(ItemsProperty , "" , Items));
             LabelPropertyChangedCallback(this , new DependencyPropertyChangedEventArgs(LabelProperty , "" , Label));
             TextPropertyChangedCallback(this , new DependencyPropertyChangedEventArgs(TextProperty , "" , Text));

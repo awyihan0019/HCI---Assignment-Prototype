@@ -255,31 +255,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_DisplayBookDetail.xaml">
+    <Page Include="Page\Create-Booking\UserControl_DisplayBookDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_selectDate.xaml">
+    <Page Include="Page\Create-Booking\UserControl_selectDate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_SelectFoodAndDrink.xaml">
+    <Page Include="Page\Create-Booking\UserControl_SelectFoodAndDrink.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_SelectLocation.xaml">
+    <Page Include="Page\Create-Booking\UserControl_SelectLocation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_SelectMovie.xaml">
+    <Page Include="Page\Create-Booking\UserControl_SelectMovie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_SelectTime.xaml">
+    <Page Include="Page\Create-Booking\UserControl_SelectTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page\View Booking\UserControl_SelectSeats.xaml">
+    <Page Include="Page\Create-Booking\UserControl_SelectSeats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -345,25 +345,25 @@
     <Compile Include="Page\Top Up\UserControl_TopUpProcess.xaml.cs">
       <DependentUpon>UserControl_TopUpProcess.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_DisplayBookDetail.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_DisplayBookDetail.xaml.cs">
       <DependentUpon>UserControl_DisplayBookDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_selectDate.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_selectDate.xaml.cs">
       <DependentUpon>UserControl_selectDate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_SelectFoodAndDrink.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_SelectFoodAndDrink.xaml.cs">
       <DependentUpon>UserControl_SelectFoodAndDrink.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_SelectLocation.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_SelectLocation.xaml.cs">
       <DependentUpon>UserControl_SelectLocation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_SelectMovie.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_SelectMovie.xaml.cs">
       <DependentUpon>UserControl_SelectMovie.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_SelectSeats.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_SelectSeats.xaml.cs">
       <DependentUpon>UserControl_SelectSeats.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page\View Booking\UserControl_SelectTime.xaml.cs">
+    <Compile Include="Page\Create-Booking\UserControl_SelectTime.xaml.cs">
       <DependentUpon>UserControl_SelectTime.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
