@@ -53,6 +53,7 @@ namespace HCI___Assignment_Prototype.Page {
                             var newUser = new User(email , password , email);
                             Global.SampleData.Users.Add(newUser);
                             Global.Global.CurrentUser = newUser;
+                            Global.Global.CurrentUser.Reservations = new System.Collections.Generic.List<Class.MovieReservation>();
                             MainWindow.MainFrame.Navigate(new UserControl_SF_Verify());
                         });
                 }

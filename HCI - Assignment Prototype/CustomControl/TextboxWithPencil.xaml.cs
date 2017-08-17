@@ -40,7 +40,8 @@ namespace HCI___Assignment_Prototype.CustomControl
             {
                 if (!IsNumeric(TextBox.Text))
                 {
-                    //show error
+                    DialogBox.Show("Please Enter A Valid Phone Number", "", "Continue");
+                    TextBox.Text = "";
                     return;
                 }
             }
