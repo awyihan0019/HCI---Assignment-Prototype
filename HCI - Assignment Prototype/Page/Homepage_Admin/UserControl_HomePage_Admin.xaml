@@ -15,8 +15,8 @@
             <TextBlock FontSize="30" Margin="2 2 2 10" HorizontalAlignment="Left" FontWeight="Bold">Movie Reservation Detail</TextBlock>
             <Button x:Name="CreateReservation" Margin="2 2 2 10" Click="Click_CreateNewReservation"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200"
-                    ToolTip="Make new reservation" HorizontalAlignment="Right">
-                Create New Reservation
+                    ToolTip="Make a new movie profile" HorizontalAlignment="Right">
+                Create Booking Profile
             </Button>
         </DockPanel>
         <StackPanel x:Name="MovieList"></StackPanel>
